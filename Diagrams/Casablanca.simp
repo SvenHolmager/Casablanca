@@ -69,9 +69,7 @@
       </attributes>
       <operations />
       <template-parameters>
-        <source-codes>
-          <source-code language="ActionScript" />
-        </source-codes>
+        <source-codes />
       </template-parameters>
     </item>
     <item id="di611197200236565579" cid="REL007" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:01:55">
@@ -212,9 +210,7 @@
       </attributes>
       <operations />
       <template-parameters>
-        <source-codes>
-          <source-code language="ActionScript" />
-        </source-codes>
+        <source-codes />
       </template-parameters>
     </item>
     <item id="di231198011425762034" cid="C005" type="class" name="Room" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 22:54:58">
@@ -252,12 +248,10 @@
       </attributes>
       <operations />
       <template-parameters>
-        <source-codes>
-          <source-code language="ActionScript" />
-        </source-codes>
+        <source-codes />
       </template-parameters>
     </item>
-    <item id="di913260115508388041" cid="REL014" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:25:43">
+    <item id="di913260115508388041" cid="REL014" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:25:43">
       <stereotypes />
       <tagged-values />
       <associated-diagrams />
@@ -303,9 +297,7 @@
       </attributes>
       <operations />
       <template-parameters>
-        <source-codes>
-          <source-code language="ActionScript" />
-        </source-codes>
+        <source-codes />
       </template-parameters>
     </item>
   </items>
@@ -759,9 +751,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di376562013842995518" cid="REL003" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 09:53:44">
@@ -912,9 +902,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di181038182912784626" cid="C006" type="class" name="RoomType" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 22:55:16">
@@ -953,9 +941,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di977218907870534416" cid="REL008" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:02:03">
@@ -964,7 +950,7 @@
           <associated-diagrams />
           <owned-items />
           <style class="default" />
-          <relation from="di237994610268584982" to="di595009648294561457">
+          <relation from="di181038182912784626" to="di231198011425762034">
             <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
           </relation>
@@ -1124,9 +1110,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di546703882165120447" cid="C012" type="class" name="ActivityBooking" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:06:44">
@@ -1167,9 +1151,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di702927146345770338" cid="C003" type="class" name="Guest" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 22:54:42">
@@ -1212,9 +1194,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di981702187272771552" cid="C003" type="class" name="Guest" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 22:54:42">
@@ -1258,9 +1238,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di173346988286871153" cid="REL008" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:02:03">
@@ -1269,7 +1247,7 @@
           <associated-diagrams />
           <owned-items />
           <style class="default" />
-          <relation from="di237994610268584982" to="di595009648294561457">
+          <relation from="di985108302528634277" to="di333198482941637243">
             <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
           </relation>
@@ -1314,9 +1292,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di674915194527116445" cid="C037" type="class" name="PaymentStatus" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/22/2014 00:51:26">
@@ -1392,9 +1368,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
       </abstract-items>
@@ -1759,7 +1733,7 @@
             <drawing-line start-point="-13,223" end-point="1357,224" />
             <style class="default" />
           </item>
-          <item id="di394077671761467233" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di572873359502643413" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="-5" ay="792" awidth="1364" aheight="2" x="-5" y="792" width="1364" height="2" angle="0" />
             <drawing-line start-point="-5,792" end-point="1358,793" />
             <style class="default" />
@@ -1942,7 +1916,7 @@
             <style class="default" />
           </item>
           <item id="di913837081784000516" iid="fafb1f52e4484244aece025fe7f09cc7" creation-date="03/24/2014 09:53:44" order-index="19" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="462" y1="180" x2="462" y2="265" start-border-pos="0.624529813139431" end-border-pos="0.125470166537851">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="462" y1="180" x2="462" y2="265" start-border-pos="0.624529833462149" end-border-pos="0.125470207336752">
               <points>
                 <point x="462" y="180" />
                 <point x="462" y="265" />
@@ -1956,7 +1930,7 @@
             <class />
           </item>
           <item id="di611197200236565579" iid="878f33a39ce0477685603c43a1b1c661" creation-date="03/21/2014 23:01:55" order-index="5" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="462" y1="455" x2="462" y2="536" start-border-pos="0.624529833462149" end-border-pos="0.125470166537851">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="462" y1="455" x2="462" y2="536" start-border-pos="0.624529833462149" end-border-pos="0.125470207336752">
               <points>
                 <point x="462" y="455" />
                 <point x="462" y="536" />
@@ -2415,7 +2389,7 @@
             </cooperation>
             <associated-diagrams />
             <owned-items />
-            <style style-name="Default" shadow-type="smooth" shadow-offset="1,1" shadow-visible="true" shadow-color="#3C000000" gloss-effect="true" wrap-name-text="true" wrap-other-text="true" padding="1" glow-color="#FFFFFFFF" name-color="#FF000000" name-font="Verdana;10;B" name-horizontal-alignment="center" name-vertical-alignment="center" part-header-color="#FF1E1E1E" part-header-font="Verdana;9;I" part-header-horizontal-alignment="center" part-header-vertical-alignment="center" text-color="#FF000000" text-font="Verdana;9;" text-horizontal-alignment="left" text-vertical-alignment="center" tagged-value-color="#FF1E1E1E" tagged-value-font="Verdana;9;I" tagged-value-horizontal-alignment="center" tagged-value-vertical-alignment="center" stereotype-color="#FF1E1E1E" stereotype-font="Verdana;9;I" stereotype-horizontal-alignment="center" stereotype-vertical-alignment="center">
+            <style style-name="Custom Style" shadow-type="smooth" shadow-offset="1,1" shadow-visible="true" shadow-color="#3C000000" gloss-effect="true" wrap-name-text="true" wrap-other-text="true" padding="1" glow-color="#FFFFFFFF" name-color="#FF000000" name-font="Verdana;10;B" name-horizontal-alignment="center" name-vertical-alignment="center" part-header-color="#FF1E1E1E" part-header-font="Verdana;9;I" part-header-horizontal-alignment="center" part-header-vertical-alignment="center" text-color="#FF000000" text-font="Verdana;9;" text-horizontal-alignment="left" text-vertical-alignment="center" tagged-value-color="#FF1E1E1E" tagged-value-font="Verdana;9;I" tagged-value-horizontal-alignment="center" tagged-value-vertical-alignment="center" stereotype-color="#FF1E1E1E" stereotype-font="Verdana;9;I" stereotype-horizontal-alignment="center" stereotype-vertical-alignment="center">
               <background type="vertical-linear" color="#FFD3D3D3" color2="#FFFFFFFF" />
               <border color="#FF000000" width="1" dash-style="Solid" />
               <alternate-styles>
@@ -2436,12 +2410,10 @@
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di443244492368836265" cid="C004" type="class" name="RoomBooking" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:54:37">
+          <item id="di443244492368836265" cid="C004" type="class" name="RoomBooking" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:54:37">
             <stereotypes />
             <tagged-values />
             <documentation>
@@ -2476,12 +2448,10 @@
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di722988836866898742" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:56">
+          <item id="di722988836866898742" cid="REL001" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:56">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2492,7 +2462,7 @@
               <end-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di155765385576434980" cid="REL002" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:59">
+          <item id="di155765385576434980" cid="REL002" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:59">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2503,7 +2473,7 @@
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di194095871356687913" cid="REL003" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:56:02">
+          <item id="di194095871356687913" cid="REL003" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:56:02">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2514,7 +2484,7 @@
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di223330207843463569" cid="REL005" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 14:22:28">
+          <item id="di223330207843463569" cid="REL005" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 14:22:28">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2525,7 +2495,7 @@
               <end-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di515091346111974293" cid="C005" type="class" name="Guest_Room" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:23:51">
+          <item id="di515091346111974293" cid="C005" type="class" name="Guest_Room" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:23:51">
             <stereotypes />
             <tagged-values />
             <documentation>
@@ -2560,12 +2530,10 @@
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di853931578203673599" cid="REL007" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:07">
+          <item id="di853931578203673599" cid="REL007" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:07">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2576,7 +2544,7 @@
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di354453771949559159" cid="REL008" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:17">
+          <item id="di354453771949559159" cid="REL008" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:17">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2594,8 +2562,7 @@
             <drawing-text>
               <text>A RoomBooking has only one room and one reservation.
 
-The Room table contains every room for rent.
-</text>
+The Room table contains every room for rent.</text>
             </drawing-text>
             <style class="default" />
           </item>
@@ -2633,7 +2600,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <style class="default" />
           </item>
           <item id="di853931578203673599" iid="8edc5d892ff7459fb0b56bd630611639" creation-date="03/24/2014 15:24:07" order-index="20" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="508" y1="146" x2="634" y2="146" start-border-pos="0.37559481316212" end-border-pos="0.87440518683788">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="508" y1="146" x2="634" y2="146" start-border-pos="0.375594818155179" end-border-pos="0.87440518683788">
               <points>
                 <point x="508" y="146" />
                 <point x="634" y="146" />
@@ -2667,7 +2634,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di223330207843463569" iid="ca2714e23cfc4669b5f19d10eb83bc4f" creation-date="03/24/2014 14:22:28" order-index="18" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="329" y1="424" x2="212" y2="424" start-border-pos="0.874391405994355" end-border-pos="0.375608594005645">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="329" y1="424" x2="212" y2="424" start-border-pos="0.874391405994355" end-border-pos="0.375608633950119">
               <points>
                 <point x="329" y="424" />
                 <point x="212" y="424" />
@@ -2756,12 +2723,12 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di807585462612773080" to="di520770281723981911">
+            <relation from="di600328308948841443" to="di173535035962029268">
               <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di464479611136447098" cid="REL009" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:13:56">
+          <item id="di464479611136447098" cid="REL009" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:13:56">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2772,7 +2739,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di957366192783059096" cid="C006" type="class" name="Instructor_Activity - Type" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:04">
+          <item id="di957366192783059096" cid="C006" type="class" name="Instructor_Activity - Type" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:04">
             <stereotypes />
             <tagged-values />
             <documentation>
@@ -2807,12 +2774,10 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di465100132516501389" cid="REL010" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:35">
+          <item id="di465100132516501389" cid="REL010" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:35">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2823,7 +2788,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di747800001210404012" cid="REL011" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:37">
+          <item id="di747800001210404012" cid="REL011" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:37">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2834,7 +2799,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di287539697179049421" cid="REL012" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:41">
+          <item id="di287539697179049421" cid="REL012" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:41">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2845,7 +2810,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di477036913566354798" cid="REL013" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:47">
+          <item id="di477036913566354798" cid="REL013" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 16:18:47">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -2867,7 +2832,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di465100132516501389" iid="95becfcca09f40edac81d11381ab804f" creation-date="03/24/2014 16:18:35" order-index="8" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="303" y1="695" x2="673" y2="695" start-border-pos="0.375537105553992" end-border-pos="0.87446287156465">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="303" y1="695" x2="673" y2="695" start-border-pos="0.375537094064155" end-border-pos="0.874462860173133">
               <points>
                 <point x="303" y="695" />
                 <point x="673" y="695" />
@@ -2881,7 +2846,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di747800001210404012" iid="7f48ec4f1b534515b90a1cf0b8bae3e8" creation-date="03/24/2014 16:18:37" order-index="9" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="760" y1="514" x2="760" y2="611" start-border-pos="0.625475288811028" end-border-pos="0.124524689432142">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="760" y1="514" x2="760" y2="611" start-border-pos="0.625475310650588" end-border-pos="0.124524711106245">
               <points>
                 <point x="760" y="514" />
                 <point x="760" y="611" />
@@ -2891,7 +2856,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,13" />
           </item>
           <item id="di287539697179049421" iid="a0de7406c97f4e809135d583a515b3d1" creation-date="03/24/2014 16:18:41" order-index="10" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="215" y1="611" x2="215" y2="514" start-border-pos="0.124524689432142" end-border-pos="0.625475299730807">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="215" y1="611" x2="215" y2="514" start-border-pos="0.124524689349412" end-border-pos="0.625475310650588">
               <points>
                 <point x="215" y="611" />
                 <point x="215" y="514" />
@@ -2901,7 +2866,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di299383329739460143" iid="c1db0639e77a4528b54daf84740f7a7d" creation-date="03/21/2014 23:09:10" order-index="5" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="673" y1="431" x2="578" y2="431" start-border-pos="0.874587529202333" end-border-pos="0.375412447916309">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="673" y1="431" x2="578" y2="431" start-border-pos="0.87458760932483" end-border-pos="0.37541239067517">
               <points>
                 <point x="673" y="431" />
                 <point x="578" y="431" />
@@ -2915,7 +2880,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di477036913566354798" iid="002fdef946f04d178ba07d6329002731" creation-date="03/24/2014 16:18:47" order-index="11" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="403" y1="431" x2="303" y2="431" start-border-pos="0.874587529202333" end-border-pos="0.375412459394739">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="403" y1="431" x2="303" y2="431" start-border-pos="0.87458760932483" end-border-pos="0.37541239067517">
               <points>
                 <point x="403" y="431" />
                 <point x="303" y="431" />
@@ -2929,7 +2894,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di464479611136447098" iid="3b4b609f842b4397b2b1a65d135bc80c" creation-date="03/24/2014 16:13:56" order-index="6" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="215" y1="347" x2="216" y2="256" start-border-pos="0.124987141712858" end-border-pos="0.625201937408942">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="215" y1="347" x2="216" y2="256" start-border-pos="0.124987130833322" end-border-pos="0.62520190453837">
               <points>
                 <point x="215" y="347" />
                 <point x="216" y="256" />
@@ -3052,7 +3017,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di735056685278227493" to="di355997250954768592">
+            <relation from="di535099569211803468" to="di811729227452255896">
               <start-role id="" name="" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -3063,7 +3028,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di356405478408572245" to="di177141569821006055">
+            <relation from="di577597270538196805" to="di727687255173840248">
               <start-role id="" name="" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -3203,7 +3168,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di757747685504944216" to="di356405478408572245">
+            <relation from="di635315472388769199" to="di577597270538196805">
               <start-role id="" name="" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -3214,18 +3179,18 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di735056685278227493" to="di356405478408572245">
+            <relation from="di535099569211803468" to="di577597270538196805">
               <start-role id="" name="" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di574446967886882607" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:56">
+          <item id="di574446967886882607" cid="REL001" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:56">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di161769519509315778" to="di646110226767061952">
+            <relation from="di339256003621163200" to="di904368024646289395">
               <start-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -3257,7 +3222,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             </cooperation>
             <associated-diagrams />
             <owned-items />
-            <style style-name="Default" shadow-type="smooth" shadow-offset="1,1" shadow-visible="true" shadow-color="#3C000000" gloss-effect="true" wrap-name-text="true" wrap-other-text="true" padding="1" glow-color="#FFFFFFFF" name-color="#FF000000" name-font="Verdana;10;B" name-horizontal-alignment="center" name-vertical-alignment="center" part-header-color="#FF1E1E1E" part-header-font="Verdana;9;I" part-header-horizontal-alignment="center" part-header-vertical-alignment="center" text-color="#FF000000" text-font="Verdana;9;" text-horizontal-alignment="left" text-vertical-alignment="center" tagged-value-color="#FF1E1E1E" tagged-value-font="Verdana;9;I" tagged-value-horizontal-alignment="center" tagged-value-vertical-alignment="center" stereotype-color="#FF1E1E1E" stereotype-font="Verdana;9;I" stereotype-horizontal-alignment="center" stereotype-vertical-alignment="center">
+            <style style-name="Custom Style" shadow-type="smooth" shadow-offset="1,1" shadow-visible="true" shadow-color="#3C000000" gloss-effect="true" wrap-name-text="true" wrap-other-text="true" padding="1" glow-color="#FFFFFFFF" name-color="#FF000000" name-font="Verdana;10;B" name-horizontal-alignment="center" name-vertical-alignment="center" part-header-color="#FF1E1E1E" part-header-font="Verdana;9;I" part-header-horizontal-alignment="center" part-header-vertical-alignment="center" text-color="#FF000000" text-font="Verdana;9;" text-horizontal-alignment="left" text-vertical-alignment="center" tagged-value-color="#FF1E1E1E" tagged-value-font="Verdana;9;I" tagged-value-horizontal-alignment="center" tagged-value-vertical-alignment="center" stereotype-color="#FF1E1E1E" stereotype-font="Verdana;9;I" stereotype-horizontal-alignment="center" stereotype-vertical-alignment="center">
               <background type="vertical-linear" color="#FFD3D3D3" color2="#FFFFFFFF" />
               <border color="#FF000000" width="1" dash-style="Solid" />
               <alternate-styles>
@@ -3278,45 +3243,43 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di697379993803329300" cid="REL007" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:07">
+          <item id="di697379993803329300" cid="REL007" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:07">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di161769519509315778" to="di515091346111974293">
+            <relation from="di339256003621163200" to="di828884501605630656">
               <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di606883480976735707" cid="REL008" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:17">
+          <item id="di606883480976735707" cid="REL008" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:24:17">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di231198011425762034" to="di515091346111974293">
+            <relation from="di333198482941637243" to="di828884501605630656">
               <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di988809557786956611" cid="REL005" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 14:22:28">
+          <item id="di988809557786956611" cid="REL005" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 14:22:28">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di646110226767061952" to="di318791957617866771">
+            <relation from="di904368024646289395" to="di674915194527116445">
               <start-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di828884501605630656" cid="C005" type="class" name="Guest_Room" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:23:51">
+          <item id="di828884501605630656" cid="C005" type="class" name="Guest_Room" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 15:23:51">
             <stereotypes />
             <tagged-values />
             <documentation>
@@ -3351,23 +3314,21 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di732941393347863018" cid="REL002" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:59">
+          <item id="di732941393347863018" cid="REL002" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:55:59">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di646110226767061952" to="di443244492368836265">
+            <relation from="di904368024646289395" to="di287845158838997888">
               <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di287845158838997888" cid="C004" type="class" name="RoomBooking" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:54:37">
+          <item id="di287845158838997888" cid="C004" type="class" name="RoomBooking" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:54:37">
             <stereotypes />
             <tagged-values />
             <documentation>
@@ -3402,18 +3363,16 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             </attributes>
             <operations />
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di595921935854269919" cid="REL003" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:56:02">
+          <item id="di595921935854269919" cid="REL003" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/24/2014 13:56:02">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di231198011425762034" to="di443244492368836265">
+            <relation from="di333198482941637243" to="di287845158838997888">
               <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -3424,31 +3383,31 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <layout ax="563" ay="-56" awidth="140" aheight="160" x="563" y="-56" width="140" height="160" angle="0" />
             <class />
           </item>
-          <item id="" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
+          <item id="di347130415400630368" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
             <layout ax="-13" ay="223" awidth="1916" aheight="2" x="-13" y="223" width="1877" height="2" angle="0" />
             <drawing-line start-point="-13,223" end-point="1902,224" />
             <style class="default" />
           </item>
-          <item id="di394077671761467233" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di137757989924077903" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="-6" ay="898" awidth="1904" aheight="2" x="-6" y="898" width="1931" height="2" angle="0" />
             <drawing-line start-point="-6,898" end-point="1897,899" />
             <style class="default" />
           </item>
-          <item id="di574773514884686770" iid="e7008a6808d94d95912b7419fffaf7a8" name="Element1" creation-date="03/22/2014 01:26:45" order-index="17" type="drawing-art-text">
+          <item id="di876801010737226759" iid="e7008a6808d94d95912b7419fffaf7a8" name="Element1" creation-date="03/22/2014 01:26:45" order-index="17" type="drawing-art-text">
             <layout ax="-13" ay="250" awidth="159" aheight="33" x="-13" y="250" width="159" height="33" angle="0" />
             <drawing-art-text>
               <text>Domain Layer</text>
             </drawing-art-text>
             <style class="default" />
           </item>
-          <item id="di807657750625842527" iid="d128e852d42342d1baee774098d67e70" name="Element2" creation-date="03/22/2014 01:27:05" order-index="18" type="drawing-art-text">
+          <item id="di828329624576110361" iid="d128e852d42342d1baee774098d67e70" name="Element2" creation-date="03/22/2014 01:27:05" order-index="18" type="drawing-art-text">
             <layout ax="-13" ay="-97" awidth="231" aheight="41" x="-13" y="-97" width="231" height="41" angle="0" />
             <drawing-art-text>
               <text>Presentation Layer</text>
             </drawing-art-text>
             <style class="default" />
           </item>
-          <item id="di766181149935276722" iid="c4293671a28a40c7a22d7588475505b4" name="Element3" creation-date="03/22/2014 01:28:03" order-index="19" type="drawing-art-text">
+          <item id="di205737799748370144" iid="c4293671a28a40c7a22d7588475505b4" name="Element3" creation-date="03/22/2014 01:28:03" order-index="19" type="drawing-art-text">
             <layout ax="-6" ay="925" awidth="220" aheight="40" x="-6" y="925" width="220" height="40" angle="0" />
             <drawing-art-text>
               <text>Datasource Layer</text>
@@ -3496,7 +3455,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di372747494623275069" iid="b420bfe54f5d47039f3b1098ac87885f" creation-date="03/24/2014 11:06:03" order-index="27" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="806" y1="1266" x2="696" y2="1170" start-border-pos="0.970842964097046" end-border-pos="0.472516183506896">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="806" y1="1266" x2="696" y2="1170" start-border-pos="0.970842964097046" end-border-pos="0.472516769865841">
               <points>
                 <point x="806" y="1266" />
                 <point x="696" y="1170" />
@@ -3526,7 +3485,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di606883480976735707" iid="bcfae1f29d5f44cdab9038c65b503242" creation-date="03/24/2014 15:24:17" order-index="21" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1524" y1="648" x2="1525" y2="523" start-border-pos="0.124983711476706" end-border-pos="0.624918080371662">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1524" y1="648" x2="1525" y2="523" start-border-pos="0.124984085925518" end-border-pos="0.624918045145363">
               <points>
                 <point x="1524" y="648" />
                 <point x="1525" y="523" />
