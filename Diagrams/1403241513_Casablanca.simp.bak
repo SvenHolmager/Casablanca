@@ -1013,6 +1013,83 @@
             <source-codes />
           </template-parameters>
         </item>
+        <item id="di173535035962029268" cid="C013" type="class" name="Activity" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:06:50">
+          <stereotypes />
+          <tagged-values />
+          <documentation>
+            <text>
+              <styles>
+                <style name="S1" font-name="Verdana" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                  <text>
+                    <solid-brush color="#FF000000" />
+                  </text>
+                </style>
+              </styles>
+              <content>
+                <paragraph line-spacing="1">
+                  <p s="S1">
+                    <t />
+                  </p>
+                </paragraph>
+              </content>
+            </text>
+          </documentation>
+          <cooperation>
+            <participants />
+            <comments />
+          </cooperation>
+          <associated-diagrams />
+          <owned-items />
+          <style class="default" />
+          <attributes>
+            <attribute id="aabb5c06cfe6f485e993df4736c55c9c9815" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
+            <attribute id="a5f2ae06cc01a4bc982881de294a207e9722" name="ActivityTypeId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
+            <attribute id="a9cafc78fc7e74f6fa0293a06511b87ae925" name="InstructorId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
+            <attribute id="a17aa537c315c4ca1acab2be670980167205" name="Name" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
+          </attributes>
+          <operations />
+          <template-parameters>
+            <source-codes />
+          </template-parameters>
+        </item>
+        <item id="di600328308948841443" cid="C017" type="class" name="ActivityType" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:08:28">
+          <stereotypes />
+          <tagged-values />
+          <documentation>
+            <text>
+              <styles>
+                <style name="S1" font-name="Verdana" font-size="12" font-bold="false" font-italic="false" font-underline="false" font-strikeout="false">
+                  <text>
+                    <solid-brush color="#FF000000" />
+                  </text>
+                </style>
+              </styles>
+              <content>
+                <paragraph line-spacing="1">
+                  <p s="S1">
+                    <t />
+                  </p>
+                </paragraph>
+              </content>
+            </text>
+          </documentation>
+          <cooperation>
+            <participants />
+            <comments />
+          </cooperation>
+          <associated-diagrams />
+          <owned-items />
+          <style class="default" />
+          <attributes>
+            <attribute id="ac81d2f36face41d2876814d41bc9ccd7930" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
+            <attribute id="ac649ca3c6e88438fae82a99f0201516d21" name="Name" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
+            <attribute id="af2a1e459fffc4d1c859c5ef6a423a2e1985" name="BookingsNeeded" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
+          </attributes>
+          <operations />
+          <template-parameters>
+            <source-codes />
+          </template-parameters>
+        </item>
       </abstract-items>
       <sub-models />
       <diagram type="uml-class" id="p197143621453587026" name="JavaClassArchitecture" order-index="1" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="true" show-relationship-texts="true" auto-routed-paths="false">
@@ -1985,7 +2062,7 @@
           </item>
         </layer>
       </diagram>
-      <diagram type="uml-class" id="p555096672388995986" name="SQLTables2" order-index="8" overview-order-index="6" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="true" show-relationship-texts="true" auto-routed-paths="false">
+      <diagram type="uml-class" id="p555096672388995986" name="SQLTables_Room" order-index="8" overview-order-index="6" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="true" show-relationship-texts="true" auto-routed-paths="false">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -2213,6 +2290,57 @@
           </item>
           <item id="di181038182912784626" iid="c8a8864cc7a94e88b5d813b0525625dc" creation-date="03/21/2014 22:55:16" order-index="3" type="entity">
             <layout ax="648" ay="637.3297" awidth="166" aheight="191" x="648" y="637.3297" width="166" height="191" angle="0" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p381296095574103919" name="SQLTables_Activity" order-index="9" overview-order-index="7" show-id="false" show-name="true" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="true" show-relationship-texts="true" auto-routed-paths="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>03/24/2014 15:10:58</creation-date>
+          <change-date>03/24/2014 15:12:22</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <tagged-values />
+        <abstract-items>
+          <item id="di299383329739460143" cid="REL022" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 23:09:10">
+            <stereotypes />
+            <tagged-values />
+            <associated-diagrams />
+            <owned-items />
+            <style class="default" />
+            <relation from="di807585462612773080" to="di520770281723981911">
+              <start-role id="" name="" multiplicity="1" navigability="" association-type="association" visibility="private" />
+              <end-role id="" name="" multiplicity="*" navigability="" association-type="association" visibility="private" />
+            </relation>
+          </item>
+        </abstract-items>
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di173535035962029268" iid="bd4b7639d1af48cf8b00fe7088881bfc" creation-date="03/21/2014 23:06:50" order-index="2" type="entity">
+            <layout ax="363" ay="453" awidth="180" aheight="160" x="363" y="453" width="180" height="160" angle="0" />
+            <class />
+          </item>
+          <item id="di299383329739460143" iid="c1db0639e77a4528b54daf84740f7a7d" creation-date="03/21/2014 23:09:10" order-index="5" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="251" y1="533" x2="363" y2="533" start-border-pos="0.375" end-border-pos="0.875">
+              <points>
+                <point x="251" y="533" />
+                <point x="363" y="533" />
+              </points>
+            </layout>
+            <relation from="di600328308948841443" from-iid="eec1aca9ab3d4b9a90eb2a383c3fbb59" to="di173535035962029268" to-iid="bd4b7639d1af48cf8b00fe7088881bfc" />
+            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
+          </item>
+          <item id="di600328308948841443" iid="eec1aca9ab3d4b9a90eb2a383c3fbb59" creation-date="03/21/2014 23:08:28" order-index="4" type="entity">
+            <layout ax="71" ay="453" awidth="180" aheight="160" x="71" y="453" width="180" height="160" angle="0" />
             <class />
           </item>
         </layer>
