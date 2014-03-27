@@ -3635,7 +3635,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <attribute id="ad541d44672dd4cbba74bfaee06fac775677" name="id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a23d5c690ca6440fd9a3760797df9c6bf886" name="roomBookingId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a8599392ca56d4dccb8eba7b5bdfac95c562" name="firstName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
-              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="familyName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
+              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="lastName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
             </attributes>
             <operations />
             <template-parameters>
@@ -3919,7 +3919,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <attribute id="ad541d44672dd4cbba74bfaee06fac775677" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a23d5c690ca6440fd9a3760797df9c6bf886" name="RoomBookingId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a8599392ca56d4dccb8eba7b5bdfac95c562" name="FirstName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
-              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="FamilyName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
+              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="LastName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
             </attributes>
             <operations />
             <template-parameters>
