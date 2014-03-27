@@ -29,4 +29,7 @@ public class DBFacade {
         return instance;
     }
 	  //== Singleton end
-}
+
+    public RoomBooking getRoomBooking(int Id) {
+
+    }
