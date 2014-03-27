@@ -8,7 +8,7 @@ package domain;
  *
  * @author nickhelmark
  */
-public class Guest
+public class PayingGuest
 {
     private int ID;
     private String firstName;
@@ -21,7 +21,7 @@ public class Guest
     private String checkInDate;
     private int NoOfNights;
 
-    public Guest(int ID, String firstName, String familyName, String address, String country, String phone, String email, String travelAgency, String checkInDate, int NoOfNights)
+    public PayingGuest(int ID, String firstName, String familyName, String address, String country, String phone, String email, String travelAgency, String checkInDate, int NoOfNights)
     {
         this.ID = ID;
         this.firstName = firstName;

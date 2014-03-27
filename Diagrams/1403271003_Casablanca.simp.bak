@@ -3318,7 +3318,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
           </authors>
           <description />
           <creation-date>03/24/2014 16:31:28</creation-date>
-          <change-date>03/25/2014 18:38:30</change-date>
+          <change-date>03/27/2014 10:01:35</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -3581,7 +3581,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di964866821757137301" cid="REL002" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/25/2014 18:36:45">
+          <item id="di154156865227223207" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/27/2014 10:01:25">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -3592,13 +3592,13 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di332293206676400915" cid="REL005" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/25/2014 18:37:20">
+          <item id="di770640433439227689" cid="REL003" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/27/2014 10:01:35">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
             <owned-items />
             <style class="default" />
-            <relation from="di535099569211803468" to="di164685003242627999">
+            <relation from="di535099569211803468" to="di357440996262491825">
               <start-role id="" name="" navigability="" association-type="association" visibility="private" />
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
@@ -3793,16 +3793,6 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <relation from="di504069131615049672" from-iid="bcd067f754134688a28e1440f6c7897f" to="di942734058831786533" to-iid="a463938fe5664afe9a4b10e84c1cbfdc" />
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
-          <item id="di964866821757137301" iid="b6853de7b3bf4748a5bd9c63b8a4b5c4" creation-date="03/25/2014 18:36:45" order-index="29" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="806" y1="926" x2="927" y2="925" start-border-pos="0.37419867264597" end-border-pos="0.874963619834498">
-              <points>
-                <point x="806" y="926" />
-                <point x="927" y="925" />
-              </points>
-            </layout>
-            <relation from="di357440996262491825" from-iid="7e0e9e5ca64a4d0c98272df9c9b489fe" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
-            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
-          </item>
           <item id="di134577091492973183" iid="e40b8b061294486bbc10bf5b17e720ae" creation-date="03/25/2014 18:36:48" order-index="30" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="744" x2="1117" y2="644" start-border-pos="0.927003120157539" end-border-pos="0.424649151888761">
               <points>
@@ -3811,16 +3801,6 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               </points>
             </layout>
             <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di942734058831786533" to-iid="a463938fe5664afe9a4b10e84c1cbfdc" />
-            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
-          </item>
-          <item id="di332293206676400915" iid="615e92c1298644188d3f4762559bc580" creation-date="03/25/2014 18:37:20" order-index="31" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="808" x2="1166" y2="883" start-border-pos="0.827884498438687" end-border-pos="0.319581684313322">
-              <points>
-                <point x="1384" y="808" />
-                <point x="1166" y="883" />
-              </points>
-            </layout>
-            <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di537270748965030066" iid="a9ba0db043d446c3a547d99ac73b1b03" creation-date="03/25/2014 18:38:27" order-index="32" type="relation">
@@ -3834,10 +3814,10 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di751267499831662429" iid="6a66f4ffebb74faf8c8704ab8a7e27b9" creation-date="03/25/2014 18:38:30" order-index="33" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1510" y1="697" x2="1621" y2="473" start-border-pos="0.180746456757967" end-border-pos="0.687038482829211">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1511" y1="697" x2="1623" y2="473" start-border-pos="0.181319033271227" end-border-pos="0.68901200727983">
               <points>
-                <point x="1510" y="697" />
-                <point x="1621" y="473" />
+                <point x="1511" y="697" />
+                <point x="1623" y="473" />
               </points>
             </layout>
             <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di123327717315978165" to-iid="987091f5ce804863b8124a5542d929e9" />
@@ -3856,16 +3836,36 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di123327717315978165" iid="987091f5ce804863b8124a5542d929e9" creation-date="03/25/2014 11:34:43" order-index="20" type="entity">
-            <layout ax="1574" ay="283" awidth="187" aheight="190" x="1574" y="283" width="187" height="190" angle="0" />
+            <layout ax="1577" ay="283" awidth="187" aheight="190" x="1577" y="283" width="187" height="190" angle="0" />
             <class />
           </item>
           <item id="di357440996262491825" iid="7e0e9e5ca64a4d0c98272df9c9b489fe" creation-date="03/21/2014 22:55:16" order-index="3" type="entity">
-            <layout ax="619.1483" ay="831.3297" awidth="186.9999" aheight="190" x="619.1483" y="831.3297" width="186.9999" height="190" angle="0" />
+            <layout ax="930.0001" ay="815.3297" awidth="186.9999" aheight="190" x="930.0001" y="815.3297" width="186.9999" height="190" angle="0" />
             <class />
           </item>
           <item id="di164685003242627999" iid="8aa49b5d1a5b48dba71b9913da46b197" creation-date="03/21/2014 22:54:58" order-index="2" type="entity">
-            <layout ax="927" ay="830.3297" awidth="239" aheight="190" x="927" y="830.3297" width="239" height="190" angle="0" />
+            <layout ax="619.1482" ay="815.3297" awidth="187" aheight="190" x="619.1482" y="815.3297" width="187" height="190" angle="0" />
             <class />
+          </item>
+          <item id="di154156865227223207" iid="22014a4c954f4e198a7cf337d728a13a" creation-date="03/27/2014 10:01:25" order-index="34" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="930" y1="910" x2="806" y2="910" start-border-pos="0.875433831465872" end-border-pos="0.374566168534128">
+              <points>
+                <point x="930" y="910" />
+                <point x="806" y="910" />
+              </points>
+            </layout>
+            <relation from="di357440996262491825" from-iid="7e0e9e5ca64a4d0c98272df9c9b489fe" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
+            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
+          </item>
+          <item id="di770640433439227689" iid="0d4226809b214988b2432c0b1ad43b11" creation-date="03/27/2014 10:01:35" order-index="35" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="803" x2="1117" y2="882" start-border-pos="0.834824268849856" end-border-pos="0.338156770405016">
+              <points>
+                <point x="1384" y="803" />
+                <point x="1117" y="882" />
+              </points>
+            </layout>
+            <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di357440996262491825" to-iid="7e0e9e5ca64a4d0c98272df9c9b489fe" />
+            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
         </layer>
       </diagram>
