@@ -2359,7 +2359,7 @@
             <drawing-line start-point="-13,223" end-point="1357,224" />
             <style class="default" />
           </item>
-          <item id="di941626102354360433" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di967142451300919445" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="-5" ay="792" awidth="1364" aheight="2" x="-5" y="792" width="1364" height="2" angle="0" />
             <drawing-line start-point="-5,792" end-point="1358,793" />
             <style class="default" />
@@ -3318,7 +3318,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
           </authors>
           <description />
           <creation-date>03/24/2014 16:31:28</creation-date>
-          <change-date>03/25/2014 18:38:30</change-date>
+          <change-date>03/27/2014 10:21:26</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -3581,7 +3581,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di964866821757137301" cid="REL002" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/25/2014 18:36:45">
+          <item id="di533705783565545941" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/27/2014 10:21:23">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -3592,7 +3592,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di332293206676400915" cid="REL005" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/25/2014 18:37:20">
+          <item id="di731977416780179820" cid="REL002" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/27/2014 10:21:26">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -3635,7 +3635,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <attribute id="ad541d44672dd4cbba74bfaee06fac775677" name="id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a23d5c690ca6440fd9a3760797df9c6bf886" name="roomBookingId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a8599392ca56d4dccb8eba7b5bdfac95c562" name="firstName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
-              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="lastName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
+              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="familyName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
             </attributes>
             <operations />
             <template-parameters>
@@ -3692,12 +3692,12 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <layout ax="1383.914" ay="-56" awidth="175.0862" aheight="160" x="1383.914" y="-56" width="175.0862" height="160" angle="0" />
             <class />
           </item>
-          <item id="di891549424338726818" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
+          <item id="di741399507198906400" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
             <layout ax="52" ay="223" awidth="2691" aheight="2" x="53" y="223" width="2695" height="2" angle="0" />
             <drawing-line start-point="52,223" end-point="2742,224" />
             <style class="default" />
           </item>
-          <item id="di564610891389850617" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di213030359113267271" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="53" ay="1198" awidth="2695" aheight="2" x="94" y="898" width="2649" height="2" angle="0" />
             <drawing-line start-point="53,1198" end-point="2747,1199" />
             <style class="default" />
@@ -3793,16 +3793,6 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <relation from="di504069131615049672" from-iid="bcd067f754134688a28e1440f6c7897f" to="di942734058831786533" to-iid="a463938fe5664afe9a4b10e84c1cbfdc" />
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
-          <item id="di964866821757137301" iid="b6853de7b3bf4748a5bd9c63b8a4b5c4" creation-date="03/25/2014 18:36:45" order-index="29" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="806" y1="926" x2="927" y2="925" start-border-pos="0.37419867264597" end-border-pos="0.874963619834498">
-              <points>
-                <point x="806" y="926" />
-                <point x="927" y="925" />
-              </points>
-            </layout>
-            <relation from="di357440996262491825" from-iid="7e0e9e5ca64a4d0c98272df9c9b489fe" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
-            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
-          </item>
           <item id="di134577091492973183" iid="e40b8b061294486bbc10bf5b17e720ae" creation-date="03/25/2014 18:36:48" order-index="30" type="relation">
             <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="744" x2="1117" y2="644" start-border-pos="0.927003120157539" end-border-pos="0.424649151888761">
               <points>
@@ -3811,16 +3801,6 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               </points>
             </layout>
             <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di942734058831786533" to-iid="a463938fe5664afe9a4b10e84c1cbfdc" />
-            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
-          </item>
-          <item id="di332293206676400915" iid="615e92c1298644188d3f4762559bc580" creation-date="03/25/2014 18:37:20" order-index="31" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="808" x2="1166" y2="883" start-border-pos="0.827884498438687" end-border-pos="0.319581684313322">
-              <points>
-                <point x="1384" y="808" />
-                <point x="1166" y="883" />
-              </points>
-            </layout>
-            <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di537270748965030066" iid="a9ba0db043d446c3a547d99ac73b1b03" creation-date="03/25/2014 18:38:27" order-index="32" type="relation">
@@ -3860,12 +3840,32 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <class />
           </item>
           <item id="di357440996262491825" iid="7e0e9e5ca64a4d0c98272df9c9b489fe" creation-date="03/21/2014 22:55:16" order-index="3" type="entity">
-            <layout ax="619.1483" ay="831.3297" awidth="186.9999" aheight="190" x="619.1483" y="831.3297" width="186.9999" height="190" angle="0" />
+            <layout ax="619.1482" ay="808.3297" awidth="187" aheight="192" x="619.1482" y="808.3297" width="187" height="192" angle="0" />
             <class />
           </item>
           <item id="di164685003242627999" iid="8aa49b5d1a5b48dba71b9913da46b197" creation-date="03/21/2014 22:54:58" order-index="2" type="entity">
-            <layout ax="927" ay="830.3297" awidth="239" aheight="190" x="927" y="830.3297" width="239" height="190" angle="0" />
+            <layout ax="930" ay="808.3297" awidth="187" aheight="192" x="930" y="808.3297" width="187" height="192" angle="0" />
             <class />
+          </item>
+          <item id="di533705783565545941" iid="169d928a01b841b48f0089bdddcd9d5c" creation-date="03/27/2014 10:21:23" order-index="34" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="806" y1="904" x2="930" y2="904" start-border-pos="0.374570687611898" end-border-pos="0.875429312388102">
+              <points>
+                <point x="806" y="904" />
+                <point x="930" y="904" />
+              </points>
+            </layout>
+            <relation from="di357440996262491825" from-iid="7e0e9e5ca64a4d0c98272df9c9b489fe" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
+            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
+          </item>
+          <item id="di731977416780179820" iid="44fd8c029a9e451381fd1ec16dbc3b92" creation-date="03/27/2014 10:21:26" order-index="35" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="802" x2="1117" y2="878" start-border-pos="0.836661727659418" end-border-pos="0.340166012446086">
+              <points>
+                <point x="1384" y="802" />
+                <point x="1117" y="878" />
+              </points>
+            </layout>
+            <relation from="di535099569211803468" from-iid="4d39cd1520c7457a9ceb7964f551b70e" to="di164685003242627999" to-iid="8aa49b5d1a5b48dba71b9913da46b197" />
+            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
         </layer>
       </diagram>
@@ -3919,7 +3919,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <attribute id="ad541d44672dd4cbba74bfaee06fac775677" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a23d5c690ca6440fd9a3760797df9c6bf886" name="RoomBookingId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
               <attribute id="a8599392ca56d4dccb8eba7b5bdfac95c562" name="FirstName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
-              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="LastName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
+              <attribute id="a6fcdb85581bb4bad8f86b0a63ff38510386" name="FamilyName" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
             </attributes>
             <operations />
             <template-parameters>
