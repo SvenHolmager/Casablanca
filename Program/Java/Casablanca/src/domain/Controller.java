@@ -5,7 +5,7 @@
  */
 package domain;
 
-import dataSource.DBFacade;
+import dataSource.*;
 
 /**
  *
@@ -16,7 +16,6 @@ public class Controller {
     private PayingGuest currentPayingGuest;
     private RoomBooking currentRoomBooking;
     private PayingGuest currentStayingGuest;
-    
     private DBFacade dbf;
 
     //==Singelton start
@@ -33,8 +32,9 @@ public class Controller {
         }
         return c;
     }
-
     //==Singleton end
+    
+    
     public PayingGuest getPayingGuest(int Id) {
         currentPayingGuest = dbf.getPayingGuest(Id);
         return currentPayingGuest;
@@ -75,7 +75,4 @@ public class Controller {
     public StayingGuest getStayingGuest(int Id){
         currentStayingGuest = dbf.getStayingGuest(Id);
         return currentStayingGuest;
-   
-    
-
 }
