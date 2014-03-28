@@ -6,6 +6,7 @@
 package dataSource;
 
 import java.sql.Connection;
+import domain.*;
 
 /**
  *
@@ -13,6 +14,7 @@ import java.sql.Connection;
  */
 public class DBFacade {
 
+    private BookingMapper bm;
     private RoomMapper rm;
     private GuestMapper gm;
     private Connection con;
@@ -21,6 +23,9 @@ public class DBFacade {
     private static DBFacade instance;
 
     private DBFacade() {
+        bm = new BookingMapper();
+        rm = new RoomMapper();
+        gm = new GuestMapper();
         con = new DBConnector().getConnection();  // the connection will be released upon program 
         // termination by the garbage collector		  
     }
@@ -34,21 +39,20 @@ public class DBFacade {
     //== Singleton end
 
     public RoomBooking getRoomBooking(int Id) {
-        return rm.getRoomBooking(Id, con)
+        return bm.getRoomBooking(Id, con);
     }
 
-    public RoomBooking saveRoomBooking(int Id) {
+    public boolean saveRoomBooking(RoomBooking rb) {
 
-        return rm.saveRoomBooking(Id, con)
-    
+        return bm.saveRoomBooking(rb, con);
     }
 
     public PayingGuest getPayingGuest(int Id) {
-        return gm.getPayingGuest(Id, con)
+        return gm.getPayingGuest(Id, con);
     }
 
-    public PayingGuest savePayingGuest(int Id) {
+    public boolean savePayingGuest(PayingGuest pg) {
 
-        return gm.savePayingGuest(Idgit sta)
+        return gm.savePayingGuest(pg, con);
     }
 }

@@ -10,7 +10,7 @@ package domain;
  */
 public class PayingGuest {
 
-    private int ID;
+    private int Id;
     private String firstName;
     private String familyName;
     private String address;
@@ -18,8 +18,8 @@ public class PayingGuest {
     private String phone;
     private String email;
 
-    public PayingGuest(int ID, String firstName, String familyName, String address, String country, String phone, String email) {
-        this.ID = ID;
+    public PayingGuest(int Id, String firstName, String familyName, String address, String country, String phone, String email) {
+        this.Id = Id;
         this.firstName = firstName;
         this.familyName = familyName;
         this.address = address;
@@ -29,12 +29,12 @@ public class PayingGuest {
 
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return Id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
     public String getFirstName() {

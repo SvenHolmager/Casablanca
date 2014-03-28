@@ -45,7 +45,7 @@ public class Controller {
         currentPayingGuest = new PayingGuest(0, firstName, familyName, address, country, phone, email);
 
         //== save and get DB-generated unique ono
-        boolean status = dbf.saveNewPayingGuest(currentPayingGuest);
+        boolean status = dbf.savePayingGuest(currentPayingGuest);
         if (!status) //fail!
         {
             currentPayingGuest = null;
@@ -64,7 +64,7 @@ public class Controller {
         currentRoomBooking = new RoomBooking(0, PayingGuestId, RoomId, PaymentStatusId, TravelAgency, CheckIn, CheckOut);
 
         //== save and get DB-generated unique ono
-        boolean status = dbf.saveNewRoomBooking(currentPayingGuest);
+        boolean status = dbf.saveRoomBooking(currentRoomBooking);
         if (!status) //fail!
         {
             currentPayingGuest = null;
