@@ -13,8 +13,9 @@ import java.sql.Connection;
  */
 public class DBFacade {
 
+    private Connection con;
+
     //== Singleton start
-    private static Connection con;
     private static DBFacade instance;
 
     private DBFacade() {
@@ -28,8 +29,23 @@ public class DBFacade {
         }
         return instance;
     }
-	  //== Singleton end
+    //== Singleton end
 
     public RoomBooking getRoomBooking(int Id) {
+        return rm.getRoomBooking(Id, con)
+    }
 
+    public RoomBooking saveRoomBooking(int Id) {
+
+        return rm.saveRoomBooking(Id, con)
+    
+    }
+
+    public PayingGuest getPayingGuest(int Id) {
+        return gm.getPayingGuest(Id, con)
+    }
+
+    public PayingGuest savePayingGuest(int Id) {
+
+        return gm.savePayingGuest(Idgit sta)
     }
