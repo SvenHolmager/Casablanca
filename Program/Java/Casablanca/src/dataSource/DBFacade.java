@@ -13,6 +13,8 @@ import java.sql.Connection;
  */
 public class DBFacade {
 
+    private RoomMapper rm;
+    private GuestMapper gm;
     private Connection con;
 
     //== Singleton start
@@ -49,3 +51,4 @@ public class DBFacade {
 
         return gm.savePayingGuest(Idgit sta)
     }
+}
