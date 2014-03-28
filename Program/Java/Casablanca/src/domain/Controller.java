@@ -33,8 +33,7 @@ public class Controller {
         return c;
     }
     //==Singleton end
-    
-    
+
     public PayingGuest getPayingGuest(int Id) {
         currentPayingGuest = dbf.getPayingGuest(Id);
         return currentPayingGuest;
@@ -71,8 +70,9 @@ public class Controller {
         }
         return currentRoomBooking;
     }
-    
-    public StayingGuest getStayingGuest(int Id){
-        currentStayingGuest = dbf.getStayingGuest(Id);
-        return currentStayingGuest;
+//
+//    public StayingGuest getStayingGuest(int Id) {
+//        currentStayingGuest = dbf.getStayingGuest(Id);
+//        return currentStayingGuest;
+//    }
 }
