@@ -155,9 +155,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Register"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegisterActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelRegistrationForm">
       <Properties>
@@ -184,7 +181,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldFirstName">
+        <Component class="javax.swing.JTextPane" name="jTextPane1">
         </Component>
       </SubComponents>
     </Container>
@@ -195,7 +192,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldFamilyName">
+        <Component class="javax.swing.JTextPane" name="jTextPane2">
         </Component>
       </SubComponents>
     </Container>
@@ -211,7 +208,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldPhone">
+        <Component class="javax.swing.JTextPane" name="jTextPane3">
         </Component>
       </SubComponents>
     </Container>
@@ -232,7 +229,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldAddress">
+        <Component class="javax.swing.JTextPane" name="jTextPane4">
         </Component>
       </SubComponents>
     </Container>
@@ -243,7 +240,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldTravelAgency">
+        <Component class="javax.swing.JTextPane" name="jTextPane5">
         </Component>
       </SubComponents>
     </Container>
@@ -259,7 +256,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldEmail">
+        <Component class="javax.swing.JTextPane" name="jTextPane6">
         </Component>
       </SubComponents>
     </Container>
@@ -275,7 +272,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldCountry">
+        <Component class="javax.swing.JTextPane" name="jTextPane7">
         </Component>
       </SubComponents>
     </Container>
@@ -302,7 +299,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="JTextFieldApartmentId">
+        <Component class="javax.swing.JTextPane" name="jTextPane8">
         </Component>
       </SubComponents>
     </Container>

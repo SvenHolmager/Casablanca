@@ -2361,7 +2361,7 @@
             <drawing-line start-point="-13,223" end-point="1357,224" />
             <style class="default" />
           </item>
-          <item id="di836015588918724068" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di114538428913534950" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="-5" ay="792" awidth="1364" aheight="2" x="-5" y="792" width="1364" height="2" angle="0" />
             <drawing-line start-point="-5,792" end-point="1358,793" />
             <style class="default" />
@@ -3688,7 +3688,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di822815957510498574" cid="C001" type="class" name="RoomMapper" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/28/2014 10:45:18">
+          <item id="di822815957510498574" cid="C001" type="class" name="RoomMapper" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/28/2014 10:45:18">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -3700,7 +3700,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di123242804139091739" cid="REL001" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/28/2014 10:45:32">
+          <item id="di123242804139091739" cid="REL001" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/28/2014 10:45:32">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -3711,7 +3711,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
               <end-role id="" name="" navigability="" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di496364140346012154" cid="REL002" type="relationship" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/28/2014 10:45:47">
+          <item id="di496364140346012154" cid="REL002" type="relationship" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/28/2014 10:45:47">
             <stereotypes />
             <tagged-values />
             <associated-diagrams />
@@ -3728,12 +3728,12 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <layout ax="1383.914" ay="-56" awidth="175.0862" aheight="160" x="1383.914" y="-56" width="175.0862" height="160" angle="0" />
             <class />
           </item>
-          <item id="di785938910903090453" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
+          <item id="di964461749897901336" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
             <layout ax="52" ay="223" awidth="2691" aheight="2" x="53" y="223" width="2695" height="2" angle="0" />
             <drawing-line start-point="52,223" end-point="2742,224" />
             <style class="default" />
           </item>
-          <item id="di954506174816792752" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di588574404691239645" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="53" ay="1198" awidth="2695" aheight="2" x="94" y="898" width="2649" height="2" angle="0" />
             <drawing-line start-point="53,1198" end-point="2747,1199" />
             <style class="default" />
@@ -3918,7 +3918,7 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di496364140346012154" iid="863d3fd4c51e4b5eacdd8a23338d1abc" creation-date="03/28/2014 10:45:47" order-index="38" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="1487" x2="1242" y2="1636" start-border-pos="0.735060698775166" end-border-pos="0.250574367871378">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="1384" y1="1487" x2="1242" y2="1636" start-border-pos="0.735060698775166" end-border-pos="0.250574367980834">
               <points>
                 <point x="1384" y="1487" />
                 <point x="1242" y="1636" />

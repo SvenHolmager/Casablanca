@@ -4,30 +4,19 @@
  */
 package presentation;
 
-import domain.*;
-
 /**
  *
  * @author Mads
  */
-public class HotelGuiForm extends javax.swing.JFrame {
+public class HotelGuiForm extends javax.swing.JFrame
+{
 
     /**
      * Creates new form HotelGuiForm
      */
-    public HotelGuiForm() {
+    public HotelGuiForm()
+    {
         initComponents();
-    }
-
-    private void clearAllFields() {
-        JTextFieldAddress.setText("");
-        JTextFieldApartmentId.setText("");
-        JTextFieldCountry.setText("");
-        JTextFieldEmail.setText("");
-        JTextFieldFamilyName.setText("");
-        JTextFieldFirstName.setText("");
-        JTextFieldPhone.setText("");
-        JTextFieldTravelAgency.setText("");
     }
 
     /**
@@ -45,29 +34,29 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabelFirstName = new javax.swing.JLabel();
         jLabelSurname = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        JTextFieldFirstName = new javax.swing.JTextPane();
+        jTextPane1 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        JTextFieldFamilyName = new javax.swing.JTextPane();
+        jTextPane2 = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        JTextFieldPhone = new javax.swing.JTextPane();
+        jTextPane3 = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        JTextFieldAddress = new javax.swing.JTextPane();
+        jTextPane4 = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
-        JTextFieldTravelAgency = new javax.swing.JTextPane();
+        jTextPane5 = new javax.swing.JTextPane();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        JTextFieldEmail = new javax.swing.JTextPane();
+        jTextPane6 = new javax.swing.JTextPane();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        JTextFieldCountry = new javax.swing.JTextPane();
+        jTextPane7 = new javax.swing.JTextPane();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        JTextFieldApartmentId = new javax.swing.JTextPane();
+        jTextPane8 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,11 +68,6 @@ public class HotelGuiForm extends javax.swing.JFrame {
         });
 
         jButtonRegister.setText("Register");
-        jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegisterActionPerformed(evt);
-            }
-        });
 
         jLabelRegistrationForm.setText("Room Booking Registration Form");
         jLabelRegistrationForm.setPreferredSize(new java.awt.Dimension(155, 18));
@@ -92,29 +76,29 @@ public class HotelGuiForm extends javax.swing.JFrame {
 
         jLabelSurname.setText("Surname");
 
-        jScrollPane1.setViewportView(JTextFieldFirstName);
+        jScrollPane1.setViewportView(jTextPane1);
 
-        jScrollPane2.setViewportView(JTextFieldFamilyName);
+        jScrollPane2.setViewportView(jTextPane2);
 
         jLabel1.setText("Phone");
 
-        jScrollPane3.setViewportView(JTextFieldPhone);
+        jScrollPane3.setViewportView(jTextPane3);
 
         jLabel2.setText("Country");
 
         jLabel3.setText("Address");
 
-        jScrollPane4.setViewportView(JTextFieldAddress);
+        jScrollPane4.setViewportView(jTextPane4);
 
-        jScrollPane5.setViewportView(JTextFieldTravelAgency);
+        jScrollPane5.setViewportView(jTextPane5);
 
         jLabel4.setText("Email");
 
-        jScrollPane6.setViewportView(JTextFieldEmail);
+        jScrollPane6.setViewportView(jTextPane6);
 
         jLabel5.setText("Travel Agency");
 
-        jScrollPane7.setViewportView(JTextFieldCountry);
+        jScrollPane7.setViewportView(jTextPane7);
 
         jLabel6.setText("Date of Check In");
 
@@ -123,7 +107,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
 
         jLabel8.setText("Appartment Number");
 
-        jScrollPane8.setViewportView(JTextFieldApartmentId);
+        jScrollPane8.setViewportView(jTextPane8);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,73 +214,54 @@ public class HotelGuiForm extends javax.swing.JFrame {
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonCancelActionPerformed
     {//GEN-HEADEREND:event_jButtonCancelActionPerformed
-        clearAllFields();
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCancelActionPerformed
-
-    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
-        String firstName = JTextFieldFirstName.getText();
-        String familyName = JTextFieldFamilyName.getText();
-        String address = JTextFieldAddress.getText();
-        String country = JTextFieldCountry.getText();
-        String phone = JTextFieldPhone.getText();
-        String email = JTextFieldEmail.getText();
-
-        clearAllFields();
-//
-//        PayingGuest pg = c.addNewPayingGuest(id, firstName, familyName, address, country, phone, email);
-//        if (o != null) {
-//            jTextFieldOrderNo.setText(o.getOno() + "");
-//            jTextFieldCustomerNo.setText(o.getCustomerNo() + "");
-//            jTextFieldEmplNo.setText(o.getEmployeeNo() + "");
-//            jLabelStatus.setText("New order created");
-//        } else {
-//            jLabelStatus.setText("No order created!");
-//        }
-    }//GEN-LAST:event_jButtonRegisterActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex)
+        {
             java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        } catch (InstantiationException ex)
+        {
             java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex)
+        {
             java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
             java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new HotelGuiForm().setVisible(true);
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextPane JTextFieldAddress;
-    private javax.swing.JTextPane JTextFieldApartmentId;
-    private javax.swing.JTextPane JTextFieldCountry;
-    private javax.swing.JTextPane JTextFieldEmail;
-    private javax.swing.JTextPane JTextFieldFamilyName;
-    private javax.swing.JTextPane JTextFieldFirstName;
-    private javax.swing.JTextPane JTextFieldPhone;
-    private javax.swing.JTextPane JTextFieldTravelAgency;
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonRegister;
     private javax.swing.JLabel jLabel1;
@@ -318,5 +283,13 @@ public class HotelGuiForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
+    private javax.swing.JTextPane jTextPane4;
+    private javax.swing.JTextPane jTextPane5;
+    private javax.swing.JTextPane jTextPane6;
+    private javax.swing.JTextPane jTextPane7;
+    private javax.swing.JTextPane jTextPane8;
     // End of variables declaration//GEN-END:variables
 }
