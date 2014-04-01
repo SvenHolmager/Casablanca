@@ -7,6 +7,7 @@ package dataSource;
 
 import java.sql.Connection;
 import domain.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -54,5 +55,10 @@ public class DBFacade {
     public boolean savePayingGuest(PayingGuest pg) {
 
         return gm.savePayingGuest(pg, con);
+    }
+
+    public ArrayList<Room> getRooms() {
+
+        return rm.getRooms(con);
     }
 }
