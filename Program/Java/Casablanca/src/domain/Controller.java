@@ -6,6 +6,7 @@
 package domain;
 
 import dataSource.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,6 +14,7 @@ import dataSource.*;
  */
 public class Controller {
 
+    private ArrayList<Room> currentRoomList;
     private PayingGuest currentPayingGuest;
     private RoomBooking currentRoomBooking;
     private PayingGuest currentStayingGuest;
@@ -70,9 +72,10 @@ public class Controller {
         }
         return currentRoomBooking;
     }
-//
-//    public StayingGuest getStayingGuest(int Id) {
-//        currentStayingGuest = dbf.getStayingGuest(Id);
-//        return currentStayingGuest;
-//    }
+
+    public ArrayList<Room> getRooms() {
+
+        currentRoomList = dbf.getRooms();
+        return currentRoomList;
+    }
 }
