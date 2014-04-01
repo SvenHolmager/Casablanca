@@ -25,10 +25,7 @@ public class BookingMapper {
                 "select * "
                 + "from Room_Booking "
                 + "where Id = ?";
-//      String SQLString2 =         // get PaymentStatus details
-//        "select od.pno, od.qty " +
-//        "from odetails od " +
-//        "where od.ono = ? ";         // foreign key match 
+        
         PreparedStatement statement = null;
 
         try {
@@ -48,17 +45,7 @@ public class BookingMapper {
                         rs.getString(7)
                 );
             }
-//
-//            //=== get Paymentstatus
-//            statement = con.prepareStatement(SQLString2);
-//            statement.setInt(1, ono);          // foreign key value
-//            rs = statement.executeQuery();
-//            while (rs.next()) {
-//                o.addDetail(new OrderDetail(
-//                        ono,
-//                        rs.getInt(1),
-//                        rs.getInt(2)));
-//            }
+
         } catch (Exception e) {
             System.out.println("Fail in BookingMapper - getRoomBooking");
             System.out.println(e.getMessage());
@@ -118,34 +105,4 @@ public class BookingMapper {
         }
         return rowsInserted == 1;
     }
-//
-//    //== Insert new order detail (tuple)
-//    public boolean saveNewOrderDetail(OrderDetail od, Connection con) {
-//        int rowsInserted = 0;
-//        String SQLString
-//                = "insert into odetails "
-//                + "values (?,?,?)";
-//        PreparedStatement statement = null;
-//
-//        try {
-//            //== insert tuple
-//            statement = con.prepareStatement(SQLString);
-//            statement.setInt(1, od.getOno());
-//            statement.setInt(2, od.getPno());
-//            statement.setInt(3, od.getQty());
-//            rowsInserted = statement.executeUpdate();
-//        } catch (Exception e) {
-//            System.out.println("Fail in OrderMapper - saveNewOrderDetail");
-//            System.out.println(e.getMessage());
-//        } finally // must close statement
-//        {
-//            try {
-//                statement.close();
-//            } catch (SQLException e) {
-//                System.out.println("Fail in OrderMapper - saveNewOrderDetail");
-//                System.out.println(e.getMessage());
-//            }
-//        }
-//        return rowsInserted == 1;
-//    }
 }
