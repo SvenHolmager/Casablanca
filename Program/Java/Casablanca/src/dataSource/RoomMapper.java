@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dataSource;
 
 import java.sql.Connection;
@@ -19,27 +18,31 @@ import java.util.ArrayList;
  *
  * @author Ilici
  */
-public class RoomMapper 
-{
-    public String getAvailableRooms(Connection con)
-    {
-        ArrayList<String> availablerooms = new ArrayList<String>();
-        String roomlist = "";
-        String SQLString1 = //
-                "select room_id  from room" +
-                "where room_id not in (select room_id " +
-                "                      from room_booking)" +
-                "order by room_id";
+
+public class RoomMapper {
+
+    public ArrayList<Room> getRooms(Connection con) {
+        
+        ArrayList<Room> rooms = new ArrayList<>();
+       
+        String SQLString1 = 
+                  "select * from room"                
+                + "order by room_id";
+
         PreparedStatement statement = null;
-        try
-        {
-          
-          statement = con.prepareStatement(SQLString1);
-          
-          ResultSet rs = statement.executeQuery();
-          roomlist = rs.toString();
-         
-          }         
+        try {
+
+            statement = con.prepareStatement(SQLString1);
+
+            ResultSet rs = statement.executeQuery();
+            
+            while(rs.next())                    
+            {   
+                Room room = new Room(rs.getInt(1), rs.getInt(2), rs.getInt(3),rs.getString(4));         
+                rooms.add(room);
+            }
+
+        }
         catch (Exception e)
         {   
           System.out.println("Fail in RoomMapper - getAvailableRooms");
@@ -55,9 +58,8 @@ public class RoomMapper
 			System.out.println(e.getMessage());
 		}  
         }
-          
-        
-        return roomlist;
+
+            return rooms;
+        }
+
     }
-    
-}
