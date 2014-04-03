@@ -17,6 +17,7 @@ public class HotelGuiForm extends javax.swing.JFrame
     public HotelGuiForm()
     {
         initComponents();
+
     }
 
     /**
@@ -26,196 +27,753 @@ public class HotelGuiForm extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
-        jButtonCancel = new javax.swing.JButton();
-        jButtonRegister = new javax.swing.JButton();
+        jPanelMainMenu = new javax.swing.JPanel();
+        jButtonRegistrationFormMain = new javax.swing.JButton();
+        jLabelMainMenu = new javax.swing.JLabel();
+        jButtonAvailMain = new javax.swing.JButton();
+        jButtonBookingMain = new javax.swing.JButton();
+        jPanelRegistration = new javax.swing.JPanel();
         jLabelRegistrationForm = new javax.swing.JLabel();
         jLabelFirstName = new javax.swing.JLabel();
         jLabelSurname = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        jTextFirstName = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        jLabel1 = new javax.swing.JLabel();
+        jTextSurname = new javax.swing.JTextPane();
+        jLabelPhone = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jTextPhone = new javax.swing.JTextPane();
+        jLabelCountry = new javax.swing.JLabel();
+        jLabelAdress = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        jTextAddress = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
-        jLabel4 = new javax.swing.JLabel();
+        jTextAgency = new javax.swing.JTextPane();
+        jLabelEmail = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
-        jLabel5 = new javax.swing.JLabel();
+        jTextEmail = new javax.swing.JTextPane();
+        jLabelAgency = new javax.swing.JLabel();
+        jLabelCheckIn = new javax.swing.JLabel();
+        jLabelNights = new javax.swing.JLabel();
+        jButtonDelete = new javax.swing.JButton();
+        jLabelDeletion = new javax.swing.JLabel();
+        jButtonMainMenuReg = new javax.swing.JButton();
+        jButtonRoomReg = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
+        jXDatePickerRegIn = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerRegOut = new org.jdesktop.swingx.JXDatePicker();
+        jPanelRoomAvail = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jCheckBoxSingle = new javax.swing.JCheckBox();
+        jCheckBoxDouble = new javax.swing.JCheckBox();
+        jCheckBoxFamily = new javax.swing.JCheckBox();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jTextAreaBook = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButtonMainMenuAvil = new javax.swing.JButton();
+        jButtonRegistrationRoom = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jXDatePickerRoomFrom = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerRoomTo = new org.jdesktop.swingx.JXDatePicker();
+        jPanelBookings = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        jTextEmailBook = new javax.swing.JTextPane();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextPhoneBook = new javax.swing.JTextPane();
+        jLabelAgencyBook = new javax.swing.JLabel();
+        jLabelCheckInBook = new javax.swing.JLabel();
+        jLabelPhoneBook = new javax.swing.JLabel();
+        jButtonMainMenuBook = new javax.swing.JButton();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTextSurnameBook = new javax.swing.JTextPane();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jTextAgencyBook = new javax.swing.JTextPane();
+        jLabelSurnameBook = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jTextFirstNameBook = new javax.swing.JTextPane();
+        jLabelEmailBook = new javax.swing.JLabel();
+        jLabelNightsBook = new javax.swing.JLabel();
+        jLabelCountryBook = new javax.swing.JLabel();
+        jLabelAdressBook = new javax.swing.JLabel();
+        jButtonRoomBook = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox();
+        jLabelFirstNameBook = new javax.swing.JLabel();
+        jLabelBookings = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jTextAddressBook = new javax.swing.JTextPane();
+        jButtonDeleteBook = new javax.swing.JButton();
+        jButtonRegBook = new javax.swing.JButton();
+        jXDatePickerBookIn = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerBookOut = new org.jdesktop.swingx.JXDatePicker();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.CardLayout());
 
-        jButtonCancel.setText("Cancel");
-        jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCancelActionPerformed(evt);
+        jButtonRegistrationFormMain.setText("Registration Form");
+        jButtonRegistrationFormMain.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRegistrationFormMainActionPerformed(evt);
             }
         });
 
-        jButtonRegister.setText("Register");
+        jLabelMainMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelMainMenu.setText("Main Menu");
 
-        jLabelRegistrationForm.setText("Room Booking Registration Form");
+        jButtonAvailMain.setText("Room List");
+        jButtonAvailMain.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonAvailMainActionPerformed(evt);
+            }
+        });
+
+        jButtonBookingMain.setText("Bookings");
+        jButtonBookingMain.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonBookingMainActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelMainMenuLayout = new javax.swing.GroupLayout(jPanelMainMenu);
+        jPanelMainMenu.setLayout(jPanelMainMenuLayout);
+        jPanelMainMenuLayout.setHorizontalGroup(
+            jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMainMenuLayout.createSequentialGroup()
+                .addGap(343, 343, 343)
+                .addGroup(jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonRegistrationFormMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonAvailMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelMainMenuLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabelMainMenu))
+                    .addComponent(jButtonBookingMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
+        );
+        jPanelMainMenuLayout.setVerticalGroup(
+            jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMainMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelMainMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonRegistrationFormMain)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAvailMain)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonBookingMain)
+                .addContainerGap(321, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanelMainMenu, "card2");
+
+        jLabelRegistrationForm.setText("Booking Registration Form");
         jLabelRegistrationForm.setPreferredSize(new java.awt.Dimension(155, 18));
 
         jLabelFirstName.setText("First Name And Middle Name");
 
         jLabelSurname.setText("Surname");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(jTextFirstName);
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jScrollPane2.setViewportView(jTextSurname);
 
-        jLabel1.setText("Phone");
+        jLabelPhone.setText("Phone");
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jScrollPane3.setViewportView(jTextPhone);
 
-        jLabel2.setText("Country");
+        jLabelCountry.setText("Country");
 
-        jLabel3.setText("Address");
+        jLabelAdress.setText("Address");
 
-        jScrollPane4.setViewportView(jTextPane4);
+        jScrollPane4.setViewportView(jTextAddress);
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(jTextAgency);
 
-        jLabel4.setText("Email");
+        jLabelEmail.setText("Email");
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(jTextEmail);
 
-        jLabel5.setText("Travel Agency");
+        jLabelAgency.setText("Travel Agency");
 
-        jScrollPane7.setViewportView(jTextPane7);
+        jLabelCheckIn.setText("Date of Check-In");
 
-        jLabel6.setText("Date of Check In");
+        jLabelNights.setText("Date of Check-Out");
+        jLabelNights.setToolTipText("");
 
-        jLabel7.setText("Number of Nights");
-        jLabel7.setToolTipText("");
+        jButtonDelete.setText("Clear Registration Form");
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonDeleteActionPerformed(evt);
+            }
+        });
 
-        jLabel8.setText("Appartment Number");
+        jButtonMainMenuReg.setText("Main Menu");
+        jButtonMainMenuReg.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonMainMenuRegActionPerformed(evt);
+            }
+        });
 
-        jScrollPane8.setViewportView(jTextPane8);
+        jButtonRoomReg.setText("Room List");
+        jButtonRoomReg.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRoomRegActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jButtonCancel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonRegister))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelRegistrationForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelFirstName)
-                                .addGap(206, 206, 206)
-                                .addComponent(jLabelSurname)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select a country below...", "AD - Andorra", "AE - United Arab Emirates", "AF - Afghanistan", "AG - Antigua and Barbuda", "AI - Anguilla", "AL - Albania", "AM - Armenia", "AO - Angola", "AQ - Antarctica", "AR - Argentina", "AS - American Samoa", "AT - Austria", "AU - Australia", "AW - Aruba", "AZ - Azerbaijan", "BA - Bosnia and Herzegovina", "BB - Barbados", "BD - Bangladesh", "BE - Belgium", "BF - Burkina Faso", "BG - Bulgaria", "BH - Bahrain", "BI - Burundi", "BJ - Benin", "BL - Saint Barthelemy", "BM - Bermuda", "BN - Brunei", "BO - Bolivia", "BR - Brazil", "BS - Bahamas, The", "BT - Bhutan", "BV - Bouvet Island", "BW - Botswana", "BY - Belarus", "BZ - Belize", "CA - Canada", "CC - Cocos (Keeling) Islands", "CD - Congo, Democratic Republic of the", "CF - Central African Republic", "CG - Congo, Republic of the", "CH - Switzerland", "CI - Cote d'Ivoire", "CK - Cook Islands", "CL - Chile", "CM - Cameroon", "CN - China", "CO - Colombia", "CR - Costa Rica", "CU - Cuba", "CV - Cape Verde", "CW - Curacao", "CX - Christmas Island", "CY - Cyprus", "CZ - Czech Republic", "DE - Germany", "DJ - Djibouti", "DK - Denmark", "DM - Dominica", "DO - Dominican Republic", "DZ - Algeria", "EC - Ecuador", "EE - Estonia", "EG - Egypt", "EH - Western Sahara", "ER - Eritrea", "ES - Spain", "ET - Ethiopia", "FI - Finland", "FJ - Fiji", "FK - Falkland Islands (Islas Malvinas)", "FM - Micronesia, Federated States of", "FO - Faroe Islands", "FR - France", "FX - France, Metropolitan", "GA - Gabon", "GB - United Kingdom", "GD - Grenada", "GE - Georgia", "GF - French Guiana", "GG - Guernsey", "GH - Ghana", "GI - Gibraltar", "GL - Greenland", "GM - Gambia, The", "GN - Guinea", "GP - Guadeloupe", "GQ - Equatorial Guinea", "GR - Greece", "GS - South Georgia and the Islands", "GT - Guatemala", "GU - Guam", "GW - Guinea-Bissau", "GY - Guyana", "HK - Hong Kong", "HM - Heard Island and McDonald Islands", "HN - Honduras", "HR - Croatia", "HT - Haiti", "HU - Hungary", "ID - Indonesia", "IE - Ireland", "IL - Israel", "IM - Isle of Man", "IN - India", "IO - British Indian Ocean Territory", "IQ - Iraq", "IR - Iran", "IS - Iceland", "IT - Italy", "JE - Jersey", "JM - Jamaica", "JO - Jordan", "JP - Japan", "KE - Kenya", "KG - Kyrgyzstan", "KH - Cambodia", "KI - Kiribati", "KM - Comoros", "KN - Saint Kitts and Nevis", "KP - Korea, North", "KR - Korea, South", "KW - Kuwait", "KY - Cayman Islands", "KZ - Kazakhstan", "LA - Laos", "LB - Lebanon", "LC - Saint Lucia", "LI - Liechtenstein", "LK - Sri Lanka", "LR - Liberia", "LS - Lesotho", "LT - Lithuania", "LU - Luxembourg", "LV - Latvia", "LY - Libya", "MA - Morocco", "MC - Monaco", "MD - Moldova", "ME - Montenegro", "MF - Saint Martin", "MG - Madagascar", "MH - Marshall Islands", "MK - Macedonia", "ML - Mali", "MM - Burma", "MN - Mongolia", "MO - Macau", "MP - Northern Mariana Islands", "MQ - Martinique", "MR - Mauritania", "MS - Montserrat", "MT - Malta", "MU - Mauritius", "MV - Maldives", "MW - Malawi", "MX - Mexico", "MY - Malaysia", "MZ - Mozambique", "NA - Namibia", "NC - New Caledonia", "NE - Niger", "NF - Norfolk Island", "NG - Nigeria", "NI - Nicaragua", "NL - Netherlands", "NO - Norway", "NP - Nepal", "NR - Nauru", "NU - Niue", "NZ - New Zealand", "OM - Oman", "PA - Panama", "PE - Peru", "PF - French Polynesia", "PG - Papua New Guinea", "PH - Philippines", "PK - Pakistan", "PL - Poland", "PM - Saint Pierre and Miquelon", "PN - Pitcairn Islands", "PR - Puerto Rico", "PS - Gaza Strip", "PS - West Bank", "PT - Portugal", "PW - Palau", "PY - Paraguay", "QA - Qatar", "RE - Reunion", "RO - Romania", "RS - Serbia", "RU - Russia", "RW - Rwanda", "SA - Saudi Arabia", "SB - Solomon Islands", "SC - Seychelles", "SD - Sudan", "SE - Sweden", "SG - Singapore", "SH - Saint Helena, Ascension, and Tristan da Cunha", "SI - Slovenia", "SJ - Svalbard", "SK - Slovakia", "SL - Sierra Leone", "SM - San Marino", "SN - Senegal", "SO - Somalia", "SR - Suriname", "SS - South Sudan", "ST - Sao Tome and Principe", "SV - El Salvador", "SX - Sint Maarten", "SY - Syria", "SZ - Swaziland", "TC - Turks and Caicos Islands", "TD - Chad", "TF - French Southern and Antarctic Lands", "TG - Togo", "TH - Thailand", "TJ - Tajikistan", "TK - Tokelau", "TL - Timor-Leste", "TM - Turkmenistan", "TN - Tunisia", "TO - Tonga", "TR - Turkey", "TT - Trinidad and Tobago", "TV - Tuvalu", "TW - Taiwan", "TZ - Tanzania", "UA - Ukraine", "UG - Uganda", "UM - United States Minor Outlying Islands", "US - United States", "UY - Uruguay", "UZ - Uzbekistan", "VA - Holy See (Vatican City)", "VC - Saint Vincent and the Grenadines", "VE - Venezuela", "VG - British Virgin Islands", "VI - Virgin Islands", "VN - Vietnam", "VU - Vanuatu", "WF - Wallis and Futuna", "WS - Samoa", "XK - Kosovo", "YE - Yemen", "YT - Mayotte", "ZA - South Africa", "ZM - Zambia", "ZW - Zimbabwe" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelRegistrationLayout = new javax.swing.GroupLayout(jPanelRegistration);
+        jPanelRegistration.setLayout(jPanelRegistrationLayout);
+        jPanelRegistrationLayout.setHorizontalGroup(
+            jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                .addComponent(jLabelRegistrationForm, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                                        .addComponent(jLabelFirstName)
+                                        .addGap(206, 206, 206)
+                                        .addComponent(jLabelSurname))
+                                    .addComponent(jLabelAgency)
+                                    .addComponent(jLabelCheckIn)
+                                    .addComponent(jXDatePickerRegIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 312, Short.MAX_VALUE))
+                            .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
+                                        .addComponent(jLabelAdress, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabelCountry, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                                        .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jXDatePickerRegOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabelNights))
+                                        .addGap(26, 26, 26)))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2)
                                     .addComponent(jScrollPane6)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel7))
-                                        .addGap(0, 261, Short.MAX_VALUE)))))))
+                                    .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                                        .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabelEmail)
+                                            .addComponent(jLabelPhone))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jScrollPane3)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrationLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelDeletion)
+                            .addComponent(jButtonDelete)
+                            .addComponent(jButtonMainMenuReg)
+                            .addComponent(jButtonRoomReg))))
                 .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        jPanelRegistrationLayout.setVerticalGroup(
+            jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRegistrationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelRegistrationForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelFirstName)
-                            .addComponent(jLabelSurname))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                        .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelRegistrationLayout.createSequentialGroup()
+                                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelFirstName)
+                                    .addComponent(jLabelSurname))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelAdress))
+                    .addComponent(jLabelPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCountry)
+                    .addComponent(jLabelEmail))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelAgency)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addGap(62, 62, 62)
-                .addComponent(jLabel8)
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCheckIn)
+                    .addComponent(jLabelNights))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCancel)
-                    .addComponent(jButtonRegister))
+                .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jXDatePickerRegIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jXDatePickerRegOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addComponent(jLabelDeletion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonDelete)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonMainMenuReg)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonRoomReg)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanelRegistration, "card3");
+
+        jLabel2.setText("Room Availability");
+
+        jCheckBoxSingle.setText("Single Rooms");
+        jCheckBoxSingle.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jCheckBoxSingleActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxDouble.setText("Double Rooms");
+
+        jCheckBoxFamily.setText("Family Rooms");
+
+        jTextAreaBook.setColumns(20);
+        jTextAreaBook.setRows(5);
+        jScrollPane7.setViewportView(jTextAreaBook);
+
+        jLabel1.setText("From");
+
+        jLabel3.setText("To");
+
+        jButtonMainMenuAvil.setText("Main Menu");
+        jButtonMainMenuAvil.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonMainMenuAvilActionPerformed(evt);
+            }
+        });
+
+        jButtonRegistrationRoom.setText("Registration Form");
+        jButtonRegistrationRoom.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRegistrationRoomActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Clear");
+
+        javax.swing.GroupLayout jPanelRoomAvailLayout = new javax.swing.GroupLayout(jPanelRoomAvail);
+        jPanelRoomAvail.setLayout(jPanelRoomAvailLayout);
+        jPanelRoomAvailLayout.setHorizontalGroup(
+            jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane7)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRoomAvailLayout.createSequentialGroup()
+                        .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                                .addComponent(jCheckBoxFamily)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 409, Short.MAX_VALUE)
+                                .addComponent(jButtonRegistrationRoom))
+                            .addComponent(jLabel2)
+                            .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                                .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBoxDouble)
+                                    .addComponent(jCheckBoxSingle))
+                                .addGap(42, 42, 42)
+                                .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jXDatePickerRoomFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(45, 45, 45)
+                                .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jXDatePickerRoomTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButtonMainMenuAvil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
+        jPanelRoomAvailLayout.setVerticalGroup(
+            jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                        .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxSingle)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBoxDouble)
+                            .addComponent(jXDatePickerRoomFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jXDatePickerRoomTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBoxFamily)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRoomAvailLayout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonMainMenuAvil)
+                            .addComponent(jButtonRegistrationRoom))
+                        .addContainerGap())))
+        );
+
+        getContentPane().add(jPanelRoomAvail, "card4");
+
+        jScrollPane8.setViewportView(jTextEmailBook);
+
+        jScrollPane9.setViewportView(jTextPhoneBook);
+
+        jLabelAgencyBook.setText("Travel Agency");
+
+        jLabelCheckInBook.setText("Date of Check-In");
+
+        jLabelPhoneBook.setText("Phone");
+
+        jButtonMainMenuBook.setText("Main Menu");
+        jButtonMainMenuBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonMainMenuBookActionPerformed(evt);
+            }
+        });
+
+        jScrollPane10.setViewportView(jTextSurnameBook);
+
+        jScrollPane11.setViewportView(jTextAgencyBook);
+
+        jLabelSurnameBook.setText("Surname");
+
+        jScrollPane12.setViewportView(jTextFirstNameBook);
+
+        jLabelEmailBook.setText("Email");
+
+        jLabelNightsBook.setText("Date of Check-Out");
+        jLabelNightsBook.setToolTipText("");
+
+        jLabelCountryBook.setText("Country");
+
+        jLabelAdressBook.setText("Address");
+
+        jButtonRoomBook.setText("Room List");
+        jButtonRoomBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRoomBookActionPerformed(evt);
+            }
+        });
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select a country below...", "AD - Andorra", "AE - United Arab Emirates", "AF - Afghanistan", "AG - Antigua and Barbuda", "AI - Anguilla", "AL - Albania", "AM - Armenia", "AO - Angola", "AQ - Antarctica", "AR - Argentina", "AS - American Samoa", "AT - Austria", "AU - Australia", "AW - Aruba", "AZ - Azerbaijan", "BA - Bosnia and Herzegovina", "BB - Barbados", "BD - Bangladesh", "BE - Belgium", "BF - Burkina Faso", "BG - Bulgaria", "BH - Bahrain", "BI - Burundi", "BJ - Benin", "BL - Saint Barthelemy", "BM - Bermuda", "BN - Brunei", "BO - Bolivia", "BR - Brazil", "BS - Bahamas, The", "BT - Bhutan", "BV - Bouvet Island", "BW - Botswana", "BY - Belarus", "BZ - Belize", "CA - Canada", "CC - Cocos (Keeling) Islands", "CD - Congo, Democratic Republic of the", "CF - Central African Republic", "CG - Congo, Republic of the", "CH - Switzerland", "CI - Cote d'Ivoire", "CK - Cook Islands", "CL - Chile", "CM - Cameroon", "CN - China", "CO - Colombia", "CR - Costa Rica", "CU - Cuba", "CV - Cape Verde", "CW - Curacao", "CX - Christmas Island", "CY - Cyprus", "CZ - Czech Republic", "DE - Germany", "DJ - Djibouti", "DK - Denmark", "DM - Dominica", "DO - Dominican Republic", "DZ - Algeria", "EC - Ecuador", "EE - Estonia", "EG - Egypt", "EH - Western Sahara", "ER - Eritrea", "ES - Spain", "ET - Ethiopia", "FI - Finland", "FJ - Fiji", "FK - Falkland Islands (Islas Malvinas)", "FM - Micronesia, Federated States of", "FO - Faroe Islands", "FR - France", "FX - France, Metropolitan", "GA - Gabon", "GB - United Kingdom", "GD - Grenada", "GE - Georgia", "GF - French Guiana", "GG - Guernsey", "GH - Ghana", "GI - Gibraltar", "GL - Greenland", "GM - Gambia, The", "GN - Guinea", "GP - Guadeloupe", "GQ - Equatorial Guinea", "GR - Greece", "GS - South Georgia and the Islands", "GT - Guatemala", "GU - Guam", "GW - Guinea-Bissau", "GY - Guyana", "HK - Hong Kong", "HM - Heard Island and McDonald Islands", "HN - Honduras", "HR - Croatia", "HT - Haiti", "HU - Hungary", "ID - Indonesia", "IE - Ireland", "IL - Israel", "IM - Isle of Man", "IN - India", "IO - British Indian Ocean Territory", "IQ - Iraq", "IR - Iran", "IS - Iceland", "IT - Italy", "JE - Jersey", "JM - Jamaica", "JO - Jordan", "JP - Japan", "KE - Kenya", "KG - Kyrgyzstan", "KH - Cambodia", "KI - Kiribati", "KM - Comoros", "KN - Saint Kitts and Nevis", "KP - Korea, North", "KR - Korea, South", "KW - Kuwait", "KY - Cayman Islands", "KZ - Kazakhstan", "LA - Laos", "LB - Lebanon", "LC - Saint Lucia", "LI - Liechtenstein", "LK - Sri Lanka", "LR - Liberia", "LS - Lesotho", "LT - Lithuania", "LU - Luxembourg", "LV - Latvia", "LY - Libya", "MA - Morocco", "MC - Monaco", "MD - Moldova", "ME - Montenegro", "MF - Saint Martin", "MG - Madagascar", "MH - Marshall Islands", "MK - Macedonia", "ML - Mali", "MM - Burma", "MN - Mongolia", "MO - Macau", "MP - Northern Mariana Islands", "MQ - Martinique", "MR - Mauritania", "MS - Montserrat", "MT - Malta", "MU - Mauritius", "MV - Maldives", "MW - Malawi", "MX - Mexico", "MY - Malaysia", "MZ - Mozambique", "NA - Namibia", "NC - New Caledonia", "NE - Niger", "NF - Norfolk Island", "NG - Nigeria", "NI - Nicaragua", "NL - Netherlands", "NO - Norway", "NP - Nepal", "NR - Nauru", "NU - Niue", "NZ - New Zealand", "OM - Oman", "PA - Panama", "PE - Peru", "PF - French Polynesia", "PG - Papua New Guinea", "PH - Philippines", "PK - Pakistan", "PL - Poland", "PM - Saint Pierre and Miquelon", "PN - Pitcairn Islands", "PR - Puerto Rico", "PS - Gaza Strip", "PS - West Bank", "PT - Portugal", "PW - Palau", "PY - Paraguay", "QA - Qatar", "RE - Reunion", "RO - Romania", "RS - Serbia", "RU - Russia", "RW - Rwanda", "SA - Saudi Arabia", "SB - Solomon Islands", "SC - Seychelles", "SD - Sudan", "SE - Sweden", "SG - Singapore", "SH - Saint Helena, Ascension, and Tristan da Cunha", "SI - Slovenia", "SJ - Svalbard", "SK - Slovakia", "SL - Sierra Leone", "SM - San Marino", "SN - Senegal", "SO - Somalia", "SR - Suriname", "SS - South Sudan", "ST - Sao Tome and Principe", "SV - El Salvador", "SX - Sint Maarten", "SY - Syria", "SZ - Swaziland", "TC - Turks and Caicos Islands", "TD - Chad", "TF - French Southern and Antarctic Lands", "TG - Togo", "TH - Thailand", "TJ - Tajikistan", "TK - Tokelau", "TL - Timor-Leste", "TM - Turkmenistan", "TN - Tunisia", "TO - Tonga", "TR - Turkey", "TT - Trinidad and Tobago", "TV - Tuvalu", "TW - Taiwan", "TZ - Tanzania", "UA - Ukraine", "UG - Uganda", "UM - United States Minor Outlying Islands", "US - United States", "UY - Uruguay", "UZ - Uzbekistan", "VA - Holy See (Vatican City)", "VC - Saint Vincent and the Grenadines", "VE - Venezuela", "VG - British Virgin Islands", "VI - Virgin Islands", "VN - Vietnam", "VU - Vanuatu", "WF - Wallis and Futuna", "WS - Samoa", "XK - Kosovo", "YE - Yemen", "YT - Mayotte", "ZA - South Africa", "ZM - Zambia", "ZW - Zimbabwe" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+
+        jLabelFirstNameBook.setText("First Name And Middle Name");
+
+        jLabelBookings.setText("Bookings");
+        jLabelBookings.setPreferredSize(new java.awt.Dimension(155, 18));
+
+        jScrollPane13.setViewportView(jTextAddressBook);
+
+        jButtonDeleteBook.setText("Clear ");
+        jButtonDeleteBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonDeleteBookActionPerformed(evt);
+            }
+        });
+
+        jButtonRegBook.setText("Registration Form");
+        jButtonRegBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRegBookActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelBookingsLayout = new javax.swing.GroupLayout(jPanelBookings);
+        jPanelBookings.setLayout(jPanelBookingsLayout);
+        jPanelBookingsLayout.setHorizontalGroup(
+            jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                        .addComponent(jLabelBookings, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(550, 550, 550))
+                    .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                        .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                        .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                                .addComponent(jLabelFirstNameBook)
+                                                .addGap(206, 206, 206)
+                                                .addComponent(jLabelSurnameBook))
+                                            .addComponent(jLabelAgencyBook)
+                                            .addComponent(jLabelCheckInBook)
+                                            .addComponent(jXDatePickerBookIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                        .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jScrollPane12, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabelAdressBook, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabelCountryBook, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jScrollPane13, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jXDatePickerBookOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabelNightsBook))
+                                                .addGap(26, 26, 26)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jScrollPane10)
+                                            .addComponent(jScrollPane8)
+                                            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabelEmailBook)
+                                                    .addComponent(jLabelPhoneBook))
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addComponent(jScrollPane9)))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBookingsLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButtonRegBook)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButtonMainMenuBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonDeleteBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonRoomBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())))
+        );
+        jPanelBookingsLayout.setVerticalGroup(
+            jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelBookings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                        .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelBookingsLayout.createSequentialGroup()
+                                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabelFirstNameBook)
+                                    .addComponent(jLabelSurnameBook))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelAdressBook))
+                    .addComponent(jLabelPhoneBook, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCountryBook)
+                    .addComponent(jLabelEmailBook))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelAgencyBook)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCheckInBook)
+                    .addComponent(jLabelNightsBook))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jXDatePickerBookIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jXDatePickerBookOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addComponent(jButtonDeleteBook)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonMainMenuBook)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonRoomBook)
+                    .addComponent(jButtonRegBook))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanelBookings, "card5");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonCancelActionPerformed
-    {//GEN-HEADEREND:event_jButtonCancelActionPerformed
+    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonDeleteActionPerformed
+    {//GEN-HEADEREND:event_jButtonDeleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCancelActionPerformed
+        jTextAddress.setText("");
+        jTextAgency.setText("");
+        jTextEmail.setText("");
+        jTextFirstName.setText("");
+        jTextPhone.setText("");
+        jTextSurname.setText("");
+        jLabelDeletion.setText("Deletion succesful.");
+
+    }//GEN-LAST:event_jButtonDeleteActionPerformed
+
+    private void jXDatePickerInRegActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jXDatePickerInRegActionPerformed
+    {//GEN-HEADEREND:event_jXDatePickerInRegActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jXDatePickerInRegActionPerformed
+
+    private void jButtonMainMenuRegActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonMainMenuRegActionPerformed
+    {//GEN-HEADEREND:event_jButtonMainMenuRegActionPerformed
+        // TODO add your handling code here:
+        jPanelRegistration.setVisible(false);
+        jPanelMainMenu.setVisible(true);
+    }//GEN-LAST:event_jButtonMainMenuRegActionPerformed
+
+    private void jButtonRegistrationFormMainActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRegistrationFormMainActionPerformed
+    {//GEN-HEADEREND:event_jButtonRegistrationFormMainActionPerformed
+        // TODO add your handling code here:
+        jPanelMainMenu.setVisible(false);
+        jPanelRegistration.setVisible(true);
+    }//GEN-LAST:event_jButtonRegistrationFormMainActionPerformed
+
+    private void jCheckBoxSingleActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jCheckBoxSingleActionPerformed
+    {//GEN-HEADEREND:event_jCheckBoxSingleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxSingleActionPerformed
+
+    private void jButtonMainMenuAvilActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonMainMenuAvilActionPerformed
+    {//GEN-HEADEREND:event_jButtonMainMenuAvilActionPerformed
+        // TODO add your handling code here:
+         jPanelMainMenu.setVisible(true);
+        jPanelRoomAvail.setVisible(false);
+    }//GEN-LAST:event_jButtonMainMenuAvilActionPerformed
+
+    private void jButtonAvailMainActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonAvailMainActionPerformed
+    {//GEN-HEADEREND:event_jButtonAvailMainActionPerformed
+        // TODO add your handling code here:
+        jPanelMainMenu.setVisible(false);
+        jPanelRoomAvail.setVisible(true);
+    }//GEN-LAST:event_jButtonAvailMainActionPerformed
+
+    private void jButtonRegistrationRoomActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRegistrationRoomActionPerformed
+    {//GEN-HEADEREND:event_jButtonRegistrationRoomActionPerformed
+        // TODO add your handling code here:
+        jPanelRegistration.setVisible(true);
+        jPanelRoomAvail.setVisible(false);
+    }//GEN-LAST:event_jButtonRegistrationRoomActionPerformed
+
+    private void jButtonRoomRegActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRoomRegActionPerformed
+    {//GEN-HEADEREND:event_jButtonRoomRegActionPerformed
+        // TODO add your handling code here:
+        jPanelRegistration.setVisible(false);
+        jPanelRoomAvail.setVisible(true);
+       
+    }//GEN-LAST:event_jButtonRoomRegActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jComboBox1ActionPerformed
+    {//GEN-HEADEREND:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButtonMainMenuBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonMainMenuBookActionPerformed
+    {//GEN-HEADEREND:event_jButtonMainMenuBookActionPerformed
+        // TODO add your handling code here:
+        jPanelBookings.setVisible(false);
+        jPanelMainMenu.setVisible(true);
+    }//GEN-LAST:event_jButtonMainMenuBookActionPerformed
+
+    private void jButtonRoomBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRoomBookActionPerformed
+    {//GEN-HEADEREND:event_jButtonRoomBookActionPerformed
+        // TODO add your handling code here:
+        jPanelBookings.setVisible(false);
+        jPanelRoomAvail.setVisible(true);
+    }//GEN-LAST:event_jButtonRoomBookActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jComboBox2ActionPerformed
+    {//GEN-HEADEREND:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jButtonDeleteBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonDeleteBookActionPerformed
+    {//GEN-HEADEREND:event_jButtonDeleteBookActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDeleteBookActionPerformed
+
+    private void jXDateArrivalBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jXDateArrivalBookActionPerformed
+    {//GEN-HEADEREND:event_jXDateArrivalBookActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jXDateArrivalBookActionPerformed
+
+    private void jButtonRegBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRegBookActionPerformed
+    {//GEN-HEADEREND:event_jButtonRegBookActionPerformed
+        // TODO add your handling code here:
+         jPanelBookings.setVisible(false);
+        jPanelRegistration.setVisible(true);
+    }//GEN-LAST:event_jButtonRegBookActionPerformed
+
+    private void jButtonBookingMainActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonBookingMainActionPerformed
+    {//GEN-HEADEREND:event_jButtonBookingMainActionPerformed
+        // TODO add your handling code here:
+        jPanelMainMenu.setVisible(false);
+        jPanelBookings.setVisible(true);
+    }//GEN-LAST:event_jButtonBookingMainActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,20 +820,58 @@ public class HotelGuiForm extends javax.swing.JFrame
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCancel;
-    private javax.swing.JButton jButtonRegister;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAvailMain;
+    private javax.swing.JButton jButtonBookingMain;
+    private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonDeleteBook;
+    private javax.swing.JButton jButtonMainMenuAvil;
+    private javax.swing.JButton jButtonMainMenuBook;
+    private javax.swing.JButton jButtonMainMenuReg;
+    private javax.swing.JButton jButtonRegBook;
+    private javax.swing.JButton jButtonRegistrationFormMain;
+    private javax.swing.JButton jButtonRegistrationRoom;
+    private javax.swing.JButton jButtonRoomBook;
+    private javax.swing.JButton jButtonRoomReg;
+    private javax.swing.JCheckBox jCheckBoxDouble;
+    private javax.swing.JCheckBox jCheckBoxFamily;
+    private javax.swing.JCheckBox jCheckBoxSingle;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabelAdress;
+    private javax.swing.JLabel jLabelAdressBook;
+    private javax.swing.JLabel jLabelAgency;
+    private javax.swing.JLabel jLabelAgencyBook;
+    private javax.swing.JLabel jLabelBookings;
+    private javax.swing.JLabel jLabelCheckIn;
+    private javax.swing.JLabel jLabelCheckInBook;
+    private javax.swing.JLabel jLabelCountry;
+    private javax.swing.JLabel jLabelCountryBook;
+    private javax.swing.JLabel jLabelDeletion;
+    private javax.swing.JLabel jLabelEmail;
+    private javax.swing.JLabel jLabelEmailBook;
     private javax.swing.JLabel jLabelFirstName;
+    private javax.swing.JLabel jLabelFirstNameBook;
+    private javax.swing.JLabel jLabelMainMenu;
+    private javax.swing.JLabel jLabelNights;
+    private javax.swing.JLabel jLabelNightsBook;
+    private javax.swing.JLabel jLabelPhone;
+    private javax.swing.JLabel jLabelPhoneBook;
     private javax.swing.JLabel jLabelRegistrationForm;
     private javax.swing.JLabel jLabelSurname;
+    private javax.swing.JLabel jLabelSurnameBook;
+    private javax.swing.JPanel jPanelBookings;
+    private javax.swing.JPanel jPanelMainMenu;
+    private javax.swing.JPanel jPanelRegistration;
+    private javax.swing.JPanel jPanelRoomAvail;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -283,13 +879,25 @@ public class HotelGuiForm extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
-    private javax.swing.JTextPane jTextPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTextPane jTextAddress;
+    private javax.swing.JTextPane jTextAddressBook;
+    private javax.swing.JTextPane jTextAgency;
+    private javax.swing.JTextPane jTextAgencyBook;
+    private javax.swing.JTextArea jTextAreaBook;
+    private javax.swing.JTextPane jTextEmail;
+    private javax.swing.JTextPane jTextEmailBook;
+    private javax.swing.JTextPane jTextFirstName;
+    private javax.swing.JTextPane jTextFirstNameBook;
+    private javax.swing.JTextPane jTextPhone;
+    private javax.swing.JTextPane jTextPhoneBook;
+    private javax.swing.JTextPane jTextSurname;
+    private javax.swing.JTextPane jTextSurnameBook;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerBookIn;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerBookOut;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerRegIn;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerRegOut;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerRoomFrom;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerRoomTo;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,288 +18,1384 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-66,0,0,2,-38"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                      <Component id="jButtonCancel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButtonRegister" min="-2" max="-2" attributes="0"/>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanelMainMenu">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card2"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="343" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jButtonRegistrationFormMain" max="32767" attributes="0"/>
+                      <Component id="jButtonAvailMain" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="jLabelMainMenu" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jButtonBookingMain" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabelRegistrationForm" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabelFirstName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
-                              <Component id="jLabelSurname" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane1" alignment="0" min="-2" pref="324" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane3" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane5" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane4" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane7" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane8" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jScrollPane2" max="32767" attributes="0"/>
-                                  <Component id="jScrollPane6" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="270" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabelMainMenu" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jButtonRegistrationFormMain" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonAvailMain" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonBookingMain" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="321" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="jButtonRegistrationFormMain">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registration Form"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegistrationFormMainActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelMainMenu">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Main Menu"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonAvailMain">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Room List"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAvailMainActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonBookingMain">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bookings"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBookingMainActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanelRegistration">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card3"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jLabelRegistrationForm" min="-2" pref="170" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabelFirstName" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                                          <Component id="jLabelSurname" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="261" max="32767" attributes="0"/>
+                                      <Component id="jLabelAgency" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelCheckIn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jXDatePickerRegIn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="312" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jScrollPane5" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane1" alignment="0" pref="324" max="32767" attributes="0"/>
+                                          <Component id="jLabelAdress" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelCountry" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jComboBox1" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jXDatePickerRegOut" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelNights" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jScrollPane2" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane6" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLabelEmail" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelPhone" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                  </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabelRegistrationForm" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelSurname" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabelDeletion" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonDelete" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonMainMenuReg" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonRoomReg" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabelRegistrationForm" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelSurname" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabelAdress" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabelPhone" min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelCountry" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabelAgency" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelCheckIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelNights" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jXDatePickerRegIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jXDatePickerRegOut" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="jLabelDeletion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jButtonDelete" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonMainMenuReg" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonRoomReg" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonCancel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonRegister" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
-      </Group>
-    </DimensionLayout>
-  </Layout>
-  <SubComponents>
-    <Component class="javax.swing.JButton" name="jButtonCancel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cancel"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButtonRegister">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Register"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelRegistrationForm">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Room Booking Registration Form"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[155, 18]"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelFirstName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="First Name And Middle Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabelSurname">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Surname"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+        </DimensionLayout>
+      </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane1">
+        <Component class="javax.swing.JLabel" name="jLabelRegistrationForm">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Booking Registration Form"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[155, 18]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelFirstName">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="First Name And Middle Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelSurname">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Surname"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextFirstName">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextSurname">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelPhone">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Phone"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextPhone">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelCountry">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Country"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelAdress">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Address"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextAddress">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextAgency">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelEmail">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Email"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextEmail">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelAgency">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Travel Agency"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelCheckIn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date of Check-In"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelNights">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date of Check-Out"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonDelete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clear Registration Form"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDeleteActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelDeletion">
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonMainMenuReg">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Main Menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMainMenuRegActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonRoomReg">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Room List"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRoomRegActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox1">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="251">
+                <StringItem index="0" value="Please select a country below..."/>
+                <StringItem index="1" value="AD - Andorra"/>
+                <StringItem index="2" value="AE - United Arab Emirates"/>
+                <StringItem index="3" value="AF - Afghanistan"/>
+                <StringItem index="4" value="AG - Antigua and Barbuda"/>
+                <StringItem index="5" value="AI - Anguilla"/>
+                <StringItem index="6" value="AL - Albania"/>
+                <StringItem index="7" value="AM - Armenia"/>
+                <StringItem index="8" value="AO - Angola"/>
+                <StringItem index="9" value="AQ - Antarctica"/>
+                <StringItem index="10" value="AR - Argentina"/>
+                <StringItem index="11" value="AS - American Samoa"/>
+                <StringItem index="12" value="AT - Austria"/>
+                <StringItem index="13" value="AU - Australia"/>
+                <StringItem index="14" value="AW - Aruba"/>
+                <StringItem index="15" value="AZ - Azerbaijan"/>
+                <StringItem index="16" value="BA - Bosnia and Herzegovina"/>
+                <StringItem index="17" value="BB - Barbados"/>
+                <StringItem index="18" value="BD - Bangladesh"/>
+                <StringItem index="19" value="BE - Belgium"/>
+                <StringItem index="20" value="BF - Burkina Faso"/>
+                <StringItem index="21" value="BG - Bulgaria"/>
+                <StringItem index="22" value="BH - Bahrain"/>
+                <StringItem index="23" value="BI - Burundi"/>
+                <StringItem index="24" value="BJ - Benin"/>
+                <StringItem index="25" value="BL - Saint Barthelemy"/>
+                <StringItem index="26" value="BM - Bermuda"/>
+                <StringItem index="27" value="BN - Brunei"/>
+                <StringItem index="28" value="BO - Bolivia"/>
+                <StringItem index="29" value="BR - Brazil"/>
+                <StringItem index="30" value="BS - Bahamas, The"/>
+                <StringItem index="31" value="BT - Bhutan"/>
+                <StringItem index="32" value="BV - Bouvet Island"/>
+                <StringItem index="33" value="BW - Botswana"/>
+                <StringItem index="34" value="BY - Belarus"/>
+                <StringItem index="35" value="BZ - Belize"/>
+                <StringItem index="36" value="CA - Canada"/>
+                <StringItem index="37" value="CC - Cocos (Keeling) Islands"/>
+                <StringItem index="38" value="CD - Congo, Democratic Republic of the"/>
+                <StringItem index="39" value="CF - Central African Republic"/>
+                <StringItem index="40" value="CG - Congo, Republic of the"/>
+                <StringItem index="41" value="CH - Switzerland"/>
+                <StringItem index="42" value="CI - Cote d&apos;Ivoire"/>
+                <StringItem index="43" value="CK - Cook Islands"/>
+                <StringItem index="44" value="CL - Chile"/>
+                <StringItem index="45" value="CM - Cameroon"/>
+                <StringItem index="46" value="CN - China"/>
+                <StringItem index="47" value="CO - Colombia"/>
+                <StringItem index="48" value="CR - Costa Rica"/>
+                <StringItem index="49" value="CU - Cuba"/>
+                <StringItem index="50" value="CV - Cape Verde"/>
+                <StringItem index="51" value="CW - Curacao"/>
+                <StringItem index="52" value="CX - Christmas Island"/>
+                <StringItem index="53" value="CY - Cyprus"/>
+                <StringItem index="54" value="CZ - Czech Republic"/>
+                <StringItem index="55" value="DE - Germany"/>
+                <StringItem index="56" value="DJ - Djibouti"/>
+                <StringItem index="57" value="DK - Denmark"/>
+                <StringItem index="58" value="DM - Dominica"/>
+                <StringItem index="59" value="DO - Dominican Republic"/>
+                <StringItem index="60" value="DZ - Algeria"/>
+                <StringItem index="61" value="EC - Ecuador"/>
+                <StringItem index="62" value="EE - Estonia"/>
+                <StringItem index="63" value="EG - Egypt"/>
+                <StringItem index="64" value="EH - Western Sahara"/>
+                <StringItem index="65" value="ER - Eritrea"/>
+                <StringItem index="66" value="ES - Spain"/>
+                <StringItem index="67" value="ET - Ethiopia"/>
+                <StringItem index="68" value="FI - Finland"/>
+                <StringItem index="69" value="FJ - Fiji"/>
+                <StringItem index="70" value="FK - Falkland Islands (Islas Malvinas)"/>
+                <StringItem index="71" value="FM - Micronesia, Federated States of"/>
+                <StringItem index="72" value="FO - Faroe Islands"/>
+                <StringItem index="73" value="FR - France"/>
+                <StringItem index="74" value="FX - France, Metropolitan"/>
+                <StringItem index="75" value="GA - Gabon"/>
+                <StringItem index="76" value="GB - United Kingdom"/>
+                <StringItem index="77" value="GD - Grenada"/>
+                <StringItem index="78" value="GE - Georgia"/>
+                <StringItem index="79" value="GF - French Guiana"/>
+                <StringItem index="80" value="GG - Guernsey"/>
+                <StringItem index="81" value="GH - Ghana"/>
+                <StringItem index="82" value="GI - Gibraltar"/>
+                <StringItem index="83" value="GL - Greenland"/>
+                <StringItem index="84" value="GM - Gambia, The"/>
+                <StringItem index="85" value="GN - Guinea"/>
+                <StringItem index="86" value="GP - Guadeloupe"/>
+                <StringItem index="87" value="GQ - Equatorial Guinea"/>
+                <StringItem index="88" value="GR - Greece"/>
+                <StringItem index="89" value="GS - South Georgia and the Islands"/>
+                <StringItem index="90" value="GT - Guatemala"/>
+                <StringItem index="91" value="GU - Guam"/>
+                <StringItem index="92" value="GW - Guinea-Bissau"/>
+                <StringItem index="93" value="GY - Guyana"/>
+                <StringItem index="94" value="HK - Hong Kong"/>
+                <StringItem index="95" value="HM - Heard Island and McDonald Islands"/>
+                <StringItem index="96" value="HN - Honduras"/>
+                <StringItem index="97" value="HR - Croatia"/>
+                <StringItem index="98" value="HT - Haiti"/>
+                <StringItem index="99" value="HU - Hungary"/>
+                <StringItem index="100" value="ID - Indonesia"/>
+                <StringItem index="101" value="IE - Ireland"/>
+                <StringItem index="102" value="IL - Israel"/>
+                <StringItem index="103" value="IM - Isle of Man"/>
+                <StringItem index="104" value="IN - India"/>
+                <StringItem index="105" value="IO - British Indian Ocean Territory"/>
+                <StringItem index="106" value="IQ - Iraq"/>
+                <StringItem index="107" value="IR - Iran"/>
+                <StringItem index="108" value="IS - Iceland"/>
+                <StringItem index="109" value="IT - Italy"/>
+                <StringItem index="110" value="JE - Jersey"/>
+                <StringItem index="111" value="JM - Jamaica"/>
+                <StringItem index="112" value="JO - Jordan"/>
+                <StringItem index="113" value="JP - Japan"/>
+                <StringItem index="114" value="KE - Kenya"/>
+                <StringItem index="115" value="KG - Kyrgyzstan"/>
+                <StringItem index="116" value="KH - Cambodia"/>
+                <StringItem index="117" value="KI - Kiribati"/>
+                <StringItem index="118" value="KM - Comoros"/>
+                <StringItem index="119" value="KN - Saint Kitts and Nevis"/>
+                <StringItem index="120" value="KP - Korea, North"/>
+                <StringItem index="121" value="KR - Korea, South"/>
+                <StringItem index="122" value="KW - Kuwait"/>
+                <StringItem index="123" value="KY - Cayman Islands"/>
+                <StringItem index="124" value="KZ - Kazakhstan"/>
+                <StringItem index="125" value="LA - Laos"/>
+                <StringItem index="126" value="LB - Lebanon"/>
+                <StringItem index="127" value="LC - Saint Lucia"/>
+                <StringItem index="128" value="LI - Liechtenstein"/>
+                <StringItem index="129" value="LK - Sri Lanka"/>
+                <StringItem index="130" value="LR - Liberia"/>
+                <StringItem index="131" value="LS - Lesotho"/>
+                <StringItem index="132" value="LT - Lithuania"/>
+                <StringItem index="133" value="LU - Luxembourg"/>
+                <StringItem index="134" value="LV - Latvia"/>
+                <StringItem index="135" value="LY - Libya"/>
+                <StringItem index="136" value="MA - Morocco"/>
+                <StringItem index="137" value="MC - Monaco"/>
+                <StringItem index="138" value="MD - Moldova"/>
+                <StringItem index="139" value="ME - Montenegro"/>
+                <StringItem index="140" value="MF - Saint Martin"/>
+                <StringItem index="141" value="MG - Madagascar"/>
+                <StringItem index="142" value="MH - Marshall Islands"/>
+                <StringItem index="143" value="MK - Macedonia"/>
+                <StringItem index="144" value="ML - Mali"/>
+                <StringItem index="145" value="MM - Burma"/>
+                <StringItem index="146" value="MN - Mongolia"/>
+                <StringItem index="147" value="MO - Macau"/>
+                <StringItem index="148" value="MP - Northern Mariana Islands"/>
+                <StringItem index="149" value="MQ - Martinique"/>
+                <StringItem index="150" value="MR - Mauritania"/>
+                <StringItem index="151" value="MS - Montserrat"/>
+                <StringItem index="152" value="MT - Malta"/>
+                <StringItem index="153" value="MU - Mauritius"/>
+                <StringItem index="154" value="MV - Maldives"/>
+                <StringItem index="155" value="MW - Malawi"/>
+                <StringItem index="156" value="MX - Mexico"/>
+                <StringItem index="157" value="MY - Malaysia"/>
+                <StringItem index="158" value="MZ - Mozambique"/>
+                <StringItem index="159" value="NA - Namibia"/>
+                <StringItem index="160" value="NC - New Caledonia"/>
+                <StringItem index="161" value="NE - Niger"/>
+                <StringItem index="162" value="NF - Norfolk Island"/>
+                <StringItem index="163" value="NG - Nigeria"/>
+                <StringItem index="164" value="NI - Nicaragua"/>
+                <StringItem index="165" value="NL - Netherlands"/>
+                <StringItem index="166" value="NO - Norway"/>
+                <StringItem index="167" value="NP - Nepal"/>
+                <StringItem index="168" value="NR - Nauru"/>
+                <StringItem index="169" value="NU - Niue"/>
+                <StringItem index="170" value="NZ - New Zealand"/>
+                <StringItem index="171" value="OM - Oman"/>
+                <StringItem index="172" value="PA - Panama"/>
+                <StringItem index="173" value="PE - Peru"/>
+                <StringItem index="174" value="PF - French Polynesia"/>
+                <StringItem index="175" value="PG - Papua New Guinea"/>
+                <StringItem index="176" value="PH - Philippines"/>
+                <StringItem index="177" value="PK - Pakistan"/>
+                <StringItem index="178" value="PL - Poland"/>
+                <StringItem index="179" value="PM - Saint Pierre and Miquelon"/>
+                <StringItem index="180" value="PN - Pitcairn Islands"/>
+                <StringItem index="181" value="PR - Puerto Rico"/>
+                <StringItem index="182" value="PS - Gaza Strip"/>
+                <StringItem index="183" value="PS - West Bank"/>
+                <StringItem index="184" value="PT - Portugal"/>
+                <StringItem index="185" value="PW - Palau"/>
+                <StringItem index="186" value="PY - Paraguay"/>
+                <StringItem index="187" value="QA - Qatar"/>
+                <StringItem index="188" value="RE - Reunion"/>
+                <StringItem index="189" value="RO - Romania"/>
+                <StringItem index="190" value="RS - Serbia"/>
+                <StringItem index="191" value="RU - Russia"/>
+                <StringItem index="192" value="RW - Rwanda"/>
+                <StringItem index="193" value="SA - Saudi Arabia"/>
+                <StringItem index="194" value="SB - Solomon Islands"/>
+                <StringItem index="195" value="SC - Seychelles"/>
+                <StringItem index="196" value="SD - Sudan"/>
+                <StringItem index="197" value="SE - Sweden"/>
+                <StringItem index="198" value="SG - Singapore"/>
+                <StringItem index="199" value="SH - Saint Helena, Ascension, and Tristan da Cunha"/>
+                <StringItem index="200" value="SI - Slovenia"/>
+                <StringItem index="201" value="SJ - Svalbard"/>
+                <StringItem index="202" value="SK - Slovakia"/>
+                <StringItem index="203" value="SL - Sierra Leone"/>
+                <StringItem index="204" value="SM - San Marino"/>
+                <StringItem index="205" value="SN - Senegal"/>
+                <StringItem index="206" value="SO - Somalia"/>
+                <StringItem index="207" value="SR - Suriname"/>
+                <StringItem index="208" value="SS - South Sudan"/>
+                <StringItem index="209" value="ST - Sao Tome and Principe"/>
+                <StringItem index="210" value="SV - El Salvador"/>
+                <StringItem index="211" value="SX - Sint Maarten"/>
+                <StringItem index="212" value="SY - Syria"/>
+                <StringItem index="213" value="SZ - Swaziland"/>
+                <StringItem index="214" value="TC - Turks and Caicos Islands"/>
+                <StringItem index="215" value="TD - Chad"/>
+                <StringItem index="216" value="TF - French Southern and Antarctic Lands"/>
+                <StringItem index="217" value="TG - Togo"/>
+                <StringItem index="218" value="TH - Thailand"/>
+                <StringItem index="219" value="TJ - Tajikistan"/>
+                <StringItem index="220" value="TK - Tokelau"/>
+                <StringItem index="221" value="TL - Timor-Leste"/>
+                <StringItem index="222" value="TM - Turkmenistan"/>
+                <StringItem index="223" value="TN - Tunisia"/>
+                <StringItem index="224" value="TO - Tonga"/>
+                <StringItem index="225" value="TR - Turkey"/>
+                <StringItem index="226" value="TT - Trinidad and Tobago"/>
+                <StringItem index="227" value="TV - Tuvalu"/>
+                <StringItem index="228" value="TW - Taiwan"/>
+                <StringItem index="229" value="TZ - Tanzania"/>
+                <StringItem index="230" value="UA - Ukraine"/>
+                <StringItem index="231" value="UG - Uganda"/>
+                <StringItem index="232" value="UM - United States Minor Outlying Islands"/>
+                <StringItem index="233" value="US - United States"/>
+                <StringItem index="234" value="UY - Uruguay"/>
+                <StringItem index="235" value="UZ - Uzbekistan"/>
+                <StringItem index="236" value="VA - Holy See (Vatican City)"/>
+                <StringItem index="237" value="VC - Saint Vincent and the Grenadines"/>
+                <StringItem index="238" value="VE - Venezuela"/>
+                <StringItem index="239" value="VG - British Virgin Islands"/>
+                <StringItem index="240" value="VI - Virgin Islands"/>
+                <StringItem index="241" value="VN - Vietnam"/>
+                <StringItem index="242" value="VU - Vanuatu"/>
+                <StringItem index="243" value="WF - Wallis and Futuna"/>
+                <StringItem index="244" value="WS - Samoa"/>
+                <StringItem index="245" value="XK - Kosovo"/>
+                <StringItem index="246" value="YE - Yemen"/>
+                <StringItem index="247" value="YT - Mayotte"/>
+                <StringItem index="248" value="ZA - South Africa"/>
+                <StringItem index="249" value="ZM - Zambia"/>
+                <StringItem index="250" value="ZW - Zimbabwe"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRegIn">
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRegOut">
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
+    <Container class="javax.swing.JPanel" name="jPanelRoomAvail">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card4"/>
+        </Constraint>
+      </Constraints>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane7" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jCheckBoxFamily" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="409" max="32767" attributes="0"/>
+                                  <Component id="jButtonRegistrationRoom" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jCheckBoxDouble" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoxSingle" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jXDatePickerRoomFrom" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jXDatePickerRoomTo" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jButtonMainMenuAvil" max="32767" attributes="0"/>
+                              <Component id="jButton1" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jScrollPane7" pref="305" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBoxSingle" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBoxDouble" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jXDatePickerRoomFrom" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jXDatePickerRoomTo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jCheckBoxFamily" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButtonMainMenuAvil" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonRegistrationRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane2">
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Room Availability"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="jCheckBoxSingle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Single Rooms"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxSingleActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="jCheckBoxDouble">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Double Rooms"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="jCheckBoxFamily">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Family Rooms"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextAreaBook">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="From"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="To"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonMainMenuAvil">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Main Menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMainMenuAvilActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonRegistrationRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registration Form"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegistrationRoomActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clear"/>
+          </Properties>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRoomFrom">
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRoomTo">
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Phone"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
+    <Container class="javax.swing.JPanel" name="jPanelBookings">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+          <CardConstraints cardName="card5"/>
+        </Constraint>
+      </Constraints>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabelBookings" min="-2" pref="170" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabelFirstNameBook" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                                                  <Component id="jLabelSurnameBook" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jLabelAgencyBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelCheckInBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jXDatePickerBookIn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="jScrollPane11" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jScrollPane12" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jLabelAdressBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelCountryBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane13" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jComboBox2" alignment="0" min="-2" pref="324" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jXDatePickerBookOut" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelNightsBook" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jScrollPane10" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jScrollPane8" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabelEmailBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelPhoneBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="jScrollPane9" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jButtonRegBook" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jButtonMainMenuBook" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jButtonDeleteBook" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jButtonRoomBook" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabelBookings" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelFirstNameBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabelSurnameBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane12" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane10" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabelAdressBook" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabelPhoneBook" alignment="1" min="-2" pref="14" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jScrollPane13" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jScrollPane9" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelCountryBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelEmailBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jComboBox2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jScrollPane8" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabelAgencyBook" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane11" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabelCheckInBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelNightsBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jXDatePickerBookIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jXDatePickerBookOut" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="jButtonDeleteBook" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonMainMenuBook" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButtonRoomBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonRegBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane3">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextEmailBook">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane9">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextPhoneBook">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelAgencyBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Travel Agency"/>
+          </Properties>
         </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Country"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Address"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane4">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane4">
+        <Component class="javax.swing.JLabel" name="jLabelCheckInBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date of Check-In"/>
+          </Properties>
         </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane5">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane5">
+        <Component class="javax.swing.JLabel" name="jLabelPhoneBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Phone"/>
+          </Properties>
         </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Email"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane6">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane6">
+        <Component class="javax.swing.JButton" name="jButtonMainMenuBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Main Menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMainMenuBookActionPerformed"/>
+          </Events>
         </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Travel Agency"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane7">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane10">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane7">
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextSurnameBook">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane11">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextAgencyBook">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelSurnameBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Surname"/>
+          </Properties>
         </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Date of Check In"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Number of Nights"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Appartment Number"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane8">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane12">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextPane" name="jTextPane8">
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextFirstNameBook">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabelEmailBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Email"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelNightsBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date of Check-Out"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelCountryBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Country"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelAdressBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Address"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonRoomBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Room List"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRoomBookActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox2">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="251">
+                <StringItem index="0" value="Please select a country below..."/>
+                <StringItem index="1" value="AD - Andorra"/>
+                <StringItem index="2" value="AE - United Arab Emirates"/>
+                <StringItem index="3" value="AF - Afghanistan"/>
+                <StringItem index="4" value="AG - Antigua and Barbuda"/>
+                <StringItem index="5" value="AI - Anguilla"/>
+                <StringItem index="6" value="AL - Albania"/>
+                <StringItem index="7" value="AM - Armenia"/>
+                <StringItem index="8" value="AO - Angola"/>
+                <StringItem index="9" value="AQ - Antarctica"/>
+                <StringItem index="10" value="AR - Argentina"/>
+                <StringItem index="11" value="AS - American Samoa"/>
+                <StringItem index="12" value="AT - Austria"/>
+                <StringItem index="13" value="AU - Australia"/>
+                <StringItem index="14" value="AW - Aruba"/>
+                <StringItem index="15" value="AZ - Azerbaijan"/>
+                <StringItem index="16" value="BA - Bosnia and Herzegovina"/>
+                <StringItem index="17" value="BB - Barbados"/>
+                <StringItem index="18" value="BD - Bangladesh"/>
+                <StringItem index="19" value="BE - Belgium"/>
+                <StringItem index="20" value="BF - Burkina Faso"/>
+                <StringItem index="21" value="BG - Bulgaria"/>
+                <StringItem index="22" value="BH - Bahrain"/>
+                <StringItem index="23" value="BI - Burundi"/>
+                <StringItem index="24" value="BJ - Benin"/>
+                <StringItem index="25" value="BL - Saint Barthelemy"/>
+                <StringItem index="26" value="BM - Bermuda"/>
+                <StringItem index="27" value="BN - Brunei"/>
+                <StringItem index="28" value="BO - Bolivia"/>
+                <StringItem index="29" value="BR - Brazil"/>
+                <StringItem index="30" value="BS - Bahamas, The"/>
+                <StringItem index="31" value="BT - Bhutan"/>
+                <StringItem index="32" value="BV - Bouvet Island"/>
+                <StringItem index="33" value="BW - Botswana"/>
+                <StringItem index="34" value="BY - Belarus"/>
+                <StringItem index="35" value="BZ - Belize"/>
+                <StringItem index="36" value="CA - Canada"/>
+                <StringItem index="37" value="CC - Cocos (Keeling) Islands"/>
+                <StringItem index="38" value="CD - Congo, Democratic Republic of the"/>
+                <StringItem index="39" value="CF - Central African Republic"/>
+                <StringItem index="40" value="CG - Congo, Republic of the"/>
+                <StringItem index="41" value="CH - Switzerland"/>
+                <StringItem index="42" value="CI - Cote d&apos;Ivoire"/>
+                <StringItem index="43" value="CK - Cook Islands"/>
+                <StringItem index="44" value="CL - Chile"/>
+                <StringItem index="45" value="CM - Cameroon"/>
+                <StringItem index="46" value="CN - China"/>
+                <StringItem index="47" value="CO - Colombia"/>
+                <StringItem index="48" value="CR - Costa Rica"/>
+                <StringItem index="49" value="CU - Cuba"/>
+                <StringItem index="50" value="CV - Cape Verde"/>
+                <StringItem index="51" value="CW - Curacao"/>
+                <StringItem index="52" value="CX - Christmas Island"/>
+                <StringItem index="53" value="CY - Cyprus"/>
+                <StringItem index="54" value="CZ - Czech Republic"/>
+                <StringItem index="55" value="DE - Germany"/>
+                <StringItem index="56" value="DJ - Djibouti"/>
+                <StringItem index="57" value="DK - Denmark"/>
+                <StringItem index="58" value="DM - Dominica"/>
+                <StringItem index="59" value="DO - Dominican Republic"/>
+                <StringItem index="60" value="DZ - Algeria"/>
+                <StringItem index="61" value="EC - Ecuador"/>
+                <StringItem index="62" value="EE - Estonia"/>
+                <StringItem index="63" value="EG - Egypt"/>
+                <StringItem index="64" value="EH - Western Sahara"/>
+                <StringItem index="65" value="ER - Eritrea"/>
+                <StringItem index="66" value="ES - Spain"/>
+                <StringItem index="67" value="ET - Ethiopia"/>
+                <StringItem index="68" value="FI - Finland"/>
+                <StringItem index="69" value="FJ - Fiji"/>
+                <StringItem index="70" value="FK - Falkland Islands (Islas Malvinas)"/>
+                <StringItem index="71" value="FM - Micronesia, Federated States of"/>
+                <StringItem index="72" value="FO - Faroe Islands"/>
+                <StringItem index="73" value="FR - France"/>
+                <StringItem index="74" value="FX - France, Metropolitan"/>
+                <StringItem index="75" value="GA - Gabon"/>
+                <StringItem index="76" value="GB - United Kingdom"/>
+                <StringItem index="77" value="GD - Grenada"/>
+                <StringItem index="78" value="GE - Georgia"/>
+                <StringItem index="79" value="GF - French Guiana"/>
+                <StringItem index="80" value="GG - Guernsey"/>
+                <StringItem index="81" value="GH - Ghana"/>
+                <StringItem index="82" value="GI - Gibraltar"/>
+                <StringItem index="83" value="GL - Greenland"/>
+                <StringItem index="84" value="GM - Gambia, The"/>
+                <StringItem index="85" value="GN - Guinea"/>
+                <StringItem index="86" value="GP - Guadeloupe"/>
+                <StringItem index="87" value="GQ - Equatorial Guinea"/>
+                <StringItem index="88" value="GR - Greece"/>
+                <StringItem index="89" value="GS - South Georgia and the Islands"/>
+                <StringItem index="90" value="GT - Guatemala"/>
+                <StringItem index="91" value="GU - Guam"/>
+                <StringItem index="92" value="GW - Guinea-Bissau"/>
+                <StringItem index="93" value="GY - Guyana"/>
+                <StringItem index="94" value="HK - Hong Kong"/>
+                <StringItem index="95" value="HM - Heard Island and McDonald Islands"/>
+                <StringItem index="96" value="HN - Honduras"/>
+                <StringItem index="97" value="HR - Croatia"/>
+                <StringItem index="98" value="HT - Haiti"/>
+                <StringItem index="99" value="HU - Hungary"/>
+                <StringItem index="100" value="ID - Indonesia"/>
+                <StringItem index="101" value="IE - Ireland"/>
+                <StringItem index="102" value="IL - Israel"/>
+                <StringItem index="103" value="IM - Isle of Man"/>
+                <StringItem index="104" value="IN - India"/>
+                <StringItem index="105" value="IO - British Indian Ocean Territory"/>
+                <StringItem index="106" value="IQ - Iraq"/>
+                <StringItem index="107" value="IR - Iran"/>
+                <StringItem index="108" value="IS - Iceland"/>
+                <StringItem index="109" value="IT - Italy"/>
+                <StringItem index="110" value="JE - Jersey"/>
+                <StringItem index="111" value="JM - Jamaica"/>
+                <StringItem index="112" value="JO - Jordan"/>
+                <StringItem index="113" value="JP - Japan"/>
+                <StringItem index="114" value="KE - Kenya"/>
+                <StringItem index="115" value="KG - Kyrgyzstan"/>
+                <StringItem index="116" value="KH - Cambodia"/>
+                <StringItem index="117" value="KI - Kiribati"/>
+                <StringItem index="118" value="KM - Comoros"/>
+                <StringItem index="119" value="KN - Saint Kitts and Nevis"/>
+                <StringItem index="120" value="KP - Korea, North"/>
+                <StringItem index="121" value="KR - Korea, South"/>
+                <StringItem index="122" value="KW - Kuwait"/>
+                <StringItem index="123" value="KY - Cayman Islands"/>
+                <StringItem index="124" value="KZ - Kazakhstan"/>
+                <StringItem index="125" value="LA - Laos"/>
+                <StringItem index="126" value="LB - Lebanon"/>
+                <StringItem index="127" value="LC - Saint Lucia"/>
+                <StringItem index="128" value="LI - Liechtenstein"/>
+                <StringItem index="129" value="LK - Sri Lanka"/>
+                <StringItem index="130" value="LR - Liberia"/>
+                <StringItem index="131" value="LS - Lesotho"/>
+                <StringItem index="132" value="LT - Lithuania"/>
+                <StringItem index="133" value="LU - Luxembourg"/>
+                <StringItem index="134" value="LV - Latvia"/>
+                <StringItem index="135" value="LY - Libya"/>
+                <StringItem index="136" value="MA - Morocco"/>
+                <StringItem index="137" value="MC - Monaco"/>
+                <StringItem index="138" value="MD - Moldova"/>
+                <StringItem index="139" value="ME - Montenegro"/>
+                <StringItem index="140" value="MF - Saint Martin"/>
+                <StringItem index="141" value="MG - Madagascar"/>
+                <StringItem index="142" value="MH - Marshall Islands"/>
+                <StringItem index="143" value="MK - Macedonia"/>
+                <StringItem index="144" value="ML - Mali"/>
+                <StringItem index="145" value="MM - Burma"/>
+                <StringItem index="146" value="MN - Mongolia"/>
+                <StringItem index="147" value="MO - Macau"/>
+                <StringItem index="148" value="MP - Northern Mariana Islands"/>
+                <StringItem index="149" value="MQ - Martinique"/>
+                <StringItem index="150" value="MR - Mauritania"/>
+                <StringItem index="151" value="MS - Montserrat"/>
+                <StringItem index="152" value="MT - Malta"/>
+                <StringItem index="153" value="MU - Mauritius"/>
+                <StringItem index="154" value="MV - Maldives"/>
+                <StringItem index="155" value="MW - Malawi"/>
+                <StringItem index="156" value="MX - Mexico"/>
+                <StringItem index="157" value="MY - Malaysia"/>
+                <StringItem index="158" value="MZ - Mozambique"/>
+                <StringItem index="159" value="NA - Namibia"/>
+                <StringItem index="160" value="NC - New Caledonia"/>
+                <StringItem index="161" value="NE - Niger"/>
+                <StringItem index="162" value="NF - Norfolk Island"/>
+                <StringItem index="163" value="NG - Nigeria"/>
+                <StringItem index="164" value="NI - Nicaragua"/>
+                <StringItem index="165" value="NL - Netherlands"/>
+                <StringItem index="166" value="NO - Norway"/>
+                <StringItem index="167" value="NP - Nepal"/>
+                <StringItem index="168" value="NR - Nauru"/>
+                <StringItem index="169" value="NU - Niue"/>
+                <StringItem index="170" value="NZ - New Zealand"/>
+                <StringItem index="171" value="OM - Oman"/>
+                <StringItem index="172" value="PA - Panama"/>
+                <StringItem index="173" value="PE - Peru"/>
+                <StringItem index="174" value="PF - French Polynesia"/>
+                <StringItem index="175" value="PG - Papua New Guinea"/>
+                <StringItem index="176" value="PH - Philippines"/>
+                <StringItem index="177" value="PK - Pakistan"/>
+                <StringItem index="178" value="PL - Poland"/>
+                <StringItem index="179" value="PM - Saint Pierre and Miquelon"/>
+                <StringItem index="180" value="PN - Pitcairn Islands"/>
+                <StringItem index="181" value="PR - Puerto Rico"/>
+                <StringItem index="182" value="PS - Gaza Strip"/>
+                <StringItem index="183" value="PS - West Bank"/>
+                <StringItem index="184" value="PT - Portugal"/>
+                <StringItem index="185" value="PW - Palau"/>
+                <StringItem index="186" value="PY - Paraguay"/>
+                <StringItem index="187" value="QA - Qatar"/>
+                <StringItem index="188" value="RE - Reunion"/>
+                <StringItem index="189" value="RO - Romania"/>
+                <StringItem index="190" value="RS - Serbia"/>
+                <StringItem index="191" value="RU - Russia"/>
+                <StringItem index="192" value="RW - Rwanda"/>
+                <StringItem index="193" value="SA - Saudi Arabia"/>
+                <StringItem index="194" value="SB - Solomon Islands"/>
+                <StringItem index="195" value="SC - Seychelles"/>
+                <StringItem index="196" value="SD - Sudan"/>
+                <StringItem index="197" value="SE - Sweden"/>
+                <StringItem index="198" value="SG - Singapore"/>
+                <StringItem index="199" value="SH - Saint Helena, Ascension, and Tristan da Cunha"/>
+                <StringItem index="200" value="SI - Slovenia"/>
+                <StringItem index="201" value="SJ - Svalbard"/>
+                <StringItem index="202" value="SK - Slovakia"/>
+                <StringItem index="203" value="SL - Sierra Leone"/>
+                <StringItem index="204" value="SM - San Marino"/>
+                <StringItem index="205" value="SN - Senegal"/>
+                <StringItem index="206" value="SO - Somalia"/>
+                <StringItem index="207" value="SR - Suriname"/>
+                <StringItem index="208" value="SS - South Sudan"/>
+                <StringItem index="209" value="ST - Sao Tome and Principe"/>
+                <StringItem index="210" value="SV - El Salvador"/>
+                <StringItem index="211" value="SX - Sint Maarten"/>
+                <StringItem index="212" value="SY - Syria"/>
+                <StringItem index="213" value="SZ - Swaziland"/>
+                <StringItem index="214" value="TC - Turks and Caicos Islands"/>
+                <StringItem index="215" value="TD - Chad"/>
+                <StringItem index="216" value="TF - French Southern and Antarctic Lands"/>
+                <StringItem index="217" value="TG - Togo"/>
+                <StringItem index="218" value="TH - Thailand"/>
+                <StringItem index="219" value="TJ - Tajikistan"/>
+                <StringItem index="220" value="TK - Tokelau"/>
+                <StringItem index="221" value="TL - Timor-Leste"/>
+                <StringItem index="222" value="TM - Turkmenistan"/>
+                <StringItem index="223" value="TN - Tunisia"/>
+                <StringItem index="224" value="TO - Tonga"/>
+                <StringItem index="225" value="TR - Turkey"/>
+                <StringItem index="226" value="TT - Trinidad and Tobago"/>
+                <StringItem index="227" value="TV - Tuvalu"/>
+                <StringItem index="228" value="TW - Taiwan"/>
+                <StringItem index="229" value="TZ - Tanzania"/>
+                <StringItem index="230" value="UA - Ukraine"/>
+                <StringItem index="231" value="UG - Uganda"/>
+                <StringItem index="232" value="UM - United States Minor Outlying Islands"/>
+                <StringItem index="233" value="US - United States"/>
+                <StringItem index="234" value="UY - Uruguay"/>
+                <StringItem index="235" value="UZ - Uzbekistan"/>
+                <StringItem index="236" value="VA - Holy See (Vatican City)"/>
+                <StringItem index="237" value="VC - Saint Vincent and the Grenadines"/>
+                <StringItem index="238" value="VE - Venezuela"/>
+                <StringItem index="239" value="VG - British Virgin Islands"/>
+                <StringItem index="240" value="VI - Virgin Islands"/>
+                <StringItem index="241" value="VN - Vietnam"/>
+                <StringItem index="242" value="VU - Vanuatu"/>
+                <StringItem index="243" value="WF - Wallis and Futuna"/>
+                <StringItem index="244" value="WS - Samoa"/>
+                <StringItem index="245" value="XK - Kosovo"/>
+                <StringItem index="246" value="YE - Yemen"/>
+                <StringItem index="247" value="YT - Mayotte"/>
+                <StringItem index="248" value="ZA - South Africa"/>
+                <StringItem index="249" value="ZM - Zambia"/>
+                <StringItem index="250" value="ZW - Zimbabwe"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelFirstNameBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="First Name And Middle Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelBookings">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bookings"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[155, 18]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane13">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="jTextAddressBook">
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jButtonDeleteBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clear "/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDeleteBookActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonRegBook">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registration Form"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegBookActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerBookIn">
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerBookOut">
         </Component>
       </SubComponents>
     </Container>
