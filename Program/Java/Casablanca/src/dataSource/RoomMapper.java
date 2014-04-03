@@ -38,14 +38,14 @@ public class RoomMapper {
             
             while(rs.next())                    
             {   
-                Room room = new Room(rs.getInt(1), rs.getInt(2), rs.getInt(3),rs.getString(4));         
+                Room room = new Room(rs.getInt(1), rs.getInt(2), 0,"stringy string");         
                 rooms.add(room);
             }
 
         }
         catch (Exception e)
         {   
-          System.out.println("Fail in RoomMapper - getAvailableRooms");
+          System.out.println("Fail in RoomMapper - getRooms");
           System.out.println(e.getMessage());
         }
         finally			  					// must close statement
