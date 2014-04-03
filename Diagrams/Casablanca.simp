@@ -390,7 +390,6 @@
       <attributes>
         <attribute id="ac24df21e1f7f46458b4d6096dfe706ae836" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
         <attribute id="a74cc707cb2a34710bb7623adb504ea40956" name="RoomTypeId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
-        <attribute id="a2871d9c8d0804e49a0e4b692433274e4322" name="RoomBookingId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
         <attribute id="a687093acfa8e4cd8b84cb5fce32e4736319" name="Name" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
       </attributes>
       <operations />
@@ -482,7 +481,6 @@
       <attributes>
         <attribute id="ac24df21e1f7f46458b4d6096dfe706ae836" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
         <attribute id="a74cc707cb2a34710bb7623adb504ea40956" name="RoomTypeId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
-        <attribute id="a2871d9c8d0804e49a0e4b692433274e4322" name="RoomBookingId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
         <attribute id="a687093acfa8e4cd8b84cb5fce32e4736319" name="Name" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
       </attributes>
       <operations />
@@ -1914,9 +1912,7 @@
           </attributes>
           <operations />
           <template-parameters>
-            <source-codes>
-              <source-code language="ActionScript" />
-            </source-codes>
+            <source-codes />
           </template-parameters>
         </item>
         <item id="di728717932765780745" cid="C003" type="class" name="PayingGuest" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="03/21/2014 22:54:42">
@@ -2361,7 +2357,7 @@
             <drawing-line start-point="-13,223" end-point="1357,224" />
             <style class="default" />
           </item>
-          <item id="di306536556402031871" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di315447236123137690" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="-5" ay="792" awidth="1364" aheight="2" x="-5" y="792" width="1364" height="2" angle="0" />
             <drawing-line start-point="-5,792" end-point="1358,793" />
             <style class="default" />
@@ -3728,12 +3724,12 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <layout ax="1383.914" ay="-56" awidth="175.0862" aheight="160" x="1383.914" y="-56" width="175.0862" height="160" angle="0" />
             <class />
           </item>
-          <item id="di980793611300018826" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
+          <item id="di989704291921124644" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
             <layout ax="52" ay="223" awidth="2691" aheight="2" x="53" y="223" width="2695" height="2" angle="0" />
             <drawing-line start-point="52,223" end-point="2742,224" />
             <style class="default" />
           </item>
-          <item id="di296562321723985186" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di543416131796090579" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="53" ay="1198" awidth="2695" aheight="2" x="94" y="898" width="2649" height="2" angle="0" />
             <drawing-line start-point="53,1198" end-point="2747,1199" />
             <style class="default" />
