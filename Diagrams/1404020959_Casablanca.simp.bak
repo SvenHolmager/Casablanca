@@ -1250,7 +1250,6 @@
           <attributes>
             <attribute id="aabb5c06cfe6f485e993df4736c55c9c9815" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
             <attribute id="a5f2ae06cc01a4bc982881de294a207e9722" name="ActivityTypeId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
-            <attribute id="a9cafc78fc7e74f6fa0293a06511b87ae925" name="InstructorId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
             <attribute id="a17aa537c315c4ca1acab2be670980167205" name="Name" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
           </attributes>
           <operations />
@@ -1370,11 +1369,11 @@
           <style class="default" />
           <attributes>
             <attribute id="aaf9cc1879b344fcba3434ff710a8674b447" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
+            <attribute id="ae5eb41ed6e7d474ab0da1f3879bc07ed698" name="InstructorId" type="" type-id="" visibility="private" abstract="false" virtual="false" />
             <attribute id="a4df0c831fa9d4e058584224a1a75c66f688" name="GuestId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
             <attribute id="aa1a4f383adfd4508addd97728289e3e8813" name="ActivityId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
             <attribute id="a63031d9745d74a848ad4b1c44abd734e389" name="Date" type="DateTime" type-id="Uml.DateTime" visibility="private" abstract="false" virtual="false" />
             <attribute id="ae208d3a0d6ec448a9c4ab1aca5976715499" name="Initiated" type="Boolean" type-id="Uml.Boolean" visibility="private" abstract="false" virtual="false" />
-            <attribute id="ae5eb41ed6e7d474ab0da1f3879bc07ed698" name="InstructorId" type="" type-id="" visibility="private" abstract="false" virtual="false" />
           </attributes>
           <operations />
           <template-parameters>
@@ -1832,7 +1831,6 @@
           <attributes>
             <attribute id="aabb5c06cfe6f485e993df4736c55c9c9815" name="Id" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
             <attribute id="a5f2ae06cc01a4bc982881de294a207e9722" name="ActivityTypeId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
-            <attribute id="a9cafc78fc7e74f6fa0293a06511b87ae925" name="InstructorId" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" />
             <attribute id="a17aa537c315c4ca1acab2be670980167205" name="Name" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" />
           </attributes>
           <operations />
@@ -2361,7 +2359,7 @@
             <drawing-line start-point="-13,223" end-point="1357,224" />
             <style class="default" />
           </item>
-          <item id="di753287321539798628" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di306536556402031871" iid="c95c58b9e46d4b1d9724e76910d5ee0b" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="-5" ay="792" awidth="1364" aheight="2" x="-5" y="792" width="1364" height="2" angle="0" />
             <drawing-line start-point="-5,792" end-point="1358,793" />
             <style class="default" />
@@ -3728,12 +3726,12 @@ More than one person pr. room can sign up this way (perhaps needed for free acti
             <layout ax="1383.914" ay="-56" awidth="175.0862" aheight="160" x="1383.914" y="-56" width="175.0862" height="160" angle="0" />
             <class />
           </item>
-          <item id="di126135168249393108" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
+          <item id="di980793611300018826" iid="94635538e9a8442884c8f7191f627060" name="Element1" creation-date="03/22/2014 01:24:42" order-index="15" type="drawing-line">
             <layout ax="52" ay="223" awidth="2691" aheight="2" x="53" y="223" width="2695" height="2" angle="0" />
             <drawing-line start-point="52,223" end-point="2742,224" />
             <style class="default" />
           </item>
-          <item id="di768654030299952232" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
+          <item id="di296562321723985186" iid="372b7310b8be49aba27eb44070d35998" name="Element2" creation-date="03/22/2014 01:25:11" order-index="16" type="drawing-line">
             <layout ax="53" ay="1198" awidth="2695" aheight="2" x="94" y="898" width="2649" height="2" angle="0" />
             <drawing-line start-point="53,1198" end-point="2747,1199" />
             <style class="default" />

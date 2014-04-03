@@ -1,4 +1,3 @@
-
 insert into room_type values (1, 'single', 1, 10);
 insert into room_type values (1, 'double', 2, 15);
 insert into room_type values (1, 'family', 5, 25);
@@ -26,6 +25,3 @@ insert into room values(204, 3);
 insert into PaymentStatus values(1, 'not paid');
 insert into PaymentStatus values(2, 'depositum paid');
 insert into PaymentStatus values(3, 'room paid');
-
-DELETE FROM paymentstatus, room, room_type
-WHERE room_id, payment_id, room_type_id => 0;

@@ -17,7 +17,7 @@ public class RoomBooking {
     private int PaymentStatusId;
     private String TravelAgency;
     private String CheckIn;
-    private String CheckOut;
+    private String CheckOut;    
 
     public RoomBooking(int Id, int PayingGuestId, int RoomId, int PaymentStatusId, String TravelAgency, String CheckIn, String CheckOut) {
         this.Id = Id;
