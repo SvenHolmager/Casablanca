@@ -4,21 +4,43 @@
  */
 package presentation;
 
+import domain.PayingGuest;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 /**
  *
  * @author Mads
  */
-public class HotelGuiForm extends javax.swing.JFrame
-{
+public class HotelGuiForm extends javax.swing.JFrame {
 
+    public HotelGuiForm() {
+        initComponents();
+    }
+
+   
+    public static void main(String[] args) {
+        HotelGuiForm HGF = new HotelGuiForm();
+        HGF.setVisible(true);
+
+    }
     /**
      * Creates new form HotelGuiForm
      */
-    public HotelGuiForm()
-    {
-        initComponents();
-
-    }
+    int Id;
+    String firstName;
+    String familyName;
+    String address;
+    String country;
+    String phone;
+    String email;
+    PayingGuest pg = new PayingGuest(Id, firstName, familyName, address, country, phone, email);
+    public static String sql;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,8 +49,7 @@ public class HotelGuiForm extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jPanelMainMenu = new javax.swing.JPanel();
         jButtonRegistrationFormMain = new javax.swing.JButton();
@@ -63,9 +84,10 @@ public class HotelGuiForm extends javax.swing.JFrame
         jButtonMainMenuReg = new javax.swing.JButton();
         jButtonRoomReg = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox();
-        jXDatePickerRegIn = new org.jdesktop.swingx.JXDatePicker();
-        jXDatePickerRegOut = new org.jdesktop.swingx.JXDatePicker();
         jButtonRegistration = new javax.swing.JButton();
+        jXDatePickerRegDateIn = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerRegDateOut = new org.jdesktop.swingx.JXDatePicker();
+        jLabelRegSuccess = new javax.swing.JLabel();
         jPanelRoomAvail = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jCheckBoxSingle = new javax.swing.JCheckBox();
@@ -78,9 +100,9 @@ public class HotelGuiForm extends javax.swing.JFrame
         jButtonMainMenuAvil = new javax.swing.JButton();
         jButtonRegistrationRoom = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jXDatePickerRoomFrom = new org.jdesktop.swingx.JXDatePicker();
-        jXDatePickerRoomTo = new org.jdesktop.swingx.JXDatePicker();
         jButtonBookRoom = new javax.swing.JButton();
+        jXDatePickerAvailFrom = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerAvailTo = new org.jdesktop.swingx.JXDatePicker();
         jPanelBookings = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextEmailBook = new javax.swing.JTextPane();
@@ -109,17 +131,15 @@ public class HotelGuiForm extends javax.swing.JFrame
         jTextAddressBook = new javax.swing.JTextPane();
         jButtonDeleteBook = new javax.swing.JButton();
         jButtonRegBook = new javax.swing.JButton();
-        jXDatePickerBookIn = new org.jdesktop.swingx.JXDatePicker();
-        jXDatePickerBookOut = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerBookFrom = new org.jdesktop.swingx.JXDatePicker();
+        jXDatePickerBookTo = new org.jdesktop.swingx.JXDatePicker();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
         jButtonRegistrationFormMain.setText("Registration Form");
-        jButtonRegistrationFormMain.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRegistrationFormMain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrationFormMainActionPerformed(evt);
             }
         });
@@ -128,19 +148,15 @@ public class HotelGuiForm extends javax.swing.JFrame
         jLabelMainMenu.setText("Main Menu");
 
         jButtonAvailMain.setText("Room List");
-        jButtonAvailMain.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonAvailMain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAvailMainActionPerformed(evt);
             }
         });
 
         jButtonBookingMain.setText("Bookings");
-        jButtonBookingMain.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonBookingMain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBookingMainActionPerformed(evt);
             }
         });
@@ -158,7 +174,7 @@ public class HotelGuiForm extends javax.swing.JFrame
                         .addGap(14, 14, 14)
                         .addComponent(jLabelMainMenu))
                     .addComponent(jButtonBookingMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(268, Short.MAX_VALUE))
         );
         jPanelMainMenuLayout.setVerticalGroup(
             jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,42 +227,39 @@ public class HotelGuiForm extends javax.swing.JFrame
         jLabelNights.setToolTipText("");
 
         jButtonDelete.setText("Clear Registration Form");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
 
         jButtonMainMenuReg.setText("Main Menu");
-        jButtonMainMenuReg.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonMainMenuReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMainMenuRegActionPerformed(evt);
             }
         });
 
         jButtonRoomReg.setText("Room List");
-        jButtonRoomReg.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRoomReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRoomRegActionPerformed(evt);
             }
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select a country below...", "AD - Andorra", "AE - United Arab Emirates", "AF - Afghanistan", "AG - Antigua and Barbuda", "AI - Anguilla", "AL - Albania", "AM - Armenia", "AO - Angola", "AQ - Antarctica", "AR - Argentina", "AS - American Samoa", "AT - Austria", "AU - Australia", "AW - Aruba", "AZ - Azerbaijan", "BA - Bosnia and Herzegovina", "BB - Barbados", "BD - Bangladesh", "BE - Belgium", "BF - Burkina Faso", "BG - Bulgaria", "BH - Bahrain", "BI - Burundi", "BJ - Benin", "BL - Saint Barthelemy", "BM - Bermuda", "BN - Brunei", "BO - Bolivia", "BR - Brazil", "BS - Bahamas, The", "BT - Bhutan", "BV - Bouvet Island", "BW - Botswana", "BY - Belarus", "BZ - Belize", "CA - Canada", "CC - Cocos (Keeling) Islands", "CD - Congo, Democratic Republic of the", "CF - Central African Republic", "CG - Congo, Republic of the", "CH - Switzerland", "CI - Cote d'Ivoire", "CK - Cook Islands", "CL - Chile", "CM - Cameroon", "CN - China", "CO - Colombia", "CR - Costa Rica", "CU - Cuba", "CV - Cape Verde", "CW - Curacao", "CX - Christmas Island", "CY - Cyprus", "CZ - Czech Republic", "DE - Germany", "DJ - Djibouti", "DK - Denmark", "DM - Dominica", "DO - Dominican Republic", "DZ - Algeria", "EC - Ecuador", "EE - Estonia", "EG - Egypt", "EH - Western Sahara", "ER - Eritrea", "ES - Spain", "ET - Ethiopia", "FI - Finland", "FJ - Fiji", "FK - Falkland Islands (Islas Malvinas)", "FM - Micronesia, Federated States of", "FO - Faroe Islands", "FR - France", "FX - France, Metropolitan", "GA - Gabon", "GB - United Kingdom", "GD - Grenada", "GE - Georgia", "GF - French Guiana", "GG - Guernsey", "GH - Ghana", "GI - Gibraltar", "GL - Greenland", "GM - Gambia, The", "GN - Guinea", "GP - Guadeloupe", "GQ - Equatorial Guinea", "GR - Greece", "GS - South Georgia and the Islands", "GT - Guatemala", "GU - Guam", "GW - Guinea-Bissau", "GY - Guyana", "HK - Hong Kong", "HM - Heard Island and McDonald Islands", "HN - Honduras", "HR - Croatia", "HT - Haiti", "HU - Hungary", "ID - Indonesia", "IE - Ireland", "IL - Israel", "IM - Isle of Man", "IN - India", "IO - British Indian Ocean Territory", "IQ - Iraq", "IR - Iran", "IS - Iceland", "IT - Italy", "JE - Jersey", "JM - Jamaica", "JO - Jordan", "JP - Japan", "KE - Kenya", "KG - Kyrgyzstan", "KH - Cambodia", "KI - Kiribati", "KM - Comoros", "KN - Saint Kitts and Nevis", "KP - Korea, North", "KR - Korea, South", "KW - Kuwait", "KY - Cayman Islands", "KZ - Kazakhstan", "LA - Laos", "LB - Lebanon", "LC - Saint Lucia", "LI - Liechtenstein", "LK - Sri Lanka", "LR - Liberia", "LS - Lesotho", "LT - Lithuania", "LU - Luxembourg", "LV - Latvia", "LY - Libya", "MA - Morocco", "MC - Monaco", "MD - Moldova", "ME - Montenegro", "MF - Saint Martin", "MG - Madagascar", "MH - Marshall Islands", "MK - Macedonia", "ML - Mali", "MM - Burma", "MN - Mongolia", "MO - Macau", "MP - Northern Mariana Islands", "MQ - Martinique", "MR - Mauritania", "MS - Montserrat", "MT - Malta", "MU - Mauritius", "MV - Maldives", "MW - Malawi", "MX - Mexico", "MY - Malaysia", "MZ - Mozambique", "NA - Namibia", "NC - New Caledonia", "NE - Niger", "NF - Norfolk Island", "NG - Nigeria", "NI - Nicaragua", "NL - Netherlands", "NO - Norway", "NP - Nepal", "NR - Nauru", "NU - Niue", "NZ - New Zealand", "OM - Oman", "PA - Panama", "PE - Peru", "PF - French Polynesia", "PG - Papua New Guinea", "PH - Philippines", "PK - Pakistan", "PL - Poland", "PM - Saint Pierre and Miquelon", "PN - Pitcairn Islands", "PR - Puerto Rico", "PS - Gaza Strip", "PS - West Bank", "PT - Portugal", "PW - Palau", "PY - Paraguay", "QA - Qatar", "RE - Reunion", "RO - Romania", "RS - Serbia", "RU - Russia", "RW - Rwanda", "SA - Saudi Arabia", "SB - Solomon Islands", "SC - Seychelles", "SD - Sudan", "SE - Sweden", "SG - Singapore", "SH - Saint Helena, Ascension, and Tristan da Cunha", "SI - Slovenia", "SJ - Svalbard", "SK - Slovakia", "SL - Sierra Leone", "SM - San Marino", "SN - Senegal", "SO - Somalia", "SR - Suriname", "SS - South Sudan", "ST - Sao Tome and Principe", "SV - El Salvador", "SX - Sint Maarten", "SY - Syria", "SZ - Swaziland", "TC - Turks and Caicos Islands", "TD - Chad", "TF - French Southern and Antarctic Lands", "TG - Togo", "TH - Thailand", "TJ - Tajikistan", "TK - Tokelau", "TL - Timor-Leste", "TM - Turkmenistan", "TN - Tunisia", "TO - Tonga", "TR - Turkey", "TT - Trinidad and Tobago", "TV - Tuvalu", "TW - Taiwan", "TZ - Tanzania", "UA - Ukraine", "UG - Uganda", "UM - United States Minor Outlying Islands", "US - United States", "UY - Uruguay", "UZ - Uzbekistan", "VA - Holy See (Vatican City)", "VC - Saint Vincent and the Grenadines", "VE - Venezuela", "VG - British Virgin Islands", "VI - Virgin Islands", "VN - Vietnam", "VU - Vanuatu", "WF - Wallis and Futuna", "WS - Samoa", "XK - Kosovo", "YE - Yemen", "YT - Mayotte", "ZA - South Africa", "ZM - Zambia", "ZW - Zimbabwe" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
         jButtonRegistration.setText("Create Booking");
+        jButtonRegistration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrationActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelRegistrationLayout = new javax.swing.GroupLayout(jPanelRegistration);
         jPanelRegistration.setLayout(jPanelRegistrationLayout);
@@ -268,7 +281,7 @@ public class HotelGuiForm extends javax.swing.JFrame
                                         .addComponent(jLabelSurname))
                                     .addComponent(jLabelAgency)
                                     .addComponent(jLabelCheckIn)
-                                    .addComponent(jXDatePickerRegIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jXDatePickerRegDateIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 312, Short.MAX_VALUE))
                             .addGroup(jPanelRegistrationLayout.createSequentialGroup()
                                 .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -281,9 +294,9 @@ public class HotelGuiForm extends javax.swing.JFrame
                                         .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(jPanelRegistrationLayout.createSequentialGroup()
                                         .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jXDatePickerRegOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jXDatePickerRegDateOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabelNights))
-                                        .addGap(26, 26, 26)))
+                                        .addGap(4, 4, 4)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2)
@@ -306,7 +319,9 @@ public class HotelGuiForm extends javax.swing.JFrame
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonDelete, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonRegistration, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabelRegSuccess)
+                                .addComponent(jButtonRegistration)))))
                 .addContainerGap())
         );
         jPanelRegistrationLayout.setVerticalGroup(
@@ -352,16 +367,18 @@ public class HotelGuiForm extends javax.swing.JFrame
                             .addComponent(jLabelNights))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jXDatePickerRegIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jXDatePickerRegOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(49, 49, 49)
+                            .addComponent(jXDatePickerRegDateIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jXDatePickerRegDateOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
                         .addComponent(jLabelDeletion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addComponent(jButtonMainMenuReg)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonRoomReg))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRegistrationLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabelRegSuccess)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonRegistration)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonDelete)))
@@ -373,10 +390,8 @@ public class HotelGuiForm extends javax.swing.JFrame
         jLabel2.setText("Room Availability");
 
         jCheckBoxSingle.setText("Single Rooms");
-        jCheckBoxSingle.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jCheckBoxSingle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBoxSingleActionPerformed(evt);
             }
         });
@@ -394,19 +409,15 @@ public class HotelGuiForm extends javax.swing.JFrame
         jLabel3.setText("To");
 
         jButtonMainMenuAvil.setText("Main Menu");
-        jButtonMainMenuAvil.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonMainMenuAvil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMainMenuAvilActionPerformed(evt);
             }
         });
 
         jButtonRegistrationRoom.setText("Registration Form");
-        jButtonRegistrationRoom.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRegistrationRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrationRoomActionPerformed(evt);
             }
         });
@@ -435,13 +446,15 @@ public class HotelGuiForm extends javax.swing.JFrame
                                             .addComponent(jCheckBoxSingle))
                                         .addGap(42, 42, 42)
                                         .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1)
-                                            .addComponent(jXDatePickerRoomFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(45, 45, 45)
-                                        .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jXDatePickerRoomTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                                            .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                                                .addComponent(jXDatePickerAvailFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jXDatePickerAvailTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
+                                                .addComponent(jLabel1)
+                                                .addGap(102, 102, 102)
+                                                .addComponent(jLabel3)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                                 .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jButtonRegistrationRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButtonBookRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -468,8 +481,8 @@ public class HotelGuiForm extends javax.swing.JFrame
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCheckBoxDouble)
-                            .addComponent(jXDatePickerRoomFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jXDatePickerRoomTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jXDatePickerAvailFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jXDatePickerAvailTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxFamily)
                         .addGap(16, 16, 16))
@@ -497,10 +510,8 @@ public class HotelGuiForm extends javax.swing.JFrame
         jLabelPhoneBook.setText("Phone");
 
         jButtonMainMenuBook.setText("Main Menu");
-        jButtonMainMenuBook.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonMainMenuBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMainMenuBookActionPerformed(evt);
             }
         });
@@ -523,19 +534,15 @@ public class HotelGuiForm extends javax.swing.JFrame
         jLabelAdressBook.setText("Address");
 
         jButtonRoomBook.setText("Room List");
-        jButtonRoomBook.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRoomBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRoomBookActionPerformed(evt);
             }
         });
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select a country below...", "AD - Andorra", "AE - United Arab Emirates", "AF - Afghanistan", "AG - Antigua and Barbuda", "AI - Anguilla", "AL - Albania", "AM - Armenia", "AO - Angola", "AQ - Antarctica", "AR - Argentina", "AS - American Samoa", "AT - Austria", "AU - Australia", "AW - Aruba", "AZ - Azerbaijan", "BA - Bosnia and Herzegovina", "BB - Barbados", "BD - Bangladesh", "BE - Belgium", "BF - Burkina Faso", "BG - Bulgaria", "BH - Bahrain", "BI - Burundi", "BJ - Benin", "BL - Saint Barthelemy", "BM - Bermuda", "BN - Brunei", "BO - Bolivia", "BR - Brazil", "BS - Bahamas, The", "BT - Bhutan", "BV - Bouvet Island", "BW - Botswana", "BY - Belarus", "BZ - Belize", "CA - Canada", "CC - Cocos (Keeling) Islands", "CD - Congo, Democratic Republic of the", "CF - Central African Republic", "CG - Congo, Republic of the", "CH - Switzerland", "CI - Cote d'Ivoire", "CK - Cook Islands", "CL - Chile", "CM - Cameroon", "CN - China", "CO - Colombia", "CR - Costa Rica", "CU - Cuba", "CV - Cape Verde", "CW - Curacao", "CX - Christmas Island", "CY - Cyprus", "CZ - Czech Republic", "DE - Germany", "DJ - Djibouti", "DK - Denmark", "DM - Dominica", "DO - Dominican Republic", "DZ - Algeria", "EC - Ecuador", "EE - Estonia", "EG - Egypt", "EH - Western Sahara", "ER - Eritrea", "ES - Spain", "ET - Ethiopia", "FI - Finland", "FJ - Fiji", "FK - Falkland Islands (Islas Malvinas)", "FM - Micronesia, Federated States of", "FO - Faroe Islands", "FR - France", "FX - France, Metropolitan", "GA - Gabon", "GB - United Kingdom", "GD - Grenada", "GE - Georgia", "GF - French Guiana", "GG - Guernsey", "GH - Ghana", "GI - Gibraltar", "GL - Greenland", "GM - Gambia, The", "GN - Guinea", "GP - Guadeloupe", "GQ - Equatorial Guinea", "GR - Greece", "GS - South Georgia and the Islands", "GT - Guatemala", "GU - Guam", "GW - Guinea-Bissau", "GY - Guyana", "HK - Hong Kong", "HM - Heard Island and McDonald Islands", "HN - Honduras", "HR - Croatia", "HT - Haiti", "HU - Hungary", "ID - Indonesia", "IE - Ireland", "IL - Israel", "IM - Isle of Man", "IN - India", "IO - British Indian Ocean Territory", "IQ - Iraq", "IR - Iran", "IS - Iceland", "IT - Italy", "JE - Jersey", "JM - Jamaica", "JO - Jordan", "JP - Japan", "KE - Kenya", "KG - Kyrgyzstan", "KH - Cambodia", "KI - Kiribati", "KM - Comoros", "KN - Saint Kitts and Nevis", "KP - Korea, North", "KR - Korea, South", "KW - Kuwait", "KY - Cayman Islands", "KZ - Kazakhstan", "LA - Laos", "LB - Lebanon", "LC - Saint Lucia", "LI - Liechtenstein", "LK - Sri Lanka", "LR - Liberia", "LS - Lesotho", "LT - Lithuania", "LU - Luxembourg", "LV - Latvia", "LY - Libya", "MA - Morocco", "MC - Monaco", "MD - Moldova", "ME - Montenegro", "MF - Saint Martin", "MG - Madagascar", "MH - Marshall Islands", "MK - Macedonia", "ML - Mali", "MM - Burma", "MN - Mongolia", "MO - Macau", "MP - Northern Mariana Islands", "MQ - Martinique", "MR - Mauritania", "MS - Montserrat", "MT - Malta", "MU - Mauritius", "MV - Maldives", "MW - Malawi", "MX - Mexico", "MY - Malaysia", "MZ - Mozambique", "NA - Namibia", "NC - New Caledonia", "NE - Niger", "NF - Norfolk Island", "NG - Nigeria", "NI - Nicaragua", "NL - Netherlands", "NO - Norway", "NP - Nepal", "NR - Nauru", "NU - Niue", "NZ - New Zealand", "OM - Oman", "PA - Panama", "PE - Peru", "PF - French Polynesia", "PG - Papua New Guinea", "PH - Philippines", "PK - Pakistan", "PL - Poland", "PM - Saint Pierre and Miquelon", "PN - Pitcairn Islands", "PR - Puerto Rico", "PS - Gaza Strip", "PS - West Bank", "PT - Portugal", "PW - Palau", "PY - Paraguay", "QA - Qatar", "RE - Reunion", "RO - Romania", "RS - Serbia", "RU - Russia", "RW - Rwanda", "SA - Saudi Arabia", "SB - Solomon Islands", "SC - Seychelles", "SD - Sudan", "SE - Sweden", "SG - Singapore", "SH - Saint Helena, Ascension, and Tristan da Cunha", "SI - Slovenia", "SJ - Svalbard", "SK - Slovakia", "SL - Sierra Leone", "SM - San Marino", "SN - Senegal", "SO - Somalia", "SR - Suriname", "SS - South Sudan", "ST - Sao Tome and Principe", "SV - El Salvador", "SX - Sint Maarten", "SY - Syria", "SZ - Swaziland", "TC - Turks and Caicos Islands", "TD - Chad", "TF - French Southern and Antarctic Lands", "TG - Togo", "TH - Thailand", "TJ - Tajikistan", "TK - Tokelau", "TL - Timor-Leste", "TM - Turkmenistan", "TN - Tunisia", "TO - Tonga", "TR - Turkey", "TT - Trinidad and Tobago", "TV - Tuvalu", "TW - Taiwan", "TZ - Tanzania", "UA - Ukraine", "UG - Uganda", "UM - United States Minor Outlying Islands", "US - United States", "UY - Uruguay", "UZ - Uzbekistan", "VA - Holy See (Vatican City)", "VC - Saint Vincent and the Grenadines", "VE - Venezuela", "VG - British Virgin Islands", "VI - Virgin Islands", "VN - Vietnam", "VU - Vanuatu", "WF - Wallis and Futuna", "WS - Samoa", "XK - Kosovo", "YE - Yemen", "YT - Mayotte", "ZA - South Africa", "ZM - Zambia", "ZW - Zimbabwe" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
@@ -548,19 +555,15 @@ public class HotelGuiForm extends javax.swing.JFrame
         jScrollPane13.setViewportView(jTextAddressBook);
 
         jButtonDeleteBook.setText("Clear ");
-        jButtonDeleteBook.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonDeleteBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteBookActionPerformed(evt);
             }
         });
 
         jButtonRegBook.setText("Registration Form");
-        jButtonRegBook.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRegBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegBookActionPerformed(evt);
             }
         });
@@ -588,7 +591,7 @@ public class HotelGuiForm extends javax.swing.JFrame
                                                 .addComponent(jLabelSurnameBook))
                                             .addComponent(jLabelAgencyBook)
                                             .addComponent(jLabelCheckInBook)
-                                            .addComponent(jXDatePickerBookIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jXDatePickerBookFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanelBookingsLayout.createSequentialGroup()
                                         .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -601,9 +604,9 @@ public class HotelGuiForm extends javax.swing.JFrame
                                                 .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanelBookingsLayout.createSequentialGroup()
                                                 .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jXDatePickerBookOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jXDatePickerBookTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jLabelNightsBook))
-                                                .addGap(26, 26, 26)))
+                                                .addGap(4, 4, 4)))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jScrollPane10)
@@ -666,17 +669,17 @@ public class HotelGuiForm extends javax.swing.JFrame
                     .addComponent(jLabelNightsBook))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jXDatePickerBookIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jXDatePickerBookOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
+                    .addComponent(jXDatePickerBookFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jXDatePickerBookTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
                 .addComponent(jButtonRegBook)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonMainMenuBook)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonRoomBook)
-                    .addComponent(jButtonDeleteBook))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonDeleteBook)
+                    .addComponent(jButtonRoomBook))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanelBookings, "card5");
@@ -724,7 +727,7 @@ public class HotelGuiForm extends javax.swing.JFrame
     private void jButtonMainMenuAvilActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonMainMenuAvilActionPerformed
     {//GEN-HEADEREND:event_jButtonMainMenuAvilActionPerformed
         // TODO add your handling code here:
-         jPanelMainMenu.setVisible(true);
+        jPanelMainMenu.setVisible(true);
         jPanelRoomAvail.setVisible(false);
     }//GEN-LAST:event_jButtonMainMenuAvilActionPerformed
 
@@ -747,7 +750,7 @@ public class HotelGuiForm extends javax.swing.JFrame
         // TODO add your handling code here:
         jPanelRegistration.setVisible(false);
         jPanelRoomAvail.setVisible(true);
-       
+
     }//GEN-LAST:event_jButtonRoomRegActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -777,7 +780,6 @@ public class HotelGuiForm extends javax.swing.JFrame
     private void jButtonDeleteBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonDeleteBookActionPerformed
     {//GEN-HEADEREND:event_jButtonDeleteBookActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_jButtonDeleteBookActionPerformed
 
     private void jXDateArrivalBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jXDateArrivalBookActionPerformed
@@ -788,7 +790,7 @@ public class HotelGuiForm extends javax.swing.JFrame
     private void jButtonRegBookActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRegBookActionPerformed
     {//GEN-HEADEREND:event_jButtonRegBookActionPerformed
         // TODO add your handling code here:
-         jPanelBookings.setVisible(false);
+        jPanelBookings.setVisible(false);
         jPanelRegistration.setVisible(true);
     }//GEN-LAST:event_jButtonRegBookActionPerformed
 
@@ -799,50 +801,41 @@ public class HotelGuiForm extends javax.swing.JFrame
         jPanelBookings.setVisible(true);
     }//GEN-LAST:event_jButtonBookingMainActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[])
-    {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex)
-        {
-            java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
-            java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
-            java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
-            java.util.logging.Logger.getLogger(HotelGuiForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButtonRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrationActionPerformed
+        // TODO add your handling code here:
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable()
+        String strConn = "jdbc:oracle:thin:@oracle.staff.ittralee.ie:1521:orcl";
+        String strUser = "cphsh241";
+        String strPassword = "cphsh241";
+
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection conn = DriverManager.getConnection(strConn, strUser, strPassword);
+
+            String query = "INSERT INTO PayingGuest(ID, FIRSTNAME, FAMILYNAME, PHONE, EMAIL, COUNTRYSTUDENTID, ADDRESS)"
+                    + " VALUES ("
+                    + String.valueOf(pg.getId())
+                    + ", '" + pg.getFirstName()
+                    + "', '" + pg.getFamilyName()
+                    + "', '" + pg.getPhone()
+                    + "', '" + pg.getEmail()
+                    + "', '" + pg.getCountry()
+                    + "')";
+
+            Statement stmt = conn.createStatement();
+            try {
+                stmt.executeUpdate(sql);
+            } catch (SQLException ex) {
+                Logger.getLogger(HotelGuiForm.class.getName()).log(Level.SEVERE, null, ex);
+            }   
+        } catch (Exception e) {
+            System.out.println("Soemthing messed up");
+        }
         {
-            public void run()
-            {
-                new HotelGuiForm().setVisible(true);
-            }
-        });
+    }//GEN-LAST:event_jButtonRegistrationActionPerformed
+          jLabelRegSuccess.setText("Your booking has been created.");
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAvailMain;
@@ -886,6 +879,7 @@ public class HotelGuiForm extends javax.swing.JFrame
     private javax.swing.JLabel jLabelNightsBook;
     private javax.swing.JLabel jLabelPhone;
     private javax.swing.JLabel jLabelPhoneBook;
+    private javax.swing.JLabel jLabelRegSuccess;
     private javax.swing.JLabel jLabelRegistrationForm;
     private javax.swing.JLabel jLabelSurname;
     private javax.swing.JLabel jLabelSurnameBook;
@@ -919,11 +913,11 @@ public class HotelGuiForm extends javax.swing.JFrame
     private javax.swing.JTextPane jTextPhoneBook;
     private javax.swing.JTextPane jTextSurname;
     private javax.swing.JTextPane jTextSurnameBook;
-    private org.jdesktop.swingx.JXDatePicker jXDatePickerBookIn;
-    private org.jdesktop.swingx.JXDatePicker jXDatePickerBookOut;
-    private org.jdesktop.swingx.JXDatePicker jXDatePickerRegIn;
-    private org.jdesktop.swingx.JXDatePicker jXDatePickerRegOut;
-    private org.jdesktop.swingx.JXDatePicker jXDatePickerRoomFrom;
-    private org.jdesktop.swingx.JXDatePicker jXDatePickerRoomTo;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerAvailFrom;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerAvailTo;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerBookFrom;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerBookTo;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerRegDateIn;
+    private org.jdesktop.swingx.JXDatePicker jXDatePickerRegDateOut;
     // End of variables declaration//GEN-END:variables
 }

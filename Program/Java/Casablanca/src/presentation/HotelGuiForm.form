@@ -44,7 +44,7 @@
                       </Group>
                       <Component id="jButtonBookingMain" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="270" max="32767" attributes="0"/>
+                  <EmptySpace pref="268" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -127,7 +127,7 @@
                                       </Group>
                                       <Component id="jLabelAgency" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelCheckIn" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jXDatePickerRegIn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jXDatePickerRegDateIn" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="312" max="32767" attributes="0"/>
                               </Group>
@@ -143,10 +143,10 @@
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jXDatePickerRegOut" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jXDatePickerRegDateOut" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabelNights" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -179,7 +179,10 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButtonDelete" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonRegistration" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="jLabelRegSuccess" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonRegistration" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -239,18 +242,20 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jXDatePickerRegIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jXDatePickerRegOut" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jXDatePickerRegDateIn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jXDatePickerRegDateOut" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="jLabelDeletion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="69" max="32767" attributes="0"/>
+                          <EmptySpace pref="48" max="32767" attributes="0"/>
                           <Component id="jButtonMainMenuReg" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButtonRoomReg" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jLabelRegSuccess" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButtonRegistration" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButtonDelete" min="-2" max="-2" attributes="0"/>
@@ -670,14 +675,19 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRegIn">
-        </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRegOut">
-        </Component>
         <Component class="javax.swing.JButton" name="jButtonRegistration">
           <Properties>
             <Property name="text" type="java.lang.String" value="Create Booking"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegistrationActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRegDateIn">
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRegDateOut">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelRegSuccess">
         </Component>
       </SubComponents>
     </Container>
@@ -708,17 +718,20 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jXDatePickerRoomFrom" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jXDatePickerRoomTo" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jXDatePickerAvailFrom" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jXDatePickerAvailTo" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="100" max="32767" attributes="0"/>
+                                  <EmptySpace pref="131" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jButtonRegistrationRoom" max="32767" attributes="0"/>
                                       <Component id="jButtonBookRoom" max="32767" attributes="0"/>
@@ -754,8 +767,8 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jCheckBoxDouble" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jXDatePickerRoomFrom" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jXDatePickerRoomTo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jXDatePickerAvailFrom" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jXDatePickerAvailTo" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jCheckBoxFamily" min="-2" max="-2" attributes="0"/>
@@ -848,14 +861,14 @@
             <Property name="text" type="java.lang.String" value="Clear"/>
           </Properties>
         </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRoomFrom">
-        </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerRoomTo">
-        </Component>
         <Component class="javax.swing.JButton" name="jButtonBookRoom">
           <Properties>
             <Property name="text" type="java.lang.String" value="Book Room"/>
           </Properties>
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerAvailFrom">
+        </Component>
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerAvailTo">
         </Component>
       </SubComponents>
     </Container>
@@ -890,7 +903,7 @@
                                               </Group>
                                               <Component id="jLabelAgencyBook" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabelCheckInBook" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jXDatePickerBookIn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jXDatePickerBookFrom" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
@@ -906,10 +919,10 @@
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jXDatePickerBookOut" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jXDatePickerBookTo" min="-2" max="-2" attributes="0"/>
                                                       <Component id="jLabelNightsBook" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -997,19 +1010,19 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jXDatePickerBookIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jXDatePickerBookOut" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jXDatePickerBookFrom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jXDatePickerBookTo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   <Component id="jButtonRegBook" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonMainMenuBook" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButtonRoomBook" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jButtonDeleteBook" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonRoomBook" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="21" max="32767" attributes="0"/>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1429,9 +1442,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRegBookActionPerformed"/>
           </Events>
         </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerBookIn">
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerBookFrom">
         </Component>
-        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerBookOut">
+        <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerBookTo">
         </Component>
       </SubComponents>
     </Container>
