@@ -6,13 +6,13 @@ drop table room_type;
 drop table paying_guest;
 
 create table paying_guest(
-paying_guest_id int,
-first_name varchar(20),
-family_name varchar(20),
-address varchar(50),
-country varchar(20),
-phone varchar(15),
-email varchar(25),
+paying_guest_id int ,
+first_name varchar(20) NOT NULL,
+family_name varchar(20) NOT NULL,
+address varchar(50)NOT NULL, 
+country varchar(20)NOT NULL,
+phone varchar(15) NOT NULL,
+email varchar(25) NOT NULL, 
 primary key(paying_guest_id)
 );
 
