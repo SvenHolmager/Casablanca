@@ -23,7 +23,6 @@ public class HotelGuiForm extends javax.swing.JFrame {
         initComponents();
     }
 
-   
     public static void main(String[] args) {
         HotelGuiForm HGF = new HotelGuiForm();
         HGF.setVisible(true);
@@ -133,6 +132,12 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jButtonRegBook = new javax.swing.JButton();
         jXDatePickerBookFrom = new org.jdesktop.swingx.JXDatePicker();
         jXDatePickerBookTo = new org.jdesktop.swingx.JXDatePicker();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -174,7 +179,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
                         .addGap(14, 14, 14)
                         .addComponent(jLabelMainMenu))
                     .addComponent(jButtonBookingMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(268, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
         jPanelMainMenuLayout.setVerticalGroup(
             jPanelMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,7 +287,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
                                     .addComponent(jLabelAgency)
                                     .addComponent(jLabelCheckIn)
                                     .addComponent(jXDatePickerRegDateIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 312, Short.MAX_VALUE))
+                                .addGap(0, 310, Short.MAX_VALUE))
                             .addGroup(jPanelRegistrationLayout.createSequentialGroup()
                                 .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanelRegistrationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -371,7 +376,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
                             .addComponent(jXDatePickerRegDateOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(43, 43, 43)
                         .addComponent(jLabelDeletion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                         .addComponent(jButtonMainMenuReg)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonRoomReg))
@@ -454,7 +459,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
                                                 .addComponent(jLabel1)
                                                 .addGap(102, 102, 102)
                                                 .addComponent(jLabel3)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                                 .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jButtonRegistrationRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButtonBookRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -470,7 +475,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelRoomAvailLayout.createSequentialGroup()
@@ -679,10 +684,44 @@ public class HotelGuiForm extends javax.swing.JFrame {
                 .addGroup(jPanelBookingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonDeleteBook)
                     .addComponent(jButtonRoomBook))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanelBookings, "card5");
+
+        jMenu1.setText("Main");
+
+        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+
+        jMenuItem3.setText("jMenuItem3");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -827,15 +866,28 @@ public class HotelGuiForm extends javax.swing.JFrame {
                 stmt.executeUpdate(sql);
             } catch (SQLException ex) {
                 Logger.getLogger(HotelGuiForm.class.getName()).log(Level.SEVERE, null, ex);
-            }   
+            }
         } catch (Exception e) {
             System.out.println("Soemthing messed up");
         }
         {
+            jLabelRegSuccess.setText("Your booking has been created.");
+        }
     }//GEN-LAST:event_jButtonRegistrationActionPerformed
-          jLabelRegSuccess.setText("Your booking has been created.");
-    }
+
     
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAvailMain;
@@ -883,6 +935,12 @@ public class HotelGuiForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelRegistrationForm;
     private javax.swing.JLabel jLabelSurname;
     private javax.swing.JLabel jLabelSurnameBook;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanelBookings;
     private javax.swing.JPanel jPanelMainMenu;
     private javax.swing.JPanel jPanelRegistration;
