@@ -4,6 +4,7 @@
  */
 package presentation;
 
+import domain.Controller;
 import domain.PayingGuest;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -19,8 +20,12 @@ import java.sql.DriverManager;
  */
 public class HotelGuiForm extends javax.swing.JFrame {
 
+    private Controller control;
+
     public HotelGuiForm() {
         initComponents();
+        control = new Controller();
+        System.out.println(control.getRooms());
     }
 
     public static void main(String[] args) {
