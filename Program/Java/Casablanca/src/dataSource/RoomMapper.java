@@ -21,45 +21,34 @@ import java.util.ArrayList;
 
 public class RoomMapper {
 
-    public ArrayList<Room> getRooms(Connection con) {
-        
-        ArrayList<Room> rooms = new ArrayList<>();
-       
-        String SQLString1 = 
-                  "select * from room"                
-                + "order by room_id";
+   public ArrayList<Room> getRooms(Connection con) {
 
-        PreparedStatement statement = null;
+        ArrayList<Room> rooms = new ArrayList();
+
+        String sqlString1
+                = "select * from room "
+                + "order by room_id";
+        String sqlString2 = "SELECT TABLE_NAME FROM USER_TABLES";
+
+        PreparedStatement statement;
         try {
 
-            statement = con.prepareStatement(SQLString1);
-
+            statement = con.prepareStatement(sqlString1);
             ResultSet rs = statement.executeQuery();
-            
-            while(rs.next())                    
-            {   
-                Room room = new Room(rs.getInt(1), rs.getInt(2), 0,"stringy string");         
-                rooms.add(room);
+            int i = 0;
+            while (rs.next()) {
+                i++;
+                System.out.println(rs.getString(1));
+                System.out.println("just added room nb " + i);
+                rooms.add(new Room(rs.getInt(1), rs.getInt(2), 0, "stringy string"));
             }
 
+            statement.close();
+        } catch (Exception e) {
+            System.out.println("Fail in RoomMapper - getRooms");
+            System.out.println(e.getMessage());
         }
-        catch (Exception e)
-        {   
-          System.out.println("Fail in RoomMapper - getRooms");
-          System.out.println(e.getMessage());
-        }
-        finally			  					// must close statement
-        {
-    	  try 
-            {
-		statement.close();
-            } catch (SQLException e) {
-			System.out.println("Fail in RoomMapper - getAvailableRooms");
-			System.out.println(e.getMessage());
-		}  
-        }
-
-            return rooms;
-        }
-
+        System.out.println("rooms arraylist size: " + rooms.size());
+        return rooms;
     }
+  }
