@@ -691,7 +691,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
 
         jMenu1.setText("Main");
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setText("Overview");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -699,7 +699,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.setText("Room List");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -711,7 +711,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
 
         jMenu2.setText("Edit");
 
-        jMenuItem3.setText("jMenuItem3");
+        jMenuItem3.setText("Add Guest");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -875,13 +875,17 @@ public class HotelGuiForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonRegistrationActionPerformed
 
-    
+
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
+        jPanelMainMenu.setVisible(true);
+        jPanelRoomAvail.setVisible(false);
+        jPanelRegistration.setVisible(false);
+        jPanelBookings.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+        jPanelMainMenu.setVisible(false);
+        jPanelRoomAvail.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
