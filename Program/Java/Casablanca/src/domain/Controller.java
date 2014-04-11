@@ -23,7 +23,7 @@ public class Controller {
     //==Singelton start
     private static Controller c;
 
-    private Controller() {
+    public Controller() {
 
         dbf = DBFacade.getInstance();
     }
