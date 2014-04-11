@@ -1,6 +1,6 @@
 insert into room_type values (1, 'single', 1, 10);
-insert into room_type values (1, 'double', 2, 15);
-insert into room_type values (1, 'family', 5, 25);
+insert into room_type values (2, 'double', 2, 15);
+insert into room_type values (3, 'family', 5, 25);
 
 insert into room values(001, 1);
 insert into room values(002, 1);

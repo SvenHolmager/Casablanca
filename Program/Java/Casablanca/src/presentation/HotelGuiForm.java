@@ -25,7 +25,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
     public HotelGuiForm() {
         initComponents();
         control = new Controller();
-        System.out.println(control.getRooms());
+        System.out.println(control.getRooms().toString());
     }
 
     public static void main(String[] args) {
