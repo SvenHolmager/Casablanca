@@ -13,13 +13,13 @@ public class StayingGuest {
 
     private int Id;
     private String FirstName;
-    private String LastName;
+    private String FamilyName;
     private int RoomBookingId;
 
     public StayingGuest(int Id, String FirstName, String LastName, int RoomBookingId) {
         this.Id = Id;
         this.FirstName = FirstName;
-        this.LastName = LastName;
+        this.FamilyName = LastName;
         this.RoomBookingId = RoomBookingId;
     }
 
@@ -39,12 +39,12 @@ public class StayingGuest {
         this.FirstName = FirstName;
     }
 
-    public String getLastName() {
-        return LastName;
+    public String getFamilyName() {
+        return FamilyName;
     }
 
     public void setLastName(String LastName) {
-        this.LastName = LastName;
+        this.FamilyName = LastName;
     }
 
     public int getRoomBookingId() {

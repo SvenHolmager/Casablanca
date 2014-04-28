@@ -104,4 +104,88 @@ public class GuestMapper {
         }
         return rowsInserted == 1;
     }
+    
+
+    public StayingGuest getStayingGuest(int Id, Connection con) {
+        StayingGuest sg = null;
+        String SQLString1 = // get RoomBooking
+                "select * "
+                + "from Staying_Guest "
+                + "where Id = ?";
+
+        PreparedStatement statement = null;
+
+        try {
+            //=== get RoomBooking
+
+            statement = con.prepareStatement(SQLString1);
+
+            statement.setInt(1, Id);     // primary key value
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                sg = new StayingGuest(Id,
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getInt(4)
+
+                );
+            }
+
+        } catch (Exception e) {
+            System.out.println("Fail in GuestMapper - getGuestMapper");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                System.out.println("Fail in GuestMapper - getGuestMapper");
+                System.out.println(e.getMessage());
+            }
+        }
+        return sg;
+    }
+    
+
+    public boolean saveStayingGuest(StayingGuest sg, Connection con) {
+        int rowsInserted = 0;
+        String SQLString1
+                = "select orderseq.nextval  "
+                + "from dual";
+        String SQLString2
+                = "insert into Staying_Guest "
+                + "values (?,?,?,?)";
+        PreparedStatement statement = null;
+
+        try {
+            //== get unique id
+            statement = con.prepareStatement(SQLString1);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                sg.setId(rs.getInt(1));
+            }
+
+            //== insert tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setInt(1, sg.getId());
+            statement.setString(2, sg.getFirstName());
+            statement.setString(3, sg.getFamilyName());
+            rowsInserted = statement.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println("Fail in BookingMapper - saveRoomBooking");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                System.out.println("Fail in BookingMapper - saveRoomBooking");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
+
+    
 }
