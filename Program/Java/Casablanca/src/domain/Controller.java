@@ -36,12 +36,12 @@ public class Controller {
     }
     //==Singleton end
 
-    public PayingGuest getPayingGuest(int Id) {
-        currentPayingGuest = dbf.getPayingGuest(Id);
+    public PayingGuest getPayingGuest(int id) {
+        currentPayingGuest = dbf.getPayingGuest(id);
         return currentPayingGuest;
     }
 
-    public PayingGuest addNewPayingGuest(int ID, String firstName, String familyName, String address, String country, String phone, String email) {
+    public PayingGuest addNewPayingGuest(int id, String firstName, String familyName, String address, String country, String phone, String email) {
         //== create order object with ono=0
         currentPayingGuest = new PayingGuest(0, firstName, familyName, address, country, phone, email);
 
@@ -54,15 +54,15 @@ public class Controller {
         return currentPayingGuest;
     }
 
-    public RoomBooking getRoomBooking(int Id) {
-        currentRoomBooking = dbf.getRoomBooking(Id);
+    public RoomBooking getRoomBooking(int id) {
+        currentRoomBooking = dbf.getRoomBooking(id);
         return currentRoomBooking;
     }
 
-    public RoomBooking addNewRoomBooking(int Id, int PayingGuestId, int RoomId, int PaymentStatusId, String TravelAgency, String CheckIn, String CheckOut) {
+    public RoomBooking addNewRoomBooking(int id, int payingGuestId, int roomId, String checkIn, String checkOut, String travelAgency, boolean paymentStatus) {
 
         //== create order object with ono=0
-        currentRoomBooking = new RoomBooking(0, PayingGuestId, RoomId, PaymentStatusId, TravelAgency, CheckIn, CheckOut);
+        currentRoomBooking = new RoomBooking(0, payingGuestId, roomId, checkIn, checkOut, travelAgency, paymentStatus);
 
         //== save and get DB-generated unique ono
         boolean status = dbf.saveRoomBooking(currentRoomBooking);

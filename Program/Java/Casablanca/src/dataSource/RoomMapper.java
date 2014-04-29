@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import domain.Room;
-import domain.RoomType;
 import java.util.ArrayList;
 
 /**
@@ -40,7 +39,7 @@ public class RoomMapper {
                 i++;
                 System.out.println(rs.getString(1));
                 System.out.println("just added room nb " + i);
-                rooms.add(new Room(rs.getInt(1), rs.getInt(2), 0, "stringy string"));
+                rooms.add(new Room(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getInt(4), rs.getInt(5) ));
             }
 
             statement.close();
@@ -51,4 +50,42 @@ public class RoomMapper {
         System.out.println("rooms arraylist size: " + rooms.size());
         return rooms;
     }
+   
+   
+   public void updateRoomsTable(Connection con) {
+       
+       Object[][] roomsMatrix = null;
+       int size=0;
+       
+       String sqlString3 = "SELECT ROOM.ROOM_ID AS 'Room Number', ROOM_TYPE.NAME as 'Room Type', ROOM_TYPE.MAXRESIDENTS as 'Max Residents',ROOM_TYPE.COSTPERNIGHT as 'Cost/night' " +
+                "FROM ROOM, ROOM_TYPE "+
+                "WHERE ROOM.ROOMTYPEID = ROOM_TYPE.TYPE_ID; ";
+           
+           
+       PreparedStatement statement;
+        try {
+
+            statement = con.prepareStatement(sqlString3);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                size++;           
+            }
+            
+            if(size>0)
+            {
+                roomsMatrix = new Object[size][4];
+              while (rs.next())
+              {
+                 int i =0;
+              }
+            }
+
+            statement.close();
+        } catch (Exception e) {
+            System.out.println("Fail in RoomMapper - getRooms");
+            System.out.println(e.getMessage());
+        }
+       
+                   
+     }
   }

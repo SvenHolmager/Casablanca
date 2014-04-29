@@ -11,48 +11,51 @@ package domain;
  */
 public class StayingGuest {
 
-    private int Id;
-    private String FirstName;
-    private String FamilyName;
-    private int RoomBookingId;
+    private int id;
+    private int roomBookingId;
+    private String firstName;
+    private String familyName;
 
-    public StayingGuest(int Id, String FirstName, String LastName, int RoomBookingId) {
-        this.Id = Id;
-        this.FirstName = FirstName;
-        this.FamilyName = LastName;
-        this.RoomBookingId = RoomBookingId;
+    public StayingGuest(int id, int roomBookingId, String firstName, String familyName) {
+        this.id = id;
+        this.roomBookingId = roomBookingId;
+        this.firstName = firstName;
+        this.familyName = familyName;
     }
 
     public int getId() {
-        return Id;
-    }
-
-    public void setId(int Id) {
-        this.Id = Id;
-    }
-
-    public String getFirstName() {
-        return FirstName;
-    }
-
-    public void setFirstName(String FirstName) {
-        this.FirstName = FirstName;
-    }
-
-    public String getFamilyName() {
-        return FamilyName;
-    }
-
-    public void setLastName(String LastName) {
-        this.FamilyName = LastName;
+        return id;
     }
 
     public int getRoomBookingId() {
-        return RoomBookingId;
+        return roomBookingId;
     }
 
-    public void setRoomBookingId(int RoomBookingId) {
-        this.RoomBookingId = RoomBookingId;
+    public String getFirstName() {
+        return firstName;
     }
+
+    public String getFamilyName() {
+        return familyName;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setRoomBookingId(int roomBookingId) {
+        this.roomBookingId = roomBookingId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
+    }
+    
+    
+    
 
 }

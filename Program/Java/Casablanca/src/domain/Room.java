@@ -11,48 +11,63 @@ package domain;
  */
 public class Room {
 
-    private int Id;
-    private int RoomTypeId;
-    private int RoomBookingId;
-    private String Name;
+    private int id;
+    private String roomType;
+    private int number;
+    private int maxResidents;
+    private int costPerNight;
 
-    public Room(int Id, int RoomTypeId, int RoomBookingId, String Name) {
-        this.Id = Id;
-        this.RoomTypeId = RoomTypeId;
-        this.RoomBookingId = RoomBookingId;
-        this.Name = Name;
+    public Room(int id, int number, String roomType, int maxResidents, int costPerNight) {
+        this.id = id;
+        this.roomType = roomType;
+        this.maxResidents = maxResidents;
+        this.number = number;
+    }
+
+ 
+
+    public int getCostPerNight() {
+        return costPerNight;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setCostPerNight(int costPerNight) {
+        this.costPerNight = costPerNight;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
-    public int getRoomTypeId() {
-        return RoomTypeId;
+    public String getRoomType() {
+        return roomType;
     }
 
-    public int getRoomBookingId() {
-        return RoomBookingId;
+    public int getMaxResidents() {
+        return maxResidents;
     }
 
-    public String getName() {
-        return Name;
+    public int getNumber() {
+        return number;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setRoomTypeId(int RoomTypeId) {
-        this.RoomTypeId = RoomTypeId;
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
-    public void setRoomBookingId(int RoomBookingId) {
-        this.RoomBookingId = RoomBookingId;
+    public void setMaxResidents(int maxResidents) {
+        this.maxResidents = maxResidents;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(int number) {
+        this.number = number;
     }
     
 

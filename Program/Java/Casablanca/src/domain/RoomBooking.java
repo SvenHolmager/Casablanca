@@ -11,78 +11,88 @@ package domain;
  */
 public class RoomBooking {
 
-    private int Id;
-    private int PayingGuestId;
-    private int RoomId;
-    private int PaymentStatusId;
-    private String TravelAgency;
-    private String CheckIn;
-    private String CheckOut;    
+    private int id;
+    private int payingGuestId;
+    private int roomId;        
+    private String checkIn;
+    private String checkOut;    
+    private String travelAgency;
+    private boolean paymentStatus;
 
-    public RoomBooking(int Id, int PayingGuestId, int RoomId, int PaymentStatusId, String TravelAgency, String CheckIn, String CheckOut) {
-        this.Id = Id;
-        this.PayingGuestId = PayingGuestId;
-        this.RoomId = RoomId;
-        this.PaymentStatusId = PaymentStatusId;
-        this.TravelAgency = TravelAgency;
-        this.CheckIn = CheckIn;
-        this.CheckOut = CheckOut;
+    public RoomBooking(int id, int payingGuestId, int roomId, String checkIn, String checkOut, String travelAgency, boolean paymentStatus) {
+        this.id = id;
+        this.payingGuestId = payingGuestId;
+        this.roomId = roomId;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+        this.travelAgency = travelAgency;
+        this.paymentStatus = paymentStatus;
     }
+
+   
 
     public int getId() {
-        return Id;
-    }
-
-    public void setId(int Id) {
-        this.Id = Id;
+        return id;
     }
 
     public int getPayingGuestId() {
-        return PayingGuestId;
+        return payingGuestId;
     }
 
-    public void setPayingGuestId(int PayingGuestId) {
-        this.PayingGuestId = PayingGuestId;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPayingGuestId(int payingGuestId) {
+        this.payingGuestId = payingGuestId;
+    }
+
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
+    }
+
+    
+
+    public void setPaymentStatus(boolean paymentStatus) {
+        this.paymentStatus = paymentStatus;
     }
 
     public int getRoomId() {
-        return RoomId;
+        return roomId;
     }
 
-    public void setRoomId(int RoomId) {
-        this.RoomId = RoomId;
-    }
+    
 
-    public int getPaymentStatusId() {
-        return PaymentStatusId;
-    }
-
-    public void setPaymentStatusId(int PaymentStatusId) {
-        this.PaymentStatusId = PaymentStatusId;
-    }
-
-    public String getTravelAgency() {
-        return TravelAgency;
-    }
-
-    public void setTravelAgency(String TravelAgency) {
-        this.TravelAgency = TravelAgency;
+    public boolean getPaymentStatus() {
+        return paymentStatus;
     }
 
     public String getCheckIn() {
-        return CheckIn;
-    }
-
-    public void setCheckIn(String CheckIn) {
-        this.CheckIn = CheckIn;
+        return checkIn;
     }
 
     public String getCheckOut() {
-        return CheckOut;
+        return checkOut;
     }
 
-    public void setCheckOut(String CheckOut) {
-        this.CheckOut = CheckOut;
+    public String getTravelAgency() {
+        return travelAgency;
     }
 
+    public void setCheckIn(String checkIn) {
+        this.checkIn = checkIn;
+    }
+
+    public void setCheckOut(String checkOut) {
+        this.checkOut = checkOut;
+    }
+
+    public void setTravelAgency(String travelAgency) {
+        this.travelAgency = travelAgency;
+    }
+    
+
+    
+     
+   
 }
