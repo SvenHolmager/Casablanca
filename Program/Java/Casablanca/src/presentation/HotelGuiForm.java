@@ -30,10 +30,62 @@ import javax.swing.table.DefaultTableModel;
 public class HotelGuiForm extends javax.swing.JFrame
 {
 
+    ArrayList<Room> room = new ArrayList<>();
+    Controller control = new Controller();
+    DefaultTableModel roomTableList = new DefaultTableModel();
+    String Name;
+    
+    String[] columnNames =
+    {
+        "Room Number", "Room Type", "Room Cost", "Max Residents", "Cost Per Night"
+    };
+
+    public void setColumnNames(String[] columnNames)
+    {
+        this.columnNames = columnNames;
+    }
+
+    public String getColumnNames(int column)
+    {
+        return columnNames[column];
+    }
+
+    public int getColumnCount()
+    {
+        return 5;
+    }
+
+    public int getRowCount()
+    {
+        return room.size();
+    }
+
+    public Object getValueAt(int rowIndex, int columnIndex)
+    {
+        if (columnIndex == 0)
+        {
+            return room.get(rowIndex).getNumber();
+        } else if (columnIndex == 1)
+        {
+            return room.get(rowIndex).getRoomType();
+        } else if (columnIndex == 2)
+        {
+            return room.get(rowIndex).getId();
+        } else if (columnIndex == 3)
+        {
+            return room.get(rowIndex).getCostPerNight();
+        } else if (columnIndex == 4)
+        {
+            return room.get(rowIndex).getMaxResidents();
+        }
+        return null;
+    }
+
     public HotelGuiForm() throws ClassNotFoundException, SQLException
     {
 
         initComponents();
+
     }
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException
@@ -45,17 +97,9 @@ public class HotelGuiForm extends javax.swing.JFrame
     /**
      * Creates new form HotelGuiForm
      */
-    int Id;
-    String firstName;
-    String familyName;
-    String address;
-    String country;
-    String phone;
-    String email;
-    PayingGuest pg = new PayingGuest(Id, firstName, familyName, address, country, phone, email);
-    public static String sql;
-    
-     public void hidePanels() {
+   
+    public void hidePanels()
+    {
         jPanelActivityBooking.setVisible(false);
         jPanelActivityList.setVisible(false);
         jPanelBookings.setVisible(false);
@@ -63,7 +107,7 @@ public class HotelGuiForm extends javax.swing.JFrame
         jPanelMainMenu.setVisible(false);
         jPanelRegistration.setVisible(false);
         jPanelRoomAvail.setVisible(false);
-       
+
     }
 
     /**
@@ -1266,53 +1310,19 @@ public class HotelGuiForm extends javax.swing.JFrame
     private void jButtonRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrationActionPerformed
         // TODO add your handling code here:
 
-        String strConn = "jdbc:oracle:thin:@oracle.staff.ittralee.ie:1521:orcl";
-        String strUser = "cphsh241";
-        String strPassword = "cphsh241";
-
-        try
-        {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection conn = DriverManager.getConnection(strConn, strUser, strPassword);
-
-            String query = "INSERT INTO PayingGuest(ID, FIRSTNAME, FAMILYNAME, PHONE, EMAIL, COUNTRYSTUDENTID, ADDRESS)"
-                    + " VALUES ("
-                    + String.valueOf(pg.getId())
-                    + ", '" + pg.getFirstName()
-                    + "', '" + pg.getFamilyName()
-                    + "', '" + pg.getPhone()
-                    + "', '" + pg.getEmail()
-                    + "', '" + pg.getCountry()
-                    + "')";
-
-            Statement stmt = conn.createStatement();
-            try
-            {
-                stmt.executeUpdate(sql);
-            } catch (SQLException ex)
-            {
-                Logger.getLogger(HotelGuiForm.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } catch (Exception e)
-        {
-            System.out.println("Soemthing messed up");
-        }
-        {
-            jLabelRegSuccess.setText("Your booking has been created.");
-        }
     }//GEN-LAST:event_jButtonRegistrationActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         hidePanels();
         jPanelMainMenu.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
         hidePanels();
         jPanelRoomAvail.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jButtonMainMenuAvil1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonMainMenuAvil1ActionPerformed
@@ -1374,7 +1384,7 @@ public class HotelGuiForm extends javax.swing.JFrame
         // TODO add your handling code here:
         hidePanels();
         jPanelRegistration.setVisible(true);
-        
+
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem5ActionPerformed
@@ -1404,7 +1414,6 @@ public class HotelGuiForm extends javax.swing.JFrame
         hidePanels();
         jPanelHandballVolleyball.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
