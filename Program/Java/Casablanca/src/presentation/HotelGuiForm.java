@@ -4,8 +4,11 @@
  */
 package presentation;
 
+import dataSource.DBConnector;
+import dataSource.RoomMapper;
 import domain.Controller;
 import domain.PayingGuest;
+import domain.Room;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,22 +16,28 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.util.ArrayList;
+import java.util.Vector;
+import javax.swing.JScrollPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Mads
  */
-public class HotelGuiForm extends javax.swing.JFrame {
+public class HotelGuiForm extends javax.swing.JFrame
+{
 
-    private Controller control;
+    public HotelGuiForm() throws ClassNotFoundException, SQLException
+    {
 
-    public HotelGuiForm() {
         initComponents();
-        control = new Controller();
-        System.out.println(control.getPayingGuest(0).toString());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException
+    {
         HotelGuiForm HGF = new HotelGuiForm();
         HGF.setVisible(true);
 
@@ -45,6 +54,17 @@ public class HotelGuiForm extends javax.swing.JFrame {
     String email;
     PayingGuest pg = new PayingGuest(Id, firstName, familyName, address, country, phone, email);
     public static String sql;
+    
+     public void hidePanels() {
+        jPanelActivityBooking.setVisible(false);
+        jPanelActivityList.setVisible(false);
+        jPanelBookings.setVisible(false);
+        jPanelHandballVolleyball.setVisible(false);
+        jPanelMainMenu.setVisible(false);
+        jPanelRegistration.setVisible(false);
+        jPanelRoomAvail.setVisible(false);
+       
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,7 +73,8 @@ public class HotelGuiForm extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jPanelMainMenu = new javax.swing.JPanel();
         jButtonRegistrationFormMain = new javax.swing.JButton();
@@ -162,16 +183,23 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
         jButtonRegistrationFormMain.setText("Registration Form");
-        jButtonRegistrationFormMain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRegistrationFormMain.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRegistrationFormMainActionPerformed(evt);
             }
         });
@@ -180,29 +208,37 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabelMainMenu.setText("Main Menu");
 
         jButtonAvailMain.setText("Room List");
-        jButtonAvailMain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonAvailMain.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonAvailMainActionPerformed(evt);
             }
         });
 
         jButtonBookingMain.setText("Bookings");
-        jButtonBookingMain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonBookingMain.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonBookingMainActionPerformed(evt);
             }
         });
 
         jButton5.setText("Actiivty Booking");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton5.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButton5ActionPerformed(evt);
             }
         });
 
         jButton6.setText("Activity List");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButton6ActionPerformed(evt);
             }
         });
@@ -279,36 +315,46 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabelNights.setToolTipText("");
 
         jButtonDelete.setText("Clear Registration Form");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonDeleteActionPerformed(evt);
             }
         });
 
         jButtonMainMenuReg.setText("Main Menu");
-        jButtonMainMenuReg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonMainMenuReg.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonMainMenuRegActionPerformed(evt);
             }
         });
 
         jButtonRoomReg.setText("Room List");
-        jButtonRoomReg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRoomReg.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRoomRegActionPerformed(evt);
             }
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select a country below...", "AD - Andorra", "AE - United Arab Emirates", "AF - Afghanistan", "AG - Antigua and Barbuda", "AI - Anguilla", "AL - Albania", "AM - Armenia", "AO - Angola", "AQ - Antarctica", "AR - Argentina", "AS - American Samoa", "AT - Austria", "AU - Australia", "AW - Aruba", "AZ - Azerbaijan", "BA - Bosnia and Herzegovina", "BB - Barbados", "BD - Bangladesh", "BE - Belgium", "BF - Burkina Faso", "BG - Bulgaria", "BH - Bahrain", "BI - Burundi", "BJ - Benin", "BL - Saint Barthelemy", "BM - Bermuda", "BN - Brunei", "BO - Bolivia", "BR - Brazil", "BS - Bahamas, The", "BT - Bhutan", "BV - Bouvet Island", "BW - Botswana", "BY - Belarus", "BZ - Belize", "CA - Canada", "CC - Cocos (Keeling) Islands", "CD - Congo, Democratic Republic of the", "CF - Central African Republic", "CG - Congo, Republic of the", "CH - Switzerland", "CI - Cote d'Ivoire", "CK - Cook Islands", "CL - Chile", "CM - Cameroon", "CN - China", "CO - Colombia", "CR - Costa Rica", "CU - Cuba", "CV - Cape Verde", "CW - Curacao", "CX - Christmas Island", "CY - Cyprus", "CZ - Czech Republic", "DE - Germany", "DJ - Djibouti", "DK - Denmark", "DM - Dominica", "DO - Dominican Republic", "DZ - Algeria", "EC - Ecuador", "EE - Estonia", "EG - Egypt", "EH - Western Sahara", "ER - Eritrea", "ES - Spain", "ET - Ethiopia", "FI - Finland", "FJ - Fiji", "FK - Falkland Islands (Islas Malvinas)", "FM - Micronesia, Federated States of", "FO - Faroe Islands", "FR - France", "FX - France, Metropolitan", "GA - Gabon", "GB - United Kingdom", "GD - Grenada", "GE - Georgia", "GF - French Guiana", "GG - Guernsey", "GH - Ghana", "GI - Gibraltar", "GL - Greenland", "GM - Gambia, The", "GN - Guinea", "GP - Guadeloupe", "GQ - Equatorial Guinea", "GR - Greece", "GS - South Georgia and the Islands", "GT - Guatemala", "GU - Guam", "GW - Guinea-Bissau", "GY - Guyana", "HK - Hong Kong", "HM - Heard Island and McDonald Islands", "HN - Honduras", "HR - Croatia", "HT - Haiti", "HU - Hungary", "ID - Indonesia", "IE - Ireland", "IL - Israel", "IM - Isle of Man", "IN - India", "IO - British Indian Ocean Territory", "IQ - Iraq", "IR - Iran", "IS - Iceland", "IT - Italy", "JE - Jersey", "JM - Jamaica", "JO - Jordan", "JP - Japan", "KE - Kenya", "KG - Kyrgyzstan", "KH - Cambodia", "KI - Kiribati", "KM - Comoros", "KN - Saint Kitts and Nevis", "KP - Korea, North", "KR - Korea, South", "KW - Kuwait", "KY - Cayman Islands", "KZ - Kazakhstan", "LA - Laos", "LB - Lebanon", "LC - Saint Lucia", "LI - Liechtenstein", "LK - Sri Lanka", "LR - Liberia", "LS - Lesotho", "LT - Lithuania", "LU - Luxembourg", "LV - Latvia", "LY - Libya", "MA - Morocco", "MC - Monaco", "MD - Moldova", "ME - Montenegro", "MF - Saint Martin", "MG - Madagascar", "MH - Marshall Islands", "MK - Macedonia", "ML - Mali", "MM - Burma", "MN - Mongolia", "MO - Macau", "MP - Northern Mariana Islands", "MQ - Martinique", "MR - Mauritania", "MS - Montserrat", "MT - Malta", "MU - Mauritius", "MV - Maldives", "MW - Malawi", "MX - Mexico", "MY - Malaysia", "MZ - Mozambique", "NA - Namibia", "NC - New Caledonia", "NE - Niger", "NF - Norfolk Island", "NG - Nigeria", "NI - Nicaragua", "NL - Netherlands", "NO - Norway", "NP - Nepal", "NR - Nauru", "NU - Niue", "NZ - New Zealand", "OM - Oman", "PA - Panama", "PE - Peru", "PF - French Polynesia", "PG - Papua New Guinea", "PH - Philippines", "PK - Pakistan", "PL - Poland", "PM - Saint Pierre and Miquelon", "PN - Pitcairn Islands", "PR - Puerto Rico", "PS - Gaza Strip", "PS - West Bank", "PT - Portugal", "PW - Palau", "PY - Paraguay", "QA - Qatar", "RE - Reunion", "RO - Romania", "RS - Serbia", "RU - Russia", "RW - Rwanda", "SA - Saudi Arabia", "SB - Solomon Islands", "SC - Seychelles", "SD - Sudan", "SE - Sweden", "SG - Singapore", "SH - Saint Helena, Ascension, and Tristan da Cunha", "SI - Slovenia", "SJ - Svalbard", "SK - Slovakia", "SL - Sierra Leone", "SM - San Marino", "SN - Senegal", "SO - Somalia", "SR - Suriname", "SS - South Sudan", "ST - Sao Tome and Principe", "SV - El Salvador", "SX - Sint Maarten", "SY - Syria", "SZ - Swaziland", "TC - Turks and Caicos Islands", "TD - Chad", "TF - French Southern and Antarctic Lands", "TG - Togo", "TH - Thailand", "TJ - Tajikistan", "TK - Tokelau", "TL - Timor-Leste", "TM - Turkmenistan", "TN - Tunisia", "TO - Tonga", "TR - Turkey", "TT - Trinidad and Tobago", "TV - Tuvalu", "TW - Taiwan", "TZ - Tanzania", "UA - Ukraine", "UG - Uganda", "UM - United States Minor Outlying Islands", "US - United States", "UY - Uruguay", "UZ - Uzbekistan", "VA - Holy See (Vatican City)", "VC - Saint Vincent and the Grenadines", "VE - Venezuela", "VG - British Virgin Islands", "VI - Virgin Islands", "VN - Vietnam", "VU - Vanuatu", "WF - Wallis and Futuna", "WS - Samoa", "XK - Kosovo", "YE - Yemen", "YT - Mayotte", "ZA - South Africa", "ZM - Zambia", "ZW - Zimbabwe" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBox1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
         jButtonRegistration.setText("Create Booking");
-        jButtonRegistration.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRegistration.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRegistrationActionPerformed(evt);
             }
         });
@@ -444,8 +490,10 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabel2.setText("Room Availability");
 
         jCheckBoxSingle.setText("Single Rooms");
-        jCheckBoxSingle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jCheckBoxSingle.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jCheckBoxSingleActionPerformed(evt);
             }
         });
@@ -459,15 +507,19 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabel3.setText("To");
 
         jButtonMainMenuAvil.setText("Main Menu");
-        jButtonMainMenuAvil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonMainMenuAvil.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonMainMenuAvilActionPerformed(evt);
             }
         });
 
         jButtonRegistrationRoom.setText("Registration Form");
-        jButtonRegistrationRoom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRegistrationRoom.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRegistrationRoomActionPerformed(evt);
             }
         });
@@ -477,7 +529,8 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jButtonBookRoom.setText("Book Room");
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -529,7 +582,8 @@ public class HotelGuiForm extends javax.swing.JFrame {
                 {null, null, null},
                 {null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Room Number", "Room Type", "Room Cost"
             }
         ));
@@ -569,7 +623,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
                         .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButtonMainMenuAvil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 216, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelRoomAvailLayout.setVerticalGroup(
@@ -618,8 +672,10 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabelPhoneBook.setText("Phone");
 
         jButtonMainMenuBook.setText("Main Menu");
-        jButtonMainMenuBook.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonMainMenuBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonMainMenuBookActionPerformed(evt);
             }
         });
@@ -642,15 +698,19 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabelAdressBook.setText("Address");
 
         jButtonRoomBook.setText("Room List");
-        jButtonRoomBook.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRoomBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRoomBookActionPerformed(evt);
             }
         });
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Please select a country below...", "AD - Andorra", "AE - United Arab Emirates", "AF - Afghanistan", "AG - Antigua and Barbuda", "AI - Anguilla", "AL - Albania", "AM - Armenia", "AO - Angola", "AQ - Antarctica", "AR - Argentina", "AS - American Samoa", "AT - Austria", "AU - Australia", "AW - Aruba", "AZ - Azerbaijan", "BA - Bosnia and Herzegovina", "BB - Barbados", "BD - Bangladesh", "BE - Belgium", "BF - Burkina Faso", "BG - Bulgaria", "BH - Bahrain", "BI - Burundi", "BJ - Benin", "BL - Saint Barthelemy", "BM - Bermuda", "BN - Brunei", "BO - Bolivia", "BR - Brazil", "BS - Bahamas, The", "BT - Bhutan", "BV - Bouvet Island", "BW - Botswana", "BY - Belarus", "BZ - Belize", "CA - Canada", "CC - Cocos (Keeling) Islands", "CD - Congo, Democratic Republic of the", "CF - Central African Republic", "CG - Congo, Republic of the", "CH - Switzerland", "CI - Cote d'Ivoire", "CK - Cook Islands", "CL - Chile", "CM - Cameroon", "CN - China", "CO - Colombia", "CR - Costa Rica", "CU - Cuba", "CV - Cape Verde", "CW - Curacao", "CX - Christmas Island", "CY - Cyprus", "CZ - Czech Republic", "DE - Germany", "DJ - Djibouti", "DK - Denmark", "DM - Dominica", "DO - Dominican Republic", "DZ - Algeria", "EC - Ecuador", "EE - Estonia", "EG - Egypt", "EH - Western Sahara", "ER - Eritrea", "ES - Spain", "ET - Ethiopia", "FI - Finland", "FJ - Fiji", "FK - Falkland Islands (Islas Malvinas)", "FM - Micronesia, Federated States of", "FO - Faroe Islands", "FR - France", "FX - France, Metropolitan", "GA - Gabon", "GB - United Kingdom", "GD - Grenada", "GE - Georgia", "GF - French Guiana", "GG - Guernsey", "GH - Ghana", "GI - Gibraltar", "GL - Greenland", "GM - Gambia, The", "GN - Guinea", "GP - Guadeloupe", "GQ - Equatorial Guinea", "GR - Greece", "GS - South Georgia and the Islands", "GT - Guatemala", "GU - Guam", "GW - Guinea-Bissau", "GY - Guyana", "HK - Hong Kong", "HM - Heard Island and McDonald Islands", "HN - Honduras", "HR - Croatia", "HT - Haiti", "HU - Hungary", "ID - Indonesia", "IE - Ireland", "IL - Israel", "IM - Isle of Man", "IN - India", "IO - British Indian Ocean Territory", "IQ - Iraq", "IR - Iran", "IS - Iceland", "IT - Italy", "JE - Jersey", "JM - Jamaica", "JO - Jordan", "JP - Japan", "KE - Kenya", "KG - Kyrgyzstan", "KH - Cambodia", "KI - Kiribati", "KM - Comoros", "KN - Saint Kitts and Nevis", "KP - Korea, North", "KR - Korea, South", "KW - Kuwait", "KY - Cayman Islands", "KZ - Kazakhstan", "LA - Laos", "LB - Lebanon", "LC - Saint Lucia", "LI - Liechtenstein", "LK - Sri Lanka", "LR - Liberia", "LS - Lesotho", "LT - Lithuania", "LU - Luxembourg", "LV - Latvia", "LY - Libya", "MA - Morocco", "MC - Monaco", "MD - Moldova", "ME - Montenegro", "MF - Saint Martin", "MG - Madagascar", "MH - Marshall Islands", "MK - Macedonia", "ML - Mali", "MM - Burma", "MN - Mongolia", "MO - Macau", "MP - Northern Mariana Islands", "MQ - Martinique", "MR - Mauritania", "MS - Montserrat", "MT - Malta", "MU - Mauritius", "MV - Maldives", "MW - Malawi", "MX - Mexico", "MY - Malaysia", "MZ - Mozambique", "NA - Namibia", "NC - New Caledonia", "NE - Niger", "NF - Norfolk Island", "NG - Nigeria", "NI - Nicaragua", "NL - Netherlands", "NO - Norway", "NP - Nepal", "NR - Nauru", "NU - Niue", "NZ - New Zealand", "OM - Oman", "PA - Panama", "PE - Peru", "PF - French Polynesia", "PG - Papua New Guinea", "PH - Philippines", "PK - Pakistan", "PL - Poland", "PM - Saint Pierre and Miquelon", "PN - Pitcairn Islands", "PR - Puerto Rico", "PS - Gaza Strip", "PS - West Bank", "PT - Portugal", "PW - Palau", "PY - Paraguay", "QA - Qatar", "RE - Reunion", "RO - Romania", "RS - Serbia", "RU - Russia", "RW - Rwanda", "SA - Saudi Arabia", "SB - Solomon Islands", "SC - Seychelles", "SD - Sudan", "SE - Sweden", "SG - Singapore", "SH - Saint Helena, Ascension, and Tristan da Cunha", "SI - Slovenia", "SJ - Svalbard", "SK - Slovakia", "SL - Sierra Leone", "SM - San Marino", "SN - Senegal", "SO - Somalia", "SR - Suriname", "SS - South Sudan", "ST - Sao Tome and Principe", "SV - El Salvador", "SX - Sint Maarten", "SY - Syria", "SZ - Swaziland", "TC - Turks and Caicos Islands", "TD - Chad", "TF - French Southern and Antarctic Lands", "TG - Togo", "TH - Thailand", "TJ - Tajikistan", "TK - Tokelau", "TL - Timor-Leste", "TM - Turkmenistan", "TN - Tunisia", "TO - Tonga", "TR - Turkey", "TT - Trinidad and Tobago", "TV - Tuvalu", "TW - Taiwan", "TZ - Tanzania", "UA - Ukraine", "UG - Uganda", "UM - United States Minor Outlying Islands", "US - United States", "UY - Uruguay", "UZ - Uzbekistan", "VA - Holy See (Vatican City)", "VC - Saint Vincent and the Grenadines", "VE - Venezuela", "VG - British Virgin Islands", "VI - Virgin Islands", "VN - Vietnam", "VU - Vanuatu", "WF - Wallis and Futuna", "WS - Samoa", "XK - Kosovo", "YE - Yemen", "YT - Mayotte", "ZA - South Africa", "ZM - Zambia", "ZW - Zimbabwe" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBox2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jComboBox2ActionPerformed(evt);
             }
         });
@@ -663,15 +723,19 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jScrollPane13.setViewportView(jTextAddressBook);
 
         jButtonDeleteBook.setText("Clear ");
-        jButtonDeleteBook.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonDeleteBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonDeleteBookActionPerformed(evt);
             }
         });
 
         jButtonRegBook.setText("Registration Form");
-        jButtonRegBook.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRegBook.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRegBookActionPerformed(evt);
             }
         });
@@ -793,8 +857,10 @@ public class HotelGuiForm extends javax.swing.JFrame {
         getContentPane().add(jPanelBookings, "card5");
 
         jButtonMainMenuAvil1.setText("Main Menu");
-        jButtonMainMenuAvil1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonMainMenuAvil1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonMainMenuAvil1ActionPerformed(evt);
             }
         });
@@ -806,7 +872,8 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabel6.setText("Activity List");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {null, null},
                 {null, null},
                 {null, null},
@@ -858,7 +925,8 @@ public class HotelGuiForm extends javax.swing.JFrame {
                 {null, null},
                 {null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Sport", "Time"
             }
         ));
@@ -907,8 +975,10 @@ public class HotelGuiForm extends javax.swing.JFrame {
 
         jLabel4.setText("Sport");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jTextField1ActionPerformed(evt);
             }
         });
@@ -918,8 +988,10 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jLabel8.setText("To");
 
         jButton3.setText("Main Menu");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton3.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButton3ActionPerformed(evt);
             }
         });
@@ -1000,46 +1072,96 @@ public class HotelGuiForm extends javax.swing.JFrame {
         jPanelHandballVolleyball.setLayout(jPanelHandballVolleyballLayout);
         jPanelHandballVolleyballLayout.setHorizontalGroup(
             jPanelHandballVolleyballLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 679, Short.MAX_VALUE)
+            .addGap(0, 825, Short.MAX_VALUE)
         );
         jPanelHandballVolleyballLayout.setVerticalGroup(
             jPanelHandballVolleyballLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 474, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanelHandballVolleyball, "card8");
 
         jMenu1.setText("Main");
 
-        jMenuItem1.setText("Overview");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jMenuItem1.setText("Main Menu");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jMenuItem1ActionPerformed(evt);
             }
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("Room List");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Rooms");
 
-        jMenuItem3.setText("Add Guest");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jMenuItem3.setText("Room List");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jMenuItem3ActionPerformed(evt);
             }
         });
         jMenu2.add(jMenuItem3);
 
+        jMenuItem4.setText("Room Booking Form");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
+        jMenuItem5.setText("Room Bookings");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Activities");
+
+        jMenuItem6.setText("Activity List");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem6);
+
+        jMenuItem7.setText("Activity Booking Form");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem7);
+
+        jMenuItem8.setText("Handball and Volleyball");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem8);
+
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -1142,69 +1264,63 @@ public class HotelGuiForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonBookingMainActionPerformed
 
     private void jButtonRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrationActionPerformed
-// TODO add your handling code here:
-        
-        
-        
-        
-//
-//        String strConn = "jdbc:oracle:thin:@oracle.staff.ittralee.ie:1521:orcl";
-//        String strUser = "cphsh241";
-//        String strPassword = "cphsh241";
-//        
-//        try {
-//            Class.forName("oracle.jdbc.driver.OracleDriver");
-//            Connection conn = DriverManager.getConnection(strConn, strUser, strPassword);
-//
-//            String query = "INSERT INTO PayingGuest(ID, FIRSTNAME, FAMILYNAME, PHONE, EMAIL, COUNTRYSTUDENTID, ADDRESS)"
-//                    + " VALUES ("
-//                    + String.valueOf(pg.getId())
-//                    + ", '" + pg.getFirstName()
-//                    + "', '" + pg.getFamilyName()
-//                    + "', '" + pg.getPhone()
-//                    + "', '" + pg.getEmail()
-//                    + "', '" + pg.getCountry()
-//                    + "')";
-//
-//            Statement stmt = conn.createStatement();
-//            try {
-//                stmt.executeUpdate(sql);
-//            } catch (SQLException ex) {
-//                Logger.getLogger(HotelGuiForm.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//        } catch (Exception e) {
-//            System.out.println("Soemthing messed up");
-//        }
-//        {
-//            jLabelRegSuccess.setText("Your booking has been created.");
-//        }
-        
-        
+        // TODO add your handling code here:
+
+        String strConn = "jdbc:oracle:thin:@oracle.staff.ittralee.ie:1521:orcl";
+        String strUser = "cphsh241";
+        String strPassword = "cphsh241";
+
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Connection conn = DriverManager.getConnection(strConn, strUser, strPassword);
+
+            String query = "INSERT INTO PayingGuest(ID, FIRSTNAME, FAMILYNAME, PHONE, EMAIL, COUNTRYSTUDENTID, ADDRESS)"
+                    + " VALUES ("
+                    + String.valueOf(pg.getId())
+                    + ", '" + pg.getFirstName()
+                    + "', '" + pg.getFamilyName()
+                    + "', '" + pg.getPhone()
+                    + "', '" + pg.getEmail()
+                    + "', '" + pg.getCountry()
+                    + "')";
+
+            Statement stmt = conn.createStatement();
+            try
+            {
+                stmt.executeUpdate(sql);
+            } catch (SQLException ex)
+            {
+                Logger.getLogger(HotelGuiForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (Exception e)
+        {
+            System.out.println("Soemthing messed up");
+        }
+        {
+            jLabelRegSuccess.setText("Your booking has been created.");
+        }
     }//GEN-LAST:event_jButtonRegistrationActionPerformed
 
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        hidePanels();
         jPanelMainMenu.setVisible(true);
-        jPanelRoomAvail.setVisible(false);
-        jPanelRegistration.setVisible(false);
-        jPanelBookings.setVisible(false);
+        
     }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        jPanelMainMenu.setVisible(false);
-        jPanelRoomAvail.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
+        hidePanels();
+        jPanelRoomAvail.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jButtonMainMenuAvil1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonMainMenuAvil1ActionPerformed
     {//GEN-HEADEREND:event_jButtonMainMenuAvil1ActionPerformed
         // TODO add your handling code here:
-         jPanelActivityList.setVisible(false);
+        jPanelActivityList.setVisible(false);
         jPanelMainMenu.setVisible(true);
-        
+
     }//GEN-LAST:event_jButtonMainMenuAvil1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField1ActionPerformed
@@ -1217,7 +1333,7 @@ public class HotelGuiForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         jPanelActivityBooking.setVisible(false);
         jPanelMainMenu.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton5ActionPerformed
@@ -1252,6 +1368,42 @@ public class HotelGuiForm extends javax.swing.JFrame {
     {//GEN-HEADEREND:event_jCheckBoxSingleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBoxSingleActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem4ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        hidePanels();
+        jPanelRegistration.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem5ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        hidePanels();
+        jPanelBookings.setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem6ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        hidePanels();
+        jPanelActivityList.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem7ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        hidePanels();
+        jPanelActivityBooking.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jMenuItem8ActionPerformed
+    {//GEN-HEADEREND:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        hidePanels();
+        jPanelHandballVolleyball.setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -1317,10 +1469,15 @@ public class HotelGuiForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSurnameBook;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanelActivityBooking;
     private javax.swing.JPanel jPanelActivityList;
     private javax.swing.JPanel jPanelBookings;
