@@ -27,9 +27,7 @@ public class RoomBooking {
         this.checkOut = checkOut;
         this.travelAgency = travelAgency;
         this.paymentStatus = paymentStatus;
-    }
-
-   
+    }   
 
     public int getId() {
         return id;

@@ -124,9 +124,9 @@ public class GuestMapper {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 sg = new StayingGuest(Id,
-                        rs.getString(2),
+                        rs.getInt(2),
                         rs.getString(3),
-                        rs.getInt(4)
+                        rs.getString(4)
 
                 );
             }

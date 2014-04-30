@@ -18,7 +18,7 @@ import domain.ActivityBooking;
  * @author sholmager
  */
 public class BookingMapper {
-    
+
 //== load an order and the associated order details
     public RoomBooking getRoomBooking(int Id, Connection con) {
         RoomBooking rb = null;
@@ -40,10 +40,10 @@ public class BookingMapper {
                 rb = new RoomBooking(Id,
                         rs.getInt(2),
                         rs.getInt(3),
-                        rs.getInt(4),
+                        rs.getString(4),
                         rs.getString(5),
                         rs.getString(6),
-                        rs.getString(7)
+                        rs.getBoolean(7)
                 );
             }
 
@@ -86,10 +86,10 @@ public class BookingMapper {
             statement.setInt(1, rb.getId());
             statement.setInt(2, rb.getPayingGuestId());
             statement.setInt(3, rb.getRoomId());
-            statement.setInt(4, rb.getPaymentStatusId());
-            statement.setString(5, rb.getTravelAgency());
-            statement.setString(6, rb.getCheckIn());
-            statement.setString(7, rb.getCheckOut());
+            statement.setString(4, rb.getCheckIn());
+            statement.setString(5, rb.getCheckOut());
+            statement.setString(6, rb.getTravelAgency());
+            statement.setBoolean(7, rb.getPaymentStatus());
             rowsInserted = statement.executeUpdate();
 
         } catch (Exception e) {
@@ -124,7 +124,7 @@ public class BookingMapper {
             statement.setInt(1, Id);     // primary key value
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
-                ab = new ActivityBooking (Id,
+                ab = new ActivityBooking(Id,
                         rs.getInt(2),
                         rs.getInt(3),
                         rs.getInt(4),
