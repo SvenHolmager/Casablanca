@@ -850,7 +850,7 @@
                               <Component id="jButtonMainMenuAvil" max="32767" attributes="0"/>
                               <Component id="jButton1" min="-2" pref="83" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="216" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="208" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -958,6 +958,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Book Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBookRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePickerAvailFrom">
         </Component>
@@ -998,6 +1001,7 @@
                     </Column>
                   </TableColumnModel>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
@@ -1584,6 +1588,9 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanelActivityList">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
           <CardConstraints cardName="card6"/>
@@ -1689,6 +1696,7 @@
                     </Column>
                   </TableColumnModel>
                 </Property>
+                <Property name="enabled" type="boolean" value="false"/>
                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>

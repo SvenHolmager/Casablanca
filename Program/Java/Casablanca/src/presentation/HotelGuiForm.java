@@ -6,6 +6,8 @@ package presentation;
 
 import dataSource.DBConnector;
 import dataSource.RoomMapper;
+import domain.Activity;
+import domain.ActivityBooking;
 import domain.Controller;
 import domain.PayingGuest;
 import domain.Room;
@@ -31,23 +33,30 @@ public class HotelGuiForm extends javax.swing.JFrame
 {
 
     ArrayList<Room> room = new ArrayList<>();
+    ArrayList<Activity> activity = new ArrayList<>();
     Controller control = new Controller();
     DefaultTableModel roomTableList = new DefaultTableModel();
+    DefaultTableModel activityTableList = new DefaultTableModel();
     String Name;
     
-    String[] columnNames =
+    
+    String[] roomColumnNames =
     {
-        "Room Number", "Room Type", "Room Cost", "Max Residents", "Cost Per Night"
+        "Room Id", "Room Number", "Room Type", "Max Residents",
+    };
+    String[] activityColumnNames =
+    {
+        "Sport", "Time", "Participants"
     };
 
     public void setColumnNames(String[] columnNames)
     {
-        this.columnNames = columnNames;
+        this.roomColumnNames = columnNames;
     }
 
     public String getColumnNames(int column)
     {
-        return columnNames[column];
+        return roomColumnNames[column];
     }
 
     public int getColumnCount()
@@ -80,12 +89,42 @@ public class HotelGuiForm extends javax.swing.JFrame
         }
         return null;
     }
-
+    
     public HotelGuiForm() throws ClassNotFoundException, SQLException
     {
 
         initComponents();
+        
+    room.add(new Room(102, 2, "Single", 1, 100));
+    room.add(new Room(103, 3, "Double", 2, 100));
+    room.add(new Room(104, 4, "Double", 2, 100));
+    room.add(new Room(115, 15, "Family", 5, 200));
+    
+    
+    
+    activity.add(new Activity("Football",1200,2));
+    activity.add(new Activity("Golf",1300,3));
+    activity.add(new Activity("Tennis",1400,5));
 
+     //   System.out.println(room.toString());
+
+    jTable2.setModel(roomTableList);
+    jTable1.setModel(activityTableList);
+    
+    
+    roomTableList.setColumnIdentifiers(roomColumnNames);
+    for (Room p : room)
+    {
+        roomTableList.addRow(new Object[] {control.getRooms()});
+    }
+    //p.getId(), p.getNumber(), p.getRoomType(), p.getMaxResidents()
+    
+    activityTableList.setColumnIdentifiers(activityColumnNames);
+    for (Activity p : activity)
+    {
+        activityTableList.addRow(new Object[] {p.getSport(), p.getTime(), p.getParticipants()});
+    }
+    
     }
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException
@@ -571,6 +610,13 @@ public class HotelGuiForm extends javax.swing.JFrame
         jButton1.setText("Clear");
 
         jButtonBookRoom.setText("Book Room");
+        jButtonBookRoom.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonBookRoomActionPerformed(evt);
+            }
+        });
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
@@ -631,6 +677,7 @@ public class HotelGuiForm extends javax.swing.JFrame
                 "Room Number", "Room Type", "Room Cost"
             }
         ));
+        jTable2.setEnabled(false);
         jScrollPane14.setViewportView(jTable2);
 
         javax.swing.GroupLayout jPanelRoomAvailLayout = new javax.swing.GroupLayout(jPanelRoomAvail);
@@ -667,7 +714,7 @@ public class HotelGuiForm extends javax.swing.JFrame
                         .addGroup(jPanelRoomAvailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButtonMainMenuAvil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 216, Short.MAX_VALUE)))
+                        .addGap(0, 208, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelRoomAvailLayout.setVerticalGroup(
@@ -900,6 +947,8 @@ public class HotelGuiForm extends javax.swing.JFrame
 
         getContentPane().add(jPanelBookings, "card5");
 
+        jPanelActivityList.setEnabled(false);
+
         jButtonMainMenuAvil1.setText("Main Menu");
         jButtonMainMenuAvil1.addActionListener(new java.awt.event.ActionListener()
         {
@@ -974,6 +1023,7 @@ public class HotelGuiForm extends javax.swing.JFrame
                 "Sport", "Time"
             }
         ));
+        jTable1.setEnabled(false);
         jScrollPane16.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanelActivityListLayout = new javax.swing.GroupLayout(jPanelActivityList);
@@ -1414,6 +1464,15 @@ public class HotelGuiForm extends javax.swing.JFrame
         hidePanels();
         jPanelHandballVolleyball.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jButtonBookRoomActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonBookRoomActionPerformed
+    {//GEN-HEADEREND:event_jButtonBookRoomActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_jButtonBookRoomActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
