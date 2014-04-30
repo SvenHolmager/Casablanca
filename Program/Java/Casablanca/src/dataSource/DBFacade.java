@@ -19,6 +19,7 @@ public class DBFacade {
     private RoomMapper rm;
     private GuestMapper gm;
     private Connection con;
+//    private ActivityMapper am;
 
     //== Singleton start
     private static DBFacade instance;
@@ -61,4 +62,9 @@ public class DBFacade {
 
         return rm.getRooms(con);
     }
+
+//    public ArrayList<Activity> getActivities() {
+//    
+//        return am.getActivities();
+//    }
 }

@@ -4,141 +4,101 @@
  */
 package presentation;
 
-import dataSource.DBConnector;
-import dataSource.RoomMapper;
 import domain.Activity;
-import domain.ActivityBooking;
 import domain.Controller;
-import domain.PayingGuest;
 import domain.Room;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
-import java.util.Vector;
-import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Mads
  */
-public class HotelGuiForm extends javax.swing.JFrame
-{
+public class HotelGuiForm extends javax.swing.JFrame {
 
-    ArrayList<Room> room = new ArrayList<>();
-    ArrayList<Activity> activity = new ArrayList<>();
     Controller control = new Controller();
     DefaultTableModel roomTableList = new DefaultTableModel();
     DefaultTableModel activityTableList = new DefaultTableModel();
     String Name;
-    
-    
-    String[] roomColumnNames =
-    {
-        "Room Id", "Room Number", "Room Type", "Max Residents",
-    };
-    String[] activityColumnNames =
-    {
-        "Sport", "Time", "Participants"
-    };
 
-    public void setColumnNames(String[] columnNames)
-    {
+    String[] roomColumnNames
+            = {
+                "Room Id", "Room Number", "Room Type", "Max Residents", "Cost Per Night"
+            };
+    String[] activityColumnNames
+            = {
+                "Sport", "Time", "Participants"
+            };
+
+    public void setColumnNames(String[] columnNames) {
         this.roomColumnNames = columnNames;
     }
 
-    public String getColumnNames(int column)
-    {
+    public String getColumnName(int column) {
         return roomColumnNames[column];
     }
 
-    public int getColumnCount()
-    {
-        return 5;
+    public int getColumnCount() {
+        return roomTableList.getColumnCount();
     }
 
-    public int getRowCount()
-    {
-        return room.size();
+    public int getRowCount() {
+        return control.getRooms().size();
     }
 
-    public Object getValueAt(int rowIndex, int columnIndex)
-    {
-        if (columnIndex == 0)
-        {
-            return room.get(rowIndex).getNumber();
-        } else if (columnIndex == 1)
-        {
-            return room.get(rowIndex).getRoomType();
-        } else if (columnIndex == 2)
-        {
-            return room.get(rowIndex).getId();
-        } else if (columnIndex == 3)
-        {
-            return room.get(rowIndex).getCostPerNight();
-        } else if (columnIndex == 4)
-        {
-            return room.get(rowIndex).getMaxResidents();
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        if (columnIndex == 0) {
+            return control.getRooms().get(rowIndex).getNumber();
+        } else if (columnIndex == 1) {
+            return control.getRooms().get(rowIndex).getRoomType();
+        } else if (columnIndex == 2) {
+            return control.getRooms().get(rowIndex).getId();
+        } else if (columnIndex == 3) {
+            return control.getRooms().get(rowIndex).getCostPerNight();
+        } else if (columnIndex == 4) {
+            return control.getRooms().get(rowIndex).getMaxResidents();
         }
         return null;
     }
-    
-    public HotelGuiForm() throws ClassNotFoundException, SQLException
-    {
+
+    public HotelGuiForm() throws ClassNotFoundException, SQLException {
 
         initComponents();
-        
-    room.add(new Room(102, 2, "Single", 1, 100));
-    room.add(new Room(103, 3, "Double", 2, 100));
-    room.add(new Room(104, 4, "Double", 2, 100));
-    room.add(new Room(115, 15, "Family", 5, 200));
-    
-    
-    
-    activity.add(new Activity("Football",1200,2));
-    activity.add(new Activity("Golf",1300,3));
-    activity.add(new Activity("Tennis",1400,5));
 
-     //   System.out.println(room.toString());
+        roomTableList.setColumnIdentifiers(roomColumnNames);
+        for (Room r : control.getRooms()) {
+            roomTableList.addRow(new Object[]{
+                r.getId(),
+                r.getNumber(),
+                r.getRoomType(),
+                r.getMaxResidents(),
+                r.getCostPerNight()});
+        }
 
-    jTable2.setModel(roomTableList);
-    jTable1.setModel(activityTableList);
-    
-    
-    roomTableList.setColumnIdentifiers(roomColumnNames);
-    for (Room p : room)
-    {
-        roomTableList.addRow(new Object[] {control.getRooms()});
-    }
-    //p.getId(), p.getNumber(), p.getRoomType(), p.getMaxResidents()
-    
-    activityTableList.setColumnIdentifiers(activityColumnNames);
-    for (Activity p : activity)
-    {
-        activityTableList.addRow(new Object[] {p.getSport(), p.getTime(), p.getParticipants()});
-    }
-    
+//        activityTableList.setColumnIdentifiers(activityColumnNames);
+//        for (Activity p : control.getActivities()) {
+//            activityTableList.addRow(new Object[]{
+//                p.getSport(),
+//                p.getTime(),
+//                p.getParticipants()});
+//        }
+
+        jTable2.setModel(roomTableList);
+        jTable1.setModel(activityTableList);
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, SQLException
-    {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         HotelGuiForm HGF = new HotelGuiForm();
         HGF.setVisible(true);
+        HGF.setTitle("Casablanca Booking System");
 
     }
+
     /**
      * Creates new form HotelGuiForm
      */
-   
-    public void hidePanels()
-    {
+    public void hidePanels() {
         jPanelActivityBooking.setVisible(false);
         jPanelActivityList.setVisible(false);
         jPanelBookings.setVisible(false);
@@ -1468,9 +1428,8 @@ public class HotelGuiForm extends javax.swing.JFrame
     private void jButtonBookRoomActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonBookRoomActionPerformed
     {//GEN-HEADEREND:event_jButtonBookRoomActionPerformed
         // TODO add your handling code here:
-        
-        
-        
+
+
     }//GEN-LAST:event_jButtonBookRoomActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

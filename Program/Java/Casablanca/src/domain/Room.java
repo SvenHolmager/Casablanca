@@ -12,8 +12,8 @@ package domain;
 public class Room {
 
     private int id;
-    private String roomType;
     private int number;
+    private String roomType;
     private int maxResidents;
     private int costPerNight;
 

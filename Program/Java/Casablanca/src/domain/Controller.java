@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class Controller {
 
     private ArrayList<Room> currentRoomList;
+    private ArrayList<Activity> currentActivityList = new ArrayList<>();
     private PayingGuest currentPayingGuest;
     private RoomBooking currentRoomBooking;
     private PayingGuest currentStayingGuest;
@@ -78,4 +79,10 @@ public class Controller {
         currentRoomList = dbf.getRooms();
         return currentRoomList;
     }
+
+//    public ArrayList<Activity> getActivity() {
+//
+//        currentActivityList = dbf.getActivities();
+//        return currentActivityList;
+//    }
 }
