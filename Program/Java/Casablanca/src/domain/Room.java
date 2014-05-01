@@ -12,12 +12,12 @@ package domain;
 public class Room {
 
     private int id;
-    private int number;
+    private String number;
     private String roomType;
     private int maxResidents;
     private int costPerNight;
 
-    public Room(int id, int number, String roomType, int maxResidents, int costPerNight) {
+    public Room(int id, String number, String roomType, int maxResidents, int costPerNight) {
         this.id = id;
         this.roomType = roomType;
         this.maxResidents = maxResidents;
@@ -30,7 +30,7 @@ public class Room {
         return costPerNight;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -50,7 +50,7 @@ public class Room {
         return maxResidents;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
@@ -66,7 +66,7 @@ public class Room {
         this.maxResidents = maxResidents;
     }
 
-    public void setName(int number) {
+    public void setName(String number) {
         this.number = number;
     }
     
