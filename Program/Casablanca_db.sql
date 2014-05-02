@@ -23,7 +23,7 @@ primary key(paying_guest_id)
 
 create table room(
 room_id int NOT NULL,
-room_no int NOT NULL,
+room_no varchar(10) NOT NULL,
 room_type varchar(20) NOT NULL,
 max_residents int NOT NULL,
 cost_per_night int NOT NULL,
