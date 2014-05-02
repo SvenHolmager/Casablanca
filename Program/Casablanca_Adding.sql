@@ -1,3 +1,5 @@
+
+
 insert into room values(1, '001', 'Single', 1, 10);
 insert into room values(2, '002', 'Single', 1, 10);
 insert into room values(3, '003', 'Single', 1, 10);

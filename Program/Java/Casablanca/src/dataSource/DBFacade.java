@@ -19,7 +19,7 @@ public class DBFacade {
     private RoomMapper rm;
     private GuestMapper gm;
     private Connection con;
-//    private ActivityMapper am;
+    private UnitOfWork unitOfWork;
 
     //== Singleton start
     private static DBFacade instance;
@@ -44,27 +44,37 @@ public class DBFacade {
         return bm.getRoomBooking(Id, con);
     }
 
-    public boolean saveRoomBooking(RoomBooking rb) {
-
-        return bm.saveRoomBooking(rb, con);
-    }
-
     public PayingGuest getPayingGuest(int Id) {
         return gm.getPayingGuest(Id, con);
     }
 
-    public boolean savePayingGuest(PayingGuest pg) {
-
-        return gm.savePayingGuest(pg, con);
-    }
-
     public ArrayList<Room> getRooms() {
-
         return rm.getRooms(con);
     }
 
-//    public ArrayList<Activity> getActivities() {
-//    
-//        return am.getActivities();
-//    }
+    public void saveRoomBooking(RoomBooking rb) {
+        if (unitOfWork != null) {
+            unitOfWork.registerNewRoomBooking(rb);
+        }
+    }
+
+    public void savePayingGuest(PayingGuest pg) {
+        if (unitOfWork != null) {
+            unitOfWork.registerNewPayingGuest(pg);
+        }
+    }
+
+    public void startProcessOrderBusinessTransaction() {
+        unitOfWork = new UnitOfWork(bm, gm);
+    }
+
+    //=== Save all changes
+    public boolean commitProcessOrderBusinessTransaction() {
+        boolean status = false;
+        if (unitOfWork != null) {
+            status = unitOfWork.commit(con);
+            unitOfWork = null;
+        }
+        return status;
+    }
 }

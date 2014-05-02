@@ -10,6 +10,9 @@ drop table room;
 --drop table room_type;
 --drop table payment_status;
 
+create sequence roomBookingSeq;
+create sequence payingGuestSeq;
+
 create table paying_guest(
 paying_guest_id int NOT NULL ,
 first_name varchar(20) NOT NULL,

@@ -12,6 +12,7 @@ import java.sql.SQLException;
 
 import domain.RoomBooking;
 import domain.ActivityBooking;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,21 +20,17 @@ import domain.ActivityBooking;
  */
 public class BookingMapper {
 
-//== load an order and the associated order details
+    //== load an RoomBooking.
     public RoomBooking getRoomBooking(int Id, Connection con) {
         RoomBooking rb = null;
         String SQLString1 = // get RoomBooking
                 "select * "
                 + "from Room_Booking "
                 + "where Id = ?";
-
         PreparedStatement statement = null;
-
         try {
             //=== get RoomBooking
-
             statement = con.prepareStatement(SQLString1);
-
             statement.setInt(1, Id);     // primary key value
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
@@ -46,7 +43,6 @@ public class BookingMapper {
                         rs.getBoolean(7)
                 );
             }
-
         } catch (Exception e) {
             System.out.println("Fail in BookingMapper - getRoomBooking");
             System.out.println(e.getMessage());
@@ -62,49 +58,27 @@ public class BookingMapper {
         return rb;
     }
 
-    //== Insert new order (tuple)
-    public boolean saveRoomBooking(RoomBooking rb, Connection con) {
+    //== Insert new RoomBooking (tuple)
+    public boolean saveRoomBooking(ArrayList<RoomBooking> roomBookingList, Connection con) throws SQLException {
         int rowsInserted = 0;
         String SQLString1
-                = "select orderseq.nextval  "
-                + "from dual";
-        String SQLString2
                 = "insert into Room_Booking "
                 + "values (?,?,?,?,?,?,?)";
         PreparedStatement statement = null;
+        statement = con.prepareStatement(SQLString1);
 
-        try {
-            //== get unique ono
-            statement = con.prepareStatement(SQLString1);
-            ResultSet rs = statement.executeQuery();
-            if (rs.next()) {
-                rb.setId(rs.getInt(1));
-            }
-
-            //== insert tuple
-            statement = con.prepareStatement(SQLString2);
-            statement.setInt(1, rb.getId());
+        for (int i = 0; i < roomBookingList.size(); i++) {
+            RoomBooking rb = roomBookingList.get(i);
+            statement.setInt(1, this.getNextRoomBookingNumber(con));
             statement.setInt(2, rb.getPayingGuestId());
             statement.setInt(3, rb.getRoomId());
             statement.setString(4, rb.getCheckIn());
             statement.setString(5, rb.getCheckOut());
             statement.setString(6, rb.getTravelAgency());
             statement.setBoolean(7, rb.getPaymentStatus());
-            rowsInserted = statement.executeUpdate();
-
-        } catch (Exception e) {
-            System.out.println("Fail in BookingMapper - saveRoomBooking");
-            System.out.println(e.getMessage());
-        } finally // must close statement
-        {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                System.out.println("Fail in BookingMapper - saveRoomBooking");
-                System.out.println(e.getMessage());
-            }
+            rowsInserted += statement.executeUpdate();
         }
-        return rowsInserted == 1;
+        return (rowsInserted == roomBookingList.size());
     }
 
     public ActivityBooking getActivityBooking(int Id, Connection con) {
@@ -148,7 +122,7 @@ public class BookingMapper {
         return ab;
     }
 
-    //== Insert new order (tuple)
+    //== Insert new ActivityBooking (tuple)
     public boolean saveActivityBooking(ActivityBooking ab, Connection con) {
         int rowsInserted = 0;
         String SQLString1
@@ -189,5 +163,23 @@ public class BookingMapper {
             }
         }
         return rowsInserted == 1;
+    }
+
+    // Retrieves the next unique RoomBooking number from DB
+    public int getNextRoomBookingNumber(Connection conn) {
+        int nextRoomBookingNumber = 0;
+        String SQLString = "select roomBookingSeq.nextval " + "from dual";
+        PreparedStatement statement = null;
+        try {
+            statement = conn.prepareStatement(SQLString);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                nextRoomBookingNumber = rs.getInt(1);
+            }
+        } catch (Exception e) {
+            System.out.println("Fail in BookingMapper - getNextBookingNo");
+            System.out.println(e.getMessage());
+        }
+        return nextRoomBookingNumber;
     }
 }
