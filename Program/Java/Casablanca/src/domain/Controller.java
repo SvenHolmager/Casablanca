@@ -54,44 +54,30 @@ public class Controller {
     }
 
     public Room addCurrentRoom(int id, String number, String roomType, int maxResidents, int costPerNight) {
-        
+
         currentRoom = null;
         currentRoom = new Room(id, number, roomType, maxResidents, costPerNight);
 
         return currentRoom;
     }
 
-    public PayingGuest addNewPayingGuest(int id, String firstName, String familyName, String address, String country, String phone, String email) {
+    public PayingGuest addNewPayingGuest(int id, String firstName, String familyName, String address, String country, String phone, String email) throws SQLException {
         if (processingBooking) {
             return null;
         }
-
         dbf.startProcessBookingBusinessTransaction();
-        int newOrderNo = dbFacade.getNextOrderNumber();// DB-generated unique ID
-        if (newOrderNo != 0) {
-            processingOrder = true;
-            //- capture current date.Represent as String
-            String dateReceived = (new java.sql.Date(
-                    (new java.util.Date().getTime())).toString());
-            currentRoomBooking = new Order(newOrderNo, customerNumber, employeeNumber, dateReceived, null, 0);
-            dbFacade.registerNewOrder(currentOrder);
-        } else {
-            processingOrder = false;
-            currentRoomBooking = null;
-        }
-        return currentRoomBooking;
 
-        //        //== create order object with ono=0
-//        currentPayingGuest = new PayingGuest(0, firstName, familyName, address, country, phone, email);
-//
-//        //== save and get DB-generated unique ono
-//        boolean status = dbf.savePayingGuest(currentPayingGuest);
-//        if (!status) //fail!
-//        {
-//            currentPayingGuest = null;
-//        }
-//        return currentPayingGuest;
-//    }
+        int newPayingGuestId = dbf.getNextPayingGuestId();// DB-generated unique ID
+        if (newPayingGuestId != 0) {
+            processingBooking = true;
+
+            currentPayingGuest = new PayingGuest(newPayingGuestId, firstName, familyName, address, country, phone, email);
+            dbf.savePayingGuest(currentPayingGuest);
+        } else {
+            processingBooking = false;
+            currentPayingGuest = null;
+        }
+        return currentPayingGuest;
     }
 
     public RoomBooking getRoomBooking(int id) {
@@ -103,35 +89,19 @@ public class Controller {
         if (processingBooking) {
             return null;
         }
-
-        dbf.startProcessBookingBusinessTransaction();
         int newBookingId = dbf.getNextRoomBookingId();// DB-generated unique ID
 
         if (newBookingId != 0) {
             processingBooking = true;
-            //- capture current date.Represent as String
 
-            currentRoomBooking = new RoomBooking(newBookingId, int payingGuestId, currentRoom.getId(), String checkIn, String checkOut, String travelAgency, boolean paymentStatus)
-            , String checkIn, String checkOut
-            , String travelAgency, boolean paymentStatus
-            )
-            dbf.registerNewOrder(currentOrder);
+            currentRoomBooking = new RoomBooking(newBookingId, currentPayingGuest.getId(), currentRoom.getId(), checkIn, checkOut, travelAgency, paymentStatus);
+
+            dbf.saveRoomBooking(currentRoomBooking);
         } else {
             processingBooking = false;
             currentRoomBooking = null;
         }
         return currentRoomBooking;
-//        //== create order object with ono=0
-//        currentRoomBooking = new RoomBooking(0, payingGuestId, roomId, checkIn, checkOut, travelAgency, paymentStatus);
-//
-//        //== save and get DB-generated unique ono
-//        boolean status = dbf.saveRoomBooking(currentRoomBooking);
-//        if (!status) //fail!
-//        {
-//            currentPayingGuest = null;
-//        }
-//        return currentRoomBooking;
-
     }
 
     public ArrayList<Room> getRooms() {
