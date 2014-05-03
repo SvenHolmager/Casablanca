@@ -70,10 +70,10 @@ public class GuestMapper {
                 + "values (?,?,?,?,?,?,?)";
         PreparedStatement statement = null;
         statement = con.prepareStatement(SQLString1);
-        try {
+       
             for (int i = 0; i < payingGuestList.size(); i++) {
                 PayingGuest pg = payingGuestList.get(i);
-                statement.setInt(1, this.getNextPayingGuestNumber(con));
+                statement.setInt(1, pg.getId());
                 statement.setString(2, pg.getFirstName());
                 statement.setString(3, pg.getFamilyName());
                 statement.setString(4, pg.getAddress());
@@ -82,20 +82,9 @@ public class GuestMapper {
                 statement.setString(7, pg.getEmail());
                 rowsInserted = statement.executeUpdate();
             }
-        } catch (Exception e) {
-            System.out.println("Fail in GuestMapper - savePayinGuest");
-            System.out.println(e.getMessage());
-        } finally // must close statement
-        {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                System.out.println("Fail in GuestMapper - savePayingGuest");
-                System.out.println(e.getMessage());
-            }
+        
             return rowsInserted == 1;
         }
-    }
 
     public StayingGuest getStayingGuest(int Id, Connection con) {
         StayingGuest sg = null;
@@ -144,32 +133,18 @@ public class GuestMapper {
         PreparedStatement statement = null;
         statement = con.prepareStatement(SQLString1);
 
-        try {
             for (int i = 0; i < stayingGuestList.size(); i++) {
                 StayingGuest sg = stayingGuestList.get(i);
                 statement.setInt(1, sg.getId());
                 statement.setString(2, sg.getFirstName());
                 statement.setString(3, sg.getFamilyName());
-                rowsInserted = statement.executeUpdate();
-            }
-        } //== insert tuple
-        catch (Exception e) {
-            System.out.println("Fail in GuestMapper - saveStayinGuest");
-            System.out.println(e.getMessage());
-        } finally // must close statement
-        {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                System.out.println("Fail in GuestMapper - saveStayingGuest");
-                System.out.println(e.getMessage());
-            }
-        }
+                rowsInserted = statement.executeUpdate();           
+        } 
         return rowsInserted == 1;
     }
 
     // Retrieves the next unique PayingGuest number from DB
-    public int getNextPayingGuestNumber(Connection conn) throws SQLException {
+    public int getNextPayingGuestId(Connection conn) throws SQLException {
         int nextPayingGuestNumber = 0;
         String SQLString = "select payingGuestSeq.nextval " + "from dual";
         PreparedStatement statement = null;
@@ -187,7 +162,7 @@ public class GuestMapper {
     }
 
     // Retrieves the next unique PayingGuest number from DB
-    public int getStayingGuestNumber(Connection conn) throws SQLException {
+    public int getStayingGuestId(Connection conn) throws SQLException {
         int nextPayingGuestNumber = 0;
         String SQLString = "select stayingGuestSeq.nextval " + "from dual";
         PreparedStatement statement = null;

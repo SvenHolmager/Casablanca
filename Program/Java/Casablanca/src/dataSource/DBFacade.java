@@ -7,6 +7,7 @@ package dataSource;
 
 import java.sql.Connection;
 import domain.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -82,6 +83,22 @@ public class DBFacade {
         if (unitOfWork != null) {
             unitOfWork.registerNewStayingGuest(sg);
         }
+    }
+    
+    public int getNextRoomBookingId() throws SQLException {
+        return bm.getNextRoomBookingId(con);
+    }
+    
+    public int getNextActivityBookingId() throws SQLException {
+        return bm.getNextActivityBookingId(con);
+    }
+    
+    public int getNextPayingGuestId() throws SQLException {
+        return gm.getNextPayingGuestId(con);
+    }
+    
+    public int getNexStayingGuestId() throws SQLException {
+        return gm.getStayingGuestId(con);
     }
 
     public void startProcessBookingBusinessTransaction() {
