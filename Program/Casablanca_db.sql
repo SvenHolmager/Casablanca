@@ -12,6 +12,8 @@ drop table room;
 
 create sequence roomBookingSeq;
 create sequence payingGuestSeq;
+create sequence activityBookingSeq;
+create sequence stayingGuestSeq;
 
 create table paying_guest(
 paying_guest_id int NOT NULL ,

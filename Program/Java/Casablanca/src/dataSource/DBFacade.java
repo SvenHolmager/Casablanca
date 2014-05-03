@@ -44,8 +44,16 @@ public class DBFacade {
         return bm.getRoomBooking(Id, con);
     }
 
+    public ActivityBooking getActivityBooking(int Id) {
+        return bm.getActivityBooking(Id, con);
+    }
+
     public PayingGuest getPayingGuest(int Id) {
         return gm.getPayingGuest(Id, con);
+    }
+
+    public StayingGuest getStayingGuest(int Id) {
+        return gm.getStayingGuest(Id, con);
     }
 
     public ArrayList<Room> getRooms() {
@@ -58,18 +66,30 @@ public class DBFacade {
         }
     }
 
+    public void saveActivityBooking(ActivityBooking ab) {
+        if (unitOfWork != null) {
+            unitOfWork.registerNewActivityBooking(ab);
+        }
+    }
+
     public void savePayingGuest(PayingGuest pg) {
         if (unitOfWork != null) {
             unitOfWork.registerNewPayingGuest(pg);
         }
     }
 
-    public void startProcessOrderBusinessTransaction() {
+    public void saveStayingGuest(StayingGuest sg) {
+        if (unitOfWork != null) {
+            unitOfWork.registerNewStayingGuest(sg);
+        }
+    }
+
+    public void startProcessBookingBusinessTransaction() {
         unitOfWork = new UnitOfWork(bm, gm);
     }
 
     //=== Save all changes
-    public boolean commitProcessOrderBusinessTransaction() {
+    public boolean commitProcessBookingBusinessTransaction() {
         boolean status = false;
         if (unitOfWork != null) {
             status = unitOfWork.commit(con);

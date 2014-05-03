@@ -14,18 +14,22 @@ import java.util.ArrayList;
  */
 public class Controller {
 
-    private ArrayList<Room> currentRoomList;
-    private ArrayList<Activity> currentActivityList = new ArrayList<>();
+    private ArrayList<Room> currentRoomsList;
+    private ArrayList<Activity> currentActivityList;
     private PayingGuest currentPayingGuest;
+    private StayingGuest currentStayingGuest;
     private RoomBooking currentRoomBooking;
-    private PayingGuest currentStayingGuest;
-    private DBFacade dbf;
+    private final DBFacade dbf;
+    
+    private boolean processingBooking;
 
     //==Singelton start
     private static Controller c;
 
     public Controller() {
 
+        processingBooking = false;
+        
         dbf = DBFacade.getInstance();
     }
 
@@ -40,6 +44,11 @@ public class Controller {
     public PayingGuest getPayingGuest(int id) {
         currentPayingGuest = dbf.getPayingGuest(id);
         return currentPayingGuest;
+    }
+    
+    public StayingGuest getStayingGuest(int id) {
+        currentStayingGuest = dbf.getStayingGuest(id);
+        return currentStayingGuest;
     }
 
     public PayingGuest addNewPayingGuest(int id, String firstName, String familyName, String address, String country, String phone, String email) {
@@ -76,8 +85,8 @@ public class Controller {
 
     public ArrayList<Room> getRooms() {
 
-        currentRoomList = dbf.getRooms();
-        return currentRoomList;
+        currentRoomsList = dbf.getRooms();
+        return currentRoomsList;
     }
 
 //    public ArrayList<Activity> getActivity() {

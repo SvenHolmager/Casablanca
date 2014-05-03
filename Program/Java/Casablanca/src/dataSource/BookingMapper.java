@@ -65,18 +65,32 @@ public class BookingMapper {
                 = "insert into Room_Booking "
                 + "values (?,?,?,?,?,?,?)";
         PreparedStatement statement = null;
-        statement = con.prepareStatement(SQLString1);
+        try {
 
-        for (int i = 0; i < roomBookingList.size(); i++) {
-            RoomBooking rb = roomBookingList.get(i);
-            statement.setInt(1, this.getNextRoomBookingNumber(con));
-            statement.setInt(2, rb.getPayingGuestId());
-            statement.setInt(3, rb.getRoomId());
-            statement.setString(4, rb.getCheckIn());
-            statement.setString(5, rb.getCheckOut());
-            statement.setString(6, rb.getTravelAgency());
-            statement.setBoolean(7, rb.getPaymentStatus());
-            rowsInserted += statement.executeUpdate();
+            statement = con.prepareStatement(SQLString1);
+
+            for (int i = 0; i < roomBookingList.size(); i++) {
+                RoomBooking rb = roomBookingList.get(i);
+                statement.setInt(1, this.getNextRoomBookingNumber(con));
+                statement.setInt(2, rb.getPayingGuestId());
+                statement.setInt(3, rb.getRoomId());
+                statement.setString(4, rb.getCheckIn());
+                statement.setString(5, rb.getCheckOut());
+                statement.setString(6, rb.getTravelAgency());
+                statement.setBoolean(7, rb.getPaymentStatus());
+                rowsInserted += statement.executeUpdate();
+            }
+        } catch (Exception e) {
+            System.out.println("Fail in BookingMapper - saveRoomBooking");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                System.out.println("Fail in BookingMapper - saveRoomBooking");
+                System.out.println(e.getMessage());
+            }
         }
         return (rowsInserted == roomBookingList.size());
     }
@@ -123,50 +137,45 @@ public class BookingMapper {
     }
 
     //== Insert new ActivityBooking (tuple)
-    public boolean saveActivityBooking(ActivityBooking ab, Connection con) {
+    public boolean saveActivityBooking(ArrayList<ActivityBooking> activityBookingList, Connection con) throws SQLException {
         int rowsInserted = 0;
         String SQLString1
-                = "select orderseq.nextval  "
-                + "from dual";
-        String SQLString2
                 = "insert into Activity_Booking "
                 + "values (?,?,?,?,?,?)";
         PreparedStatement statement = null;
 
         try {
-            //== get unique ono
+
             statement = con.prepareStatement(SQLString1);
-            ResultSet rs = statement.executeQuery();
-            if (rs.next()) {
-                ab.setId(rs.getInt(1));
+
+            for (int i = 0; i < activityBookingList.size(); i++) {
+                ActivityBooking ab = activityBookingList.get(i);
+                statement = con.prepareStatement(SQLString1);
+                statement.setInt(1, ab.getId());
+                statement.setInt(2, ab.getStayingGuestId());
+                statement.setInt(3, ab.getActivityId());
+                statement.setInt(4, ab.getInstructorId());
+                statement.setString(6, ab.getCheckIn());
+                rowsInserted = statement.executeUpdate();
             }
-
-            //== insert tuple
-            statement = con.prepareStatement(SQLString2);
-            statement.setInt(1, ab.getId());
-            statement.setInt(2, ab.getStayingGuestId());
-            statement.setInt(3, ab.getActivityId());
-            statement.setInt(4, ab.getInstructorId());
-            statement.setString(6, ab.getCheckIn());
-            rowsInserted = statement.executeUpdate();
-
         } catch (Exception e) {
-            System.out.println("Fail in BookingMapper - saveRoomBooking");
+            System.out.println("Fail in BookingMapper - saveActivityBooking");
             System.out.println(e.getMessage());
         } finally // must close statement
         {
             try {
                 statement.close();
             } catch (SQLException e) {
-                System.out.println("Fail in BookingMapper - saveRoomBooking");
+                System.out.println("Fail in BookingMapper - saveActivityBooking");
                 System.out.println(e.getMessage());
             }
         }
+
         return rowsInserted == 1;
     }
 
     // Retrieves the next unique RoomBooking number from DB
-    public int getNextRoomBookingNumber(Connection conn) {
+    public int getNextRoomBookingNumber(Connection conn) throws SQLException {
         int nextRoomBookingNumber = 0;
         String SQLString = "select roomBookingSeq.nextval " + "from dual";
         PreparedStatement statement = null;
@@ -177,9 +186,27 @@ public class BookingMapper {
                 nextRoomBookingNumber = rs.getInt(1);
             }
         } catch (Exception e) {
-            System.out.println("Fail in BookingMapper - getNextBookingNo");
+            System.out.println("Fail in BookingMapper - getNextRoomBookingId");
             System.out.println(e.getMessage());
         }
         return nextRoomBookingNumber;
     }
+    
+     public int getNextActivityBookingNumber(Connection conn) throws SQLException {
+        int nextRoomBookingNumber = 0;
+        String SQLString = "select activityBookingSeq.nextval " + "from dual";
+        PreparedStatement statement = null;
+        try {
+            statement = conn.prepareStatement(SQLString);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                nextRoomBookingNumber = rs.getInt(1);
+            }
+        } catch (Exception e) {
+            System.out.println("Fail in BookingMapper - getNextActivityBookingId");
+            System.out.println(e.getMessage());
+        }
+        return nextRoomBookingNumber;
+    }
+
 }
