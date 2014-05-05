@@ -162,7 +162,7 @@ public class GuestMapper {
     }
 
     // Retrieves the next unique PayingGuest number from DB
-    public int getStayingGuestId(Connection conn) throws SQLException {
+    public int getNextStayingGuestId(Connection conn) throws SQLException {
         int nextPayingGuestNumber = 0;
         String SQLString = "select stayingGuestSeq.nextval " + "from dual";
         PreparedStatement statement = null;

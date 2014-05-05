@@ -98,7 +98,7 @@ public class DBFacade {
     }
     
     public int getNexStayingGuestId() throws SQLException {
-        return gm.getStayingGuestId(con);
+        return gm.getNextStayingGuestId(con);
     }
 
     public void startProcessBookingBusinessTransaction() {
